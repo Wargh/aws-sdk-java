@@ -42,7 +42,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     * Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      * </p>
      * </note>
      * <p>
@@ -76,7 +76,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     * Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      * </p>
      * </note>
      * <p>
@@ -91,7 +91,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      *         <code>--cap-add</code> option to <a
      *         href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
      *         <p>
-     *         Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     *         Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      *         </p>
      *         </note>
      *         <p>
@@ -116,7 +116,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     * Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      * </p>
      * </note>
      * <p>
@@ -132,7 +132,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      *        <code>--cap-add</code> option to <a
      *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
      *        <p>
-     *        Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     *        Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      *        </p>
      *        </note>
      *        <p>
@@ -159,7 +159,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     * Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      * </p>
      * </note>
      * <p>
@@ -180,7 +180,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      *        <code>--cap-add</code> option to <a
      *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
      *        <p>
-     *        Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     *        Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      *        </p>
      *        </note>
      *        <p>
@@ -209,7 +209,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     * Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      * </p>
      * </note>
      * <p>
@@ -225,7 +225,7 @@ public class KernelCapabilities implements Serializable, Cloneable, StructuredPo
      *        <code>--cap-add</code> option to <a
      *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
      *        <p>
-     *        Tasks launched on AWS Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
+     *        Tasks launched on Fargate only support adding the <code>SYS_PTRACE</code> kernel capability.
      *        </p>
      *        </note>
      *        <p>

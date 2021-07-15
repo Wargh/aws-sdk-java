@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about a set of Amazon ECS tasks in either an AWS CodeDeploy or an <code>EXTERNAL</code> deployment. An
- * Amazon ECS task set includes details such as the desired number of tasks, how many tasks are running, and whether the
- * task set serves production traffic.
+ * Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code> deployment. An Amazon
+ * ECS task set includes details such as the desired number of tasks, how many tasks are running, and whether the task
+ * set serves production traffic.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/TaskSet" target="_top">AWS API Documentation</a>
@@ -55,7 +55,7 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
     private String clusterArn;
     /**
      * <p>
-     * The tag specified when a task set is started. If the task set is created by an AWS CodeDeploy deployment, the
+     * The tag specified when a task set is started. If the task set is created by an CodeDeploy deployment, the
      * <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external deployment,
      * the startedBy field isn't used.
      * </p>
@@ -66,12 +66,12 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * The external ID associated with the task set.
      * </p>
      * <p>
-     * If a task set is created by an AWS CodeDeploy deployment, the <code>externalId</code> parameter contains the AWS
+     * If a task set is created by an CodeDeploy deployment, the <code>externalId</code> parameter contains the
      * CodeDeploy deployment ID.
      * </p>
      * <p>
      * If a task set is created for an external deployment and is associated with a service discovery registry, the
-     * <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map attribute.
+     * <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map attribute.
      * </p>
      */
     private String externalId;
@@ -160,9 +160,9 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<CapacityProviderStrategyItem> capacityProviderStrategy;
     /**
      * <p>
-     * The AWS Fargate platform version on which the tasks in the task set are running. A platform version is only
-     * specified for tasks run on AWS Fargate. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate platform
+     * The Fargate platform version on which the tasks in the task set are running. A platform version is only specified
+     * for tasks run on Fargate. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
      * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
@@ -274,8 +274,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -444,14 +444,14 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag specified when a task set is started. If the task set is created by an AWS CodeDeploy deployment, the
+     * The tag specified when a task set is started. If the task set is created by an CodeDeploy deployment, the
      * <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external deployment,
      * the startedBy field isn't used.
      * </p>
      * 
      * @param startedBy
-     *        The tag specified when a task set is started. If the task set is created by an AWS CodeDeploy deployment,
-     *        the <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external
+     *        The tag specified when a task set is started. If the task set is created by an CodeDeploy deployment, the
+     *        <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external
      *        deployment, the startedBy field isn't used.
      */
 
@@ -461,13 +461,13 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag specified when a task set is started. If the task set is created by an AWS CodeDeploy deployment, the
+     * The tag specified when a task set is started. If the task set is created by an CodeDeploy deployment, the
      * <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external deployment,
      * the startedBy field isn't used.
      * </p>
      * 
-     * @return The tag specified when a task set is started. If the task set is created by an AWS CodeDeploy deployment,
-     *         the <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external
+     * @return The tag specified when a task set is started. If the task set is created by an CodeDeploy deployment, the
+     *         <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external
      *         deployment, the startedBy field isn't used.
      */
 
@@ -477,14 +477,14 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag specified when a task set is started. If the task set is created by an AWS CodeDeploy deployment, the
+     * The tag specified when a task set is started. If the task set is created by an CodeDeploy deployment, the
      * <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external deployment,
      * the startedBy field isn't used.
      * </p>
      * 
      * @param startedBy
-     *        The tag specified when a task set is started. If the task set is created by an AWS CodeDeploy deployment,
-     *        the <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external
+     *        The tag specified when a task set is started. If the task set is created by an CodeDeploy deployment, the
+     *        <code>startedBy</code> parameter is <code>CODE_DEPLOY</code>. For a task set created for an external
      *        deployment, the startedBy field isn't used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -499,23 +499,23 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * The external ID associated with the task set.
      * </p>
      * <p>
-     * If a task set is created by an AWS CodeDeploy deployment, the <code>externalId</code> parameter contains the AWS
+     * If a task set is created by an CodeDeploy deployment, the <code>externalId</code> parameter contains the
      * CodeDeploy deployment ID.
      * </p>
      * <p>
      * If a task set is created for an external deployment and is associated with a service discovery registry, the
-     * <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map attribute.
+     * <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map attribute.
      * </p>
      * 
      * @param externalId
      *        The external ID associated with the task set.</p>
      *        <p>
-     *        If a task set is created by an AWS CodeDeploy deployment, the <code>externalId</code> parameter contains
-     *        the AWS CodeDeploy deployment ID.
+     *        If a task set is created by an CodeDeploy deployment, the <code>externalId</code> parameter contains the
+     *        CodeDeploy deployment ID.
      *        </p>
      *        <p>
      *        If a task set is created for an external deployment and is associated with a service discovery registry,
-     *        the <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map
+     *        the <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map
      *        attribute.
      */
 
@@ -528,22 +528,22 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * The external ID associated with the task set.
      * </p>
      * <p>
-     * If a task set is created by an AWS CodeDeploy deployment, the <code>externalId</code> parameter contains the AWS
+     * If a task set is created by an CodeDeploy deployment, the <code>externalId</code> parameter contains the
      * CodeDeploy deployment ID.
      * </p>
      * <p>
      * If a task set is created for an external deployment and is associated with a service discovery registry, the
-     * <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map attribute.
+     * <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map attribute.
      * </p>
      * 
      * @return The external ID associated with the task set.</p>
      *         <p>
-     *         If a task set is created by an AWS CodeDeploy deployment, the <code>externalId</code> parameter contains
-     *         the AWS CodeDeploy deployment ID.
+     *         If a task set is created by an CodeDeploy deployment, the <code>externalId</code> parameter contains the
+     *         CodeDeploy deployment ID.
      *         </p>
      *         <p>
      *         If a task set is created for an external deployment and is associated with a service discovery registry,
-     *         the <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map
+     *         the <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map
      *         attribute.
      */
 
@@ -556,23 +556,23 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * The external ID associated with the task set.
      * </p>
      * <p>
-     * If a task set is created by an AWS CodeDeploy deployment, the <code>externalId</code> parameter contains the AWS
+     * If a task set is created by an CodeDeploy deployment, the <code>externalId</code> parameter contains the
      * CodeDeploy deployment ID.
      * </p>
      * <p>
      * If a task set is created for an external deployment and is associated with a service discovery registry, the
-     * <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map attribute.
+     * <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map attribute.
      * </p>
      * 
      * @param externalId
      *        The external ID associated with the task set.</p>
      *        <p>
-     *        If a task set is created by an AWS CodeDeploy deployment, the <code>externalId</code> parameter contains
-     *        the AWS CodeDeploy deployment ID.
+     *        If a task set is created by an CodeDeploy deployment, the <code>externalId</code> parameter contains the
+     *        CodeDeploy deployment ID.
      *        </p>
      *        <p>
      *        If a task set is created for an external deployment and is associated with a service discovery registry,
-     *        the <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map
+     *        the <code>externalId</code> parameter contains the <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map
      *        attribute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1171,17 +1171,17 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Fargate platform version on which the tasks in the task set are running. A platform version is only
-     * specified for tasks run on AWS Fargate. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate platform
+     * The Fargate platform version on which the tasks in the task set are running. A platform version is only specified
+     * for tasks run on Fargate. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
      * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param platformVersion
-     *        The AWS Fargate platform version on which the tasks in the task set are running. A platform version is
-     *        only specified for tasks run on AWS Fargate. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     *        platform versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        The Fargate platform version on which the tasks in the task set are running. A platform version is only
+     *        specified for tasks run on Fargate. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     *        versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public void setPlatformVersion(String platformVersion) {
@@ -1190,15 +1190,15 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Fargate platform version on which the tasks in the task set are running. A platform version is only
-     * specified for tasks run on AWS Fargate. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate platform
+     * The Fargate platform version on which the tasks in the task set are running. A platform version is only specified
+     * for tasks run on Fargate. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
      * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return The AWS Fargate platform version on which the tasks in the task set are running. A platform version is
-     *         only specified for tasks run on AWS Fargate. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
+     * @return The Fargate platform version on which the tasks in the task set are running. A platform version is only
+     *         specified for tasks run on Fargate. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate
      *         platform versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
@@ -1208,17 +1208,17 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Fargate platform version on which the tasks in the task set are running. A platform version is only
-     * specified for tasks run on AWS Fargate. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate platform
+     * The Fargate platform version on which the tasks in the task set are running. A platform version is only specified
+     * for tasks run on Fargate. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
      * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param platformVersion
-     *        The AWS Fargate platform version on which the tasks in the task set are running. A platform version is
-     *        only specified for tasks run on AWS Fargate. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     *        platform versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        The Fargate platform version on which the tasks in the task set are running. A platform version is only
+     *        specified for tasks run on Fargate. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     *        versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1816,8 +1816,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1863,8 +1863,9 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a
-     *         prefix for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or
-     *         values with this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *         prefix for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete
+     *         tag keys or values with this prefix. Tags with this prefix do not count against your tags per resource
+     *         limit.
      *         </p>
      *         </li>
      */
@@ -1920,8 +1921,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1968,8 +1969,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      */
@@ -2027,8 +2028,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2080,8 +2081,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2141,8 +2142,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2189,8 +2190,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

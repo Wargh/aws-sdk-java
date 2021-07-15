@@ -23,6 +23,7 @@ public enum Locale {
     DeDE("de-DE"),
     EnAU("en-AU"),
     EnGB("en-GB"),
+    EnIN("en-IN"),
     EnUS("en-US"),
     Es419("es-419"),
     EsES("es-ES"),

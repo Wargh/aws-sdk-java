@@ -131,7 +131,20 @@ public class RetryPolicyAdapterTest {
         when(retryCondition.shouldRetry(any(AmazonWebServiceRequest.class), any(AmazonClientException.class), anyInt()))
             .thenReturn(true);
         System.setProperty(AWS_RETRY_MODE_SYSTEM_PROPERTY, "standard");
-        legacyPolicy = new RetryPolicy(retryCondition, backoffStrategy, 5, false, RetryMode.STANDARD, true);
+        legacyPolicy = new RetryPolicy(retryCondition, backoffStrategy, 5, false, RetryMode.STANDARD, true, false);
+        adapter = new RetryPolicyAdapter(legacyPolicy, new ClientConfiguration());
+
+        assertFalse(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(1)));
+        assertTrue(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(2)));
+    }
+
+    @Test
+    // Adaptive mode is a superset of standard
+    public void adaptiveModeAndDefaultLegacyMaxError_shouldUseStandardDefaultModeMaxError() {
+        when(retryCondition.shouldRetry(any(AmazonWebServiceRequest.class), any(AmazonClientException.class), anyInt()))
+                .thenReturn(true);
+        System.setProperty(AWS_RETRY_MODE_SYSTEM_PROPERTY, "adaptive");
+        legacyPolicy = new RetryPolicy(retryCondition, backoffStrategy, 5, false, RetryMode.ADAPTIVE, true, false);
         adapter = new RetryPolicyAdapter(legacyPolicy, new ClientConfiguration());
 
         assertFalse(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(1)));
@@ -162,11 +175,35 @@ public class RetryPolicyAdapterTest {
     }
 
     @Test
+    // Adaptive mode is a superset of standard
+    public void adaptiveModePredefinedDynamodbPolicy_shouldUseDefaultStandardModeMaxError() {
+        when(retryCondition.shouldRetry(any(AmazonWebServiceRequest.class), any(AmazonClientException.class), anyInt()))
+                .thenReturn(true);
+        RetryPolicy dynamoDBDefaultRetryPolicy = PredefinedRetryPolicies.getDynamoDBDefaultRetryPolicy();
+        adapter = new RetryPolicyAdapter(dynamoDBDefaultRetryPolicy, new ClientConfiguration().withRetryMode(RetryMode.ADAPTIVE));
+
+        assertFalse(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(1)));
+        assertTrue(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(10)));
+    }
+
+    @Test
     public void standardModePredefinedDefaultPolicy_shouldUseDefaultStandardModeMaxError() {
         when(retryCondition.shouldRetry(any(AmazonWebServiceRequest.class), any(AmazonClientException.class), anyInt()))
             .thenReturn(true);
         RetryPolicy dynamoDBDefaultRetryPolicy = PredefinedRetryPolicies.getDefaultRetryPolicy();
         adapter = new RetryPolicyAdapter(dynamoDBDefaultRetryPolicy, new ClientConfiguration().withRetryMode(RetryMode.STANDARD));
+
+        assertFalse(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(1)));
+        assertTrue(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(2)));
+    }
+
+    @Test
+    // Adaptive mode is a superset of standard
+    public void adaptiveModePredefinedDefaultPolicy_shouldUseDefaultStandardModeMaxError() {
+        when(retryCondition.shouldRetry(any(AmazonWebServiceRequest.class), any(AmazonClientException.class), anyInt()))
+                .thenReturn(true);
+        RetryPolicy dynamoDBDefaultRetryPolicy = PredefinedRetryPolicies.getDefaultRetryPolicy();
+        adapter = new RetryPolicyAdapter(dynamoDBDefaultRetryPolicy, new ClientConfiguration().withRetryMode(RetryMode.ADAPTIVE));
 
         assertFalse(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(1)));
         assertTrue(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(2)));
@@ -189,6 +226,17 @@ public class RetryPolicyAdapterTest {
             .thenReturn(true);
         RetryPolicy dynamoDBDefaultRetryPolicy = PredefinedRetryPolicies.getDefaultRetryPolicyWithCustomMaxRetries(1);
         adapter = new RetryPolicyAdapter(dynamoDBDefaultRetryPolicy, new ClientConfiguration().withRetryMode(RetryMode.STANDARD));
+
+        assertTrue(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(1)));
+    }
+
+    @Test
+    // Adaptive mode is a superset of standard
+    public void adaptiveModePredefinedDefaultPolicyWithCustomMaxError_shouldHonor() {
+        when(retryCondition.shouldRetry(any(AmazonWebServiceRequest.class), any(AmazonClientException.class), anyInt()))
+                .thenReturn(true);
+        RetryPolicy dynamoDBDefaultRetryPolicy = PredefinedRetryPolicies.getDefaultRetryPolicyWithCustomMaxRetries(1);
+        adapter = new RetryPolicyAdapter(dynamoDBDefaultRetryPolicy, new ClientConfiguration().withRetryMode(RetryMode.ADAPTIVE));
 
         assertTrue(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(1)));
     }

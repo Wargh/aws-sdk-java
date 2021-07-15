@@ -67,6 +67,12 @@ public final class RetryPolicy {
     private final boolean honorDefaultMaxErrorRetryInRetryMode;
 
     /**
+     * Whether to fail fast when rate limiting is enabled and not enough
+     * capacity is available to execute the request immediately.
+     */
+    private final boolean fastFailRateLimiting;
+
+    /**
      * Constructs a new retry policy. See {@link PredefinedRetryPolicies} for
      * some pre-defined policy components, and also the default policies used by
      * SDK.
@@ -100,7 +106,7 @@ public final class RetryPolicy {
                        int maxErrorRetry,
                        boolean honorMaxErrorRetryInClientConfig,
                        boolean honorDefaultMaxErrorRetryInRetryMode) {
-        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, null, honorDefaultMaxErrorRetryInRetryMode);
+        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, null, honorDefaultMaxErrorRetryInRetryMode, false);
     }
 
     public RetryPolicy(RetryCondition retryCondition,
@@ -108,7 +114,17 @@ public final class RetryPolicy {
                        int maxErrorRetry,
                        boolean honorMaxErrorRetryInClientConfig,
                        RetryMode retryMode) {
-        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, retryMode, false);
+        this(retryCondition, backoffStrategy, maxErrorRetry, honorMaxErrorRetryInClientConfig, retryMode, false, false);
+    }
+
+    private RetryPolicy(RetryPolicyBuilder builder) {
+        this(builder.retryCondition,
+             builder.backoffStrategy,
+             builder.maxErrorRetry,
+             builder.honorMaxErrorRetryInClientConfig,
+             builder.retryMode,
+             builder.honorDefaultMaxErrorRetryInRetryMode,
+             builder.fastFailRateLimiting);
     }
 
     @SdkInternalApi
@@ -117,7 +133,8 @@ public final class RetryPolicy {
                 int maxErrorRetry,
                 boolean honorMaxErrorRetryInClientConfig,
                 RetryMode retryMode,
-                boolean honorDefaultMaxErrorRetryInRetryMode) {
+                boolean honorDefaultMaxErrorRetryInRetryMode,
+                boolean fastFailRateLimiting) {
         if (retryCondition == null) {
             retryCondition = PredefinedRetryPolicies.DEFAULT_RETRY_CONDITION;
         }
@@ -134,6 +151,7 @@ public final class RetryPolicy {
         this.maxErrorRetry = maxErrorRetry;
         this.honorMaxErrorRetryInClientConfig = honorMaxErrorRetryInClientConfig;
         this.retryMode = retryMode != null ? retryMode : RETRY_MODE_RESOLVER.retryMode();
+        this.fastFailRateLimiting = fastFailRateLimiting;
     }
 
     /**
@@ -185,10 +203,159 @@ public final class RetryPolicy {
     }
 
     /**
+     * Whether the client should fail immediately when {@link RetryMode#ADAPTIVE} is enabled, and there is not enough
+     * capacity in the rate limiter to execute the request immediately.
+     * <p>
+     * The default configuration value is {@code false}, which will cause client to wait until enough capacity is
+     * available.
+     *
+     * @return The fast fail configuration value.
+     */
+    public boolean isFastFailRateLimiting() {
+        return fastFailRateLimiting;
+    }
+
+    /**
      * @return Whether the default max error in retry mode should be honored.
      */
     boolean isDefaultMaxErrorRetryInRetryModeHonored() {
         return honorDefaultMaxErrorRetryInRetryMode;
+    }
+
+    /**
+     * @return A builder for conveniently building a retry policy.
+     */
+    public static RetryPolicyBuilder builder() {
+        return new RetryPolicyBuilder();
+    }
+
+    public static final class RetryPolicyBuilder {
+        private RetryCondition retryCondition;
+        private BackoffStrategy backoffStrategy;
+        private int maxErrorRetry;
+        private boolean honorMaxErrorRetryInClientConfig;
+        private RetryMode retryMode;
+        private boolean honorDefaultMaxErrorRetryInRetryMode;
+        private boolean fastFailRateLimiting;
+
+        /**
+         * Set the retry condition on whether a specific request and exception should be retried. If null value is
+         * specified, the SDK' *default retry condition is used.
+         *
+         * @param retryCondition The retry condition.
+         * @return This object for method chaining.
+         */
+        public RetryPolicyBuilder withRetryCondition(RetryCondition retryCondition) {
+            this.retryCondition = retryCondition;
+            return this;
+        }
+
+        public void setRetryCondition(RetryCondition retryCondition) {
+            withRetryCondition(retryCondition);
+        }
+
+        /**
+         * Set the back-off strategy for controlling how long the next retry should wait. If null value is specified,
+         * the SDK' default exponential back-off strategy is used.
+         *
+         * @param backoffStrategy The backoff strategy.
+         * @return This object for method chaining.
+         */
+        public RetryPolicyBuilder withBackoffStrategy(BackoffStrategy backoffStrategy) {
+            this.backoffStrategy = backoffStrategy;
+            return this;
+        }
+
+        public void setBackoffStrategy(BackoffStrategy backoffStrategy) {
+            withBackoffStrategy(backoffStrategy);
+        }
+
+        /**
+         * Set aximum number of retry attempts for failed requests.
+         *
+         * @param maxErrorRetry The max retry attempts.
+         * @return This object for method chaining.
+         */
+        public RetryPolicyBuilder withMaxErrorRetry(int maxErrorRetry) {
+            this.maxErrorRetry = maxErrorRetry;
+            return this;
+        }
+
+        public void setMaxErrorRetry(int maxErrorRetry) {
+            withMaxErrorRetry(maxErrorRetry);
+        }
+
+        /**
+         * Set whether this retry policy should honor the max error retry set by {@link
+         * ClientConfiguration#setMaxErrorRetry(int)}.
+         *
+         * @param honorMaxErrorRetryInClientConfig Whether the policy should honor the max error retry setting on the
+         * client configuration.
+         *
+         * @return This object for method chaining.
+         */
+        public RetryPolicyBuilder withHonorMaxErrorRetryInClientConfig(boolean honorMaxErrorRetryInClientConfig) {
+            this.honorMaxErrorRetryInClientConfig = honorMaxErrorRetryInClientConfig;
+            return this;
+        }
+
+        public void setHonorMaxErrorRetryInClientConfig(boolean honorMaxErrorRetryInClientConfig) {
+            withHonorMaxErrorRetryInClientConfig(honorMaxErrorRetryInClientConfig);
+        }
+
+        /**
+         * Set the retry mode for the client.
+         *
+         * @param retryMode The retry mode.
+         *
+         * @return This object for method chaining.
+         */
+        public RetryPolicyBuilder withRetryMode(RetryMode retryMode) {
+            this.retryMode = retryMode;
+            return this;
+        }
+
+        public void setRetryMode(RetryMode retryMode) {
+            withRetryMode(retryMode);
+        }
+
+        /**
+         * Whether the policy should honor the max error retries dictated by the configured retry mode.
+         *
+         * @param honorDefaultMaxErrorRetryInRetryMode Whether the policy should honor the max error retries dictated
+         *                                             by the configured retry mode.
+         * @return This object for method chaining.
+         */
+        public RetryPolicyBuilder withHonorDefaultMaxErrorRetryInRetryMode(boolean honorDefaultMaxErrorRetryInRetryMode) {
+            this.honorDefaultMaxErrorRetryInRetryMode = honorDefaultMaxErrorRetryInRetryMode;
+            return this;
+        }
+
+        public void setHonorDefaultMaxErrorRetryInRetryMode(boolean honorDefaultMaxErrorRetryInRetryMode) {
+            withHonorDefaultMaxErrorRetryInRetryMode(honorDefaultMaxErrorRetryInRetryMode);
+        }
+
+        /**
+         * Whether the client should fail immediately when it cannot immediately make a request because there is not enough capacity in the rate limiter.
+         * <p>
+         * <b>Note:</b> This configuration only has an effect when used in combination with the {@link RetryMode#ADAPTIVE} retry mode.
+         *
+         * @param fastFailRateLimiting Whether to fail fast.
+         *
+         * @return This object for method chaining.
+         */
+        public RetryPolicyBuilder withFastFailRateLimiting(boolean fastFailRateLimiting) {
+            this.fastFailRateLimiting = fastFailRateLimiting;
+            return this;
+        }
+
+        public void setFastFailRateLimiting(boolean fastFailRateLimiting) {
+            withFastFailRateLimiting(fastFailRateLimiting);
+        }
+
+        public RetryPolicy build() {
+            return new RetryPolicy(this);
+        }
     }
     
     /**

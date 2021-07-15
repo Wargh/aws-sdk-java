@@ -25,7 +25,7 @@ public class CreateTaskSetResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a set of Amazon ECS tasks in either an AWS CodeDeploy or an <code>EXTERNAL</code> deployment. A
+     * Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code> deployment. A
      * task set includes details such as the desired number of tasks, how many tasks are running, and whether the task
      * set serves production traffic.
      * </p>
@@ -34,13 +34,13 @@ public class CreateTaskSetResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a set of Amazon ECS tasks in either an AWS CodeDeploy or an <code>EXTERNAL</code> deployment. A
+     * Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code> deployment. A
      * task set includes details such as the desired number of tasks, how many tasks are running, and whether the task
      * set serves production traffic.
      * </p>
      * 
      * @param taskSet
-     *        Information about a set of Amazon ECS tasks in either an AWS CodeDeploy or an <code>EXTERNAL</code>
+     *        Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code>
      *        deployment. A task set includes details such as the desired number of tasks, how many tasks are running,
      *        and whether the task set serves production traffic.
      */
@@ -51,12 +51,12 @@ public class CreateTaskSetResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a set of Amazon ECS tasks in either an AWS CodeDeploy or an <code>EXTERNAL</code> deployment. A
+     * Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code> deployment. A
      * task set includes details such as the desired number of tasks, how many tasks are running, and whether the task
      * set serves production traffic.
      * </p>
      * 
-     * @return Information about a set of Amazon ECS tasks in either an AWS CodeDeploy or an <code>EXTERNAL</code>
+     * @return Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code>
      *         deployment. A task set includes details such as the desired number of tasks, how many tasks are running,
      *         and whether the task set serves production traffic.
      */
@@ -67,13 +67,13 @@ public class CreateTaskSetResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a set of Amazon ECS tasks in either an AWS CodeDeploy or an <code>EXTERNAL</code> deployment. A
+     * Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code> deployment. A
      * task set includes details such as the desired number of tasks, how many tasks are running, and whether the task
      * set serves production traffic.
      * </p>
      * 
      * @param taskSet
-     *        Information about a set of Amazon ECS tasks in either an AWS CodeDeploy or an <code>EXTERNAL</code>
+     *        Information about a set of Amazon ECS tasks in either an CodeDeploy or an <code>EXTERNAL</code>
      *        deployment. A task set includes details such as the desired number of tasks, how many tasks are running,
      *        and whether the task set serves production traffic.
      * @return Returns a reference to this object so that method calls can be chained together.

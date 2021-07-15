@@ -59,8 +59,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
     private String family;
     /**
      * <p>
-     * The short name or full Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
-     * grants containers in the task permission to call AWS APIs on your behalf. For more information, see <a
+     * The short name or full Amazon Resource Name (ARN) of the Identity and Access Management role that grants
+     * containers in the task permission to call Amazon Web Services APIs on your behalf. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS Task Role</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -76,8 +76,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS container agent permission
-     * to make AWS API calls on your behalf. The task execution IAM role is required depending on the requirements of
-     * your task. For more information, see <a
+     * to make Amazon Web Services API calls on your behalf. The task execution IAM role is required depending on the
+     * requirements of your task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html">Amazon ECS task
      * execution IAM role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -91,11 +91,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on Amazon
-     * EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you cannot specify
-     * port mappings in your container definitions, and the tasks containers do not have external connectivity. The
-     * <code>host</code> and <code>awsvpc</code> network modes offer the highest networking performance for containers
-     * because they use the EC2 network stack instead of the virtualized network stack provided by the
-     * <code>bridge</code> mode.
+     * EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows instances,
+     * <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to <code>none</code>,
+     * you cannot specify port mappings in your container definitions, and the tasks containers do not have external
+     * connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
+     * performance for containers because they use the EC2 network stack instead of the virtualized network stack
+     * provided by the <code>bridge</code> mode.
      * </p>
      * <p>
      * With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped directly to
@@ -115,20 +116,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code> package, or
-     * AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     * </p>
-     * </note>
      * <p>
      * If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a single
      * container instance when port mappings are used.
-     * </p>
-     * <p>
-     * Docker for Windows uses different network modes than Docker for Linux. When you register a task definition with
-     * Windows containers, you must not specify a network mode. If you use the console to register a task definition
-     * with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -153,7 +143,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS Fargate.
+     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      * </p>
      * </note>
      */
@@ -176,7 +166,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      */
@@ -187,7 +177,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      */
@@ -259,8 +249,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * >ContainerDefinition</a>.
      * </p>
      * <p>
-     * If your tasks will be run on AWS Fargate, this field is required and you must use one of the following values,
-     * which determines your range of valid values for the <code>cpu</code> parameter:
+     * If your tasks will be run on Fargate, this field is required and you must use one of the following values, which
+     * determines your range of valid values for the <code>cpu</code> parameter:
      * </p>
      * <ul>
      * <li>
@@ -317,7 +307,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      */
@@ -361,7 +351,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      */
@@ -617,8 +607,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The short name or full Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
-     * grants containers in the task permission to call AWS APIs on your behalf. For more information, see <a
+     * The short name or full Amazon Resource Name (ARN) of the Identity and Access Management role that grants
+     * containers in the task permission to call Amazon Web Services APIs on your behalf. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS Task Role</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -631,10 +621,10 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param taskRoleArn
-     *        The short name or full Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role
-     *        that grants containers in the task permission to call AWS APIs on your behalf. For more information, see
-     *        <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS Task
-     *        Role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+     *        The short name or full Amazon Resource Name (ARN) of the Identity and Access Management role that grants
+     *        containers in the task permission to call Amazon Web Services APIs on your behalf. For more information,
+     *        see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS
+     *        Task Role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *        <p>
      *        IAM roles for tasks on Windows require that the <code>-EnableTaskIAMRole</code> option is set when you
      *        launch the Amazon ECS-optimized Windows AMI. Your containers must also run some configuration code in
@@ -649,8 +639,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The short name or full Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
-     * grants containers in the task permission to call AWS APIs on your behalf. For more information, see <a
+     * The short name or full Amazon Resource Name (ARN) of the Identity and Access Management role that grants
+     * containers in the task permission to call Amazon Web Services APIs on your behalf. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS Task Role</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -662,10 +652,10 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * for tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
-     * @return The short name or full Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role
-     *         that grants containers in the task permission to call AWS APIs on your behalf. For more information, see
-     *         <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS Task
-     *         Role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+     * @return The short name or full Amazon Resource Name (ARN) of the Identity and Access Management role that grants
+     *         containers in the task permission to call Amazon Web Services APIs on your behalf. For more information,
+     *         see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS
+     *         Task Role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *         <p>
      *         IAM roles for tasks on Windows require that the <code>-EnableTaskIAMRole</code> option is set when you
      *         launch the Amazon ECS-optimized Windows AMI. Your containers must also run some configuration code in
@@ -680,8 +670,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The short name or full Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that
-     * grants containers in the task permission to call AWS APIs on your behalf. For more information, see <a
+     * The short name or full Amazon Resource Name (ARN) of the Identity and Access Management role that grants
+     * containers in the task permission to call Amazon Web Services APIs on your behalf. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS Task Role</a>
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -694,10 +684,10 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param taskRoleArn
-     *        The short name or full Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role
-     *        that grants containers in the task permission to call AWS APIs on your behalf. For more information, see
-     *        <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS Task
-     *        Role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
+     *        The short name or full Amazon Resource Name (ARN) of the Identity and Access Management role that grants
+     *        containers in the task permission to call Amazon Web Services APIs on your behalf. For more information,
+     *        see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">Amazon ECS
+     *        Task Role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *        <p>
      *        IAM roles for tasks on Windows require that the <code>-EnableTaskIAMRole</code> option is set when you
      *        launch the Amazon ECS-optimized Windows AMI. Your containers must also run some configuration code in
@@ -715,16 +705,16 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS container agent permission
-     * to make AWS API calls on your behalf. The task execution IAM role is required depending on the requirements of
-     * your task. For more information, see <a
+     * to make Amazon Web Services API calls on your behalf. The task execution IAM role is required depending on the
+     * requirements of your task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html">Amazon ECS task
      * execution IAM role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param executionRoleArn
      *        The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS container agent
-     *        permission to make AWS API calls on your behalf. The task execution IAM role is required depending on the
-     *        requirements of your task. For more information, see <a
+     *        permission to make Amazon Web Services API calls on your behalf. The task execution IAM role is required
+     *        depending on the requirements of your task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html">Amazon ECS
      *        task execution IAM role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
@@ -736,15 +726,15 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS container agent permission
-     * to make AWS API calls on your behalf. The task execution IAM role is required depending on the requirements of
-     * your task. For more information, see <a
+     * to make Amazon Web Services API calls on your behalf. The task execution IAM role is required depending on the
+     * requirements of your task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html">Amazon ECS task
      * execution IAM role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS container agent
-     *         permission to make AWS API calls on your behalf. The task execution IAM role is required depending on the
-     *         requirements of your task. For more information, see <a
+     *         permission to make Amazon Web Services API calls on your behalf. The task execution IAM role is required
+     *         depending on the requirements of your task. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html">Amazon
      *         ECS task execution IAM role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
@@ -756,16 +746,16 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS container agent permission
-     * to make AWS API calls on your behalf. The task execution IAM role is required depending on the requirements of
-     * your task. For more information, see <a
+     * to make Amazon Web Services API calls on your behalf. The task execution IAM role is required depending on the
+     * requirements of your task. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html">Amazon ECS task
      * execution IAM role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param executionRoleArn
      *        The Amazon Resource Name (ARN) of the task execution role that grants the Amazon ECS container agent
-     *        permission to make AWS API calls on your behalf. The task execution IAM role is required depending on the
-     *        requirements of your task. For more information, see <a
+     *        permission to make Amazon Web Services API calls on your behalf. The task execution IAM role is required
+     *        depending on the requirements of your task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html">Amazon ECS
      *        task execution IAM role</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -784,11 +774,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on Amazon
-     * EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you cannot specify
-     * port mappings in your container definitions, and the tasks containers do not have external connectivity. The
-     * <code>host</code> and <code>awsvpc</code> network modes offer the highest networking performance for containers
-     * because they use the EC2 network stack instead of the virtualized network stack provided by the
-     * <code>bridge</code> mode.
+     * EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows instances,
+     * <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to <code>none</code>,
+     * you cannot specify port mappings in your container definitions, and the tasks containers do not have external
+     * connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
+     * performance for containers because they use the EC2 network stack instead of the virtualized network stack
+     * provided by the <code>bridge</code> mode.
      * </p>
      * <p>
      * With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped directly to
@@ -808,20 +799,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code> package, or
-     * AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     * </p>
-     * </note>
      * <p>
      * If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a single
      * container instance when port mappings are used.
-     * </p>
-     * <p>
-     * Docker for Windows uses different network modes than Docker for Linux. When you register a task definition with
-     * Windows containers, you must not specify a network mode. If you use the console to register a task definition
-     * with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -834,11 +814,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        default is <code>bridge</code>.</p>
      *        <p>
      *        For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on
-     *        Amazon EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you
-     *        cannot specify port mappings in your container definitions, and the tasks containers do not have external
-     *        connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
-     *        performance for containers because they use the EC2 network stack instead of the virtualized network stack
-     *        provided by the <code>bridge</code> mode.
+     *        Amazon EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows
+     *        instances, <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to
+     *        <code>none</code>, you cannot specify port mappings in your container definitions, and the tasks
+     *        containers do not have external connectivity. The <code>host</code> and <code>awsvpc</code> network modes
+     *        offer the highest networking performance for containers because they use the EC2 network stack instead of
+     *        the virtualized network stack provided by the <code>bridge</code> mode.
      *        </p>
      *        <p>
      *        With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped
@@ -859,20 +840,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      *        Networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *        </p>
-     *        <note>
-     *        <p>
-     *        Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code>
-     *        package, or AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     *        </p>
-     *        </note>
      *        <p>
      *        If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a
      *        single container instance when port mappings are used.
-     *        </p>
-     *        <p>
-     *        Docker for Windows uses different network modes than Docker for Linux. When you register a task definition
-     *        with Windows containers, you must not specify a network mode. If you use the console to register a task
-     *        definition with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      *        </p>
      *        <p>
      *        For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -892,11 +862,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on Amazon
-     * EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you cannot specify
-     * port mappings in your container definitions, and the tasks containers do not have external connectivity. The
-     * <code>host</code> and <code>awsvpc</code> network modes offer the highest networking performance for containers
-     * because they use the EC2 network stack instead of the virtualized network stack provided by the
-     * <code>bridge</code> mode.
+     * EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows instances,
+     * <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to <code>none</code>,
+     * you cannot specify port mappings in your container definitions, and the tasks containers do not have external
+     * connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
+     * performance for containers because they use the EC2 network stack instead of the virtualized network stack
+     * provided by the <code>bridge</code> mode.
      * </p>
      * <p>
      * With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped directly to
@@ -916,20 +887,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code> package, or
-     * AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     * </p>
-     * </note>
      * <p>
      * If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a single
      * container instance when port mappings are used.
-     * </p>
-     * <p>
-     * Docker for Windows uses different network modes than Docker for Linux. When you register a task definition with
-     * Windows containers, you must not specify a network mode. If you use the console to register a task definition
-     * with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -941,11 +901,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *         default is <code>bridge</code>.</p>
      *         <p>
      *         For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks
-     *         on Amazon EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>,
-     *         you cannot specify port mappings in your container definitions, and the tasks containers do not have
-     *         external connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest
-     *         networking performance for containers because they use the EC2 network stack instead of the virtualized
-     *         network stack provided by the <code>bridge</code> mode.
+     *         on Amazon EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows
+     *         instances, <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to
+     *         <code>none</code>, you cannot specify port mappings in your container definitions, and the tasks
+     *         containers do not have external connectivity. The <code>host</code> and <code>awsvpc</code> network modes
+     *         offer the highest networking performance for containers because they use the EC2 network stack instead of
+     *         the virtualized network stack provided by the <code>bridge</code> mode.
      *         </p>
      *         <p>
      *         With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped
@@ -966,21 +927,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      *         Networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *         </p>
-     *         <note>
-     *         <p>
-     *         Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code>
-     *         package, or AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     *         </p>
-     *         </note>
      *         <p>
      *         If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a
      *         single container instance when port mappings are used.
-     *         </p>
-     *         <p>
-     *         Docker for Windows uses different network modes than Docker for Linux. When you register a task
-     *         definition with Windows containers, you must not specify a network mode. If you use the console to
-     *         register a task definition with Windows containers, you must choose the <code>&lt;default&gt;</code>
-     *         network mode object.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -1001,11 +950,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on Amazon
-     * EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you cannot specify
-     * port mappings in your container definitions, and the tasks containers do not have external connectivity. The
-     * <code>host</code> and <code>awsvpc</code> network modes offer the highest networking performance for containers
-     * because they use the EC2 network stack instead of the virtualized network stack provided by the
-     * <code>bridge</code> mode.
+     * EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows instances,
+     * <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to <code>none</code>,
+     * you cannot specify port mappings in your container definitions, and the tasks containers do not have external
+     * connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
+     * performance for containers because they use the EC2 network stack instead of the virtualized network stack
+     * provided by the <code>bridge</code> mode.
      * </p>
      * <p>
      * With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped directly to
@@ -1025,20 +975,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code> package, or
-     * AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     * </p>
-     * </note>
      * <p>
      * If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a single
      * container instance when port mappings are used.
-     * </p>
-     * <p>
-     * Docker for Windows uses different network modes than Docker for Linux. When you register a task definition with
-     * Windows containers, you must not specify a network mode. If you use the console to register a task definition
-     * with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -1051,11 +990,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        default is <code>bridge</code>.</p>
      *        <p>
      *        For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on
-     *        Amazon EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you
-     *        cannot specify port mappings in your container definitions, and the tasks containers do not have external
-     *        connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
-     *        performance for containers because they use the EC2 network stack instead of the virtualized network stack
-     *        provided by the <code>bridge</code> mode.
+     *        Amazon EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows
+     *        instances, <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to
+     *        <code>none</code>, you cannot specify port mappings in your container definitions, and the tasks
+     *        containers do not have external connectivity. The <code>host</code> and <code>awsvpc</code> network modes
+     *        offer the highest networking performance for containers because they use the EC2 network stack instead of
+     *        the virtualized network stack provided by the <code>bridge</code> mode.
      *        </p>
      *        <p>
      *        With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped
@@ -1076,20 +1016,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      *        Networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *        </p>
-     *        <note>
-     *        <p>
-     *        Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code>
-     *        package, or AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     *        </p>
-     *        </note>
      *        <p>
      *        If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a
      *        single container instance when port mappings are used.
-     *        </p>
-     *        <p>
-     *        Docker for Windows uses different network modes than Docker for Linux. When you register a task definition
-     *        with Windows containers, you must not specify a network mode. If you use the console to register a task
-     *        definition with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      *        </p>
      *        <p>
      *        For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -1111,11 +1040,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on Amazon
-     * EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you cannot specify
-     * port mappings in your container definitions, and the tasks containers do not have external connectivity. The
-     * <code>host</code> and <code>awsvpc</code> network modes offer the highest networking performance for containers
-     * because they use the EC2 network stack instead of the virtualized network stack provided by the
-     * <code>bridge</code> mode.
+     * EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows instances,
+     * <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to <code>none</code>,
+     * you cannot specify port mappings in your container definitions, and the tasks containers do not have external
+     * connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
+     * performance for containers because they use the EC2 network stack instead of the virtualized network stack
+     * provided by the <code>bridge</code> mode.
      * </p>
      * <p>
      * With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped directly to
@@ -1135,20 +1065,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code> package, or
-     * AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     * </p>
-     * </note>
      * <p>
      * If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a single
      * container instance when port mappings are used.
-     * </p>
-     * <p>
-     * Docker for Windows uses different network modes than Docker for Linux. When you register a task definition with
-     * Windows containers, you must not specify a network mode. If you use the console to register a task definition
-     * with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -1161,11 +1080,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        default is <code>bridge</code>.</p>
      *        <p>
      *        For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on
-     *        Amazon EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you
-     *        cannot specify port mappings in your container definitions, and the tasks containers do not have external
-     *        connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
-     *        performance for containers because they use the EC2 network stack instead of the virtualized network stack
-     *        provided by the <code>bridge</code> mode.
+     *        Amazon EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows
+     *        instances, <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to
+     *        <code>none</code>, you cannot specify port mappings in your container definitions, and the tasks
+     *        containers do not have external connectivity. The <code>host</code> and <code>awsvpc</code> network modes
+     *        offer the highest networking performance for containers because they use the EC2 network stack instead of
+     *        the virtualized network stack provided by the <code>bridge</code> mode.
      *        </p>
      *        <p>
      *        With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped
@@ -1186,20 +1106,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      *        Networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *        </p>
-     *        <note>
-     *        <p>
-     *        Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code>
-     *        package, or AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     *        </p>
-     *        </note>
      *        <p>
      *        If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a
      *        single container instance when port mappings are used.
-     *        </p>
-     *        <p>
-     *        Docker for Windows uses different network modes than Docker for Linux. When you register a task definition
-     *        with Windows containers, you must not specify a network mode. If you use the console to register a task
-     *        definition with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      *        </p>
      *        <p>
      *        For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -1219,11 +1128,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on Amazon
-     * EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you cannot specify
-     * port mappings in your container definitions, and the tasks containers do not have external connectivity. The
-     * <code>host</code> and <code>awsvpc</code> network modes offer the highest networking performance for containers
-     * because they use the EC2 network stack instead of the virtualized network stack provided by the
-     * <code>bridge</code> mode.
+     * EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows instances,
+     * <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to <code>none</code>,
+     * you cannot specify port mappings in your container definitions, and the tasks containers do not have external
+     * connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
+     * performance for containers because they use the EC2 network stack instead of the virtualized network stack
+     * provided by the <code>bridge</code> mode.
      * </p>
      * <p>
      * With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped directly to
@@ -1243,20 +1153,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
-     * <note>
-     * <p>
-     * Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code> package, or
-     * AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     * </p>
-     * </note>
      * <p>
      * If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a single
      * container instance when port mappings are used.
-     * </p>
-     * <p>
-     * Docker for Windows uses different network modes than Docker for Linux. When you register a task definition with
-     * Windows containers, you must not specify a network mode. If you use the console to register a task definition
-     * with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -1269,11 +1168,12 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        default is <code>bridge</code>.</p>
      *        <p>
      *        For Amazon ECS tasks on Fargate, the <code>awsvpc</code> network mode is required. For Amazon ECS tasks on
-     *        Amazon EC2 instances, any network mode can be used. If the network mode is set to <code>none</code>, you
-     *        cannot specify port mappings in your container definitions, and the tasks containers do not have external
-     *        connectivity. The <code>host</code> and <code>awsvpc</code> network modes offer the highest networking
-     *        performance for containers because they use the EC2 network stack instead of the virtualized network stack
-     *        provided by the <code>bridge</code> mode.
+     *        Amazon EC2 Linux instances, any network mode can be used. For Amazon ECS tasks on Amazon EC2 Windows
+     *        instances, <code>&lt;default&gt;</code> or <code>awsvpc</code> can be used. If the network mode is set to
+     *        <code>none</code>, you cannot specify port mappings in your container definitions, and the tasks
+     *        containers do not have external connectivity. The <code>host</code> and <code>awsvpc</code> network modes
+     *        offer the highest networking performance for containers because they use the EC2 network stack instead of
+     *        the virtualized network stack provided by the <code>bridge</code> mode.
      *        </p>
      *        <p>
      *        With the <code>host</code> and <code>awsvpc</code> network modes, exposed container ports are mapped
@@ -1294,20 +1194,9 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task
      *        Networking</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      *        </p>
-     *        <note>
-     *        <p>
-     *        Currently, only Amazon ECS-optimized AMIs, other Amazon Linux variants with the <code>ecs-init</code>
-     *        package, or AWS Fargate infrastructure support the <code>awsvpc</code> network mode.
-     *        </p>
-     *        </note>
      *        <p>
      *        If the network mode is <code>host</code>, you cannot run multiple instantiations of the same task on a
      *        single container instance when port mappings are used.
-     *        </p>
-     *        <p>
-     *        Docker for Windows uses different network modes than Docker for Linux. When you register a task definition
-     *        with Windows containers, you must not specify a network mode. If you use the console to register a task
-     *        definition with Windows containers, you must choose the <code>&lt;default&gt;</code> network mode object.
      *        </p>
      *        <p>
      *        For more information, see <a href="https://docs.docker.com/engine/reference/run/#network-settings">Network
@@ -1387,7 +1276,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS Fargate.
+     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -1395,8 +1284,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html">Using data
      *         volumes in tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note>
      *         <p>
-     *         The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS
-     *         Fargate.
+     *         The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      *         </p>
      */
 
@@ -1415,7 +1303,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS Fargate.
+     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -1424,8 +1312,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html">Using data
      *        volumes in tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note>
      *        <p>
-     *        The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS
-     *        Fargate.
+     *        The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      *        </p>
      */
 
@@ -1446,7 +1333,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS Fargate.
+     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      * </p>
      * </note>
      * <p>
@@ -1460,8 +1347,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html">Using data
      *        volumes in tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note>
      *        <p>
-     *        The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS
-     *        Fargate.
+     *        The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1484,7 +1370,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS Fargate.
+     * The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -1493,8 +1379,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html">Using data
      *        volumes in tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note>
      *        <p>
-     *        The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on AWS
-     *        Fargate.
+     *        The <code>host</code> and <code>sourcePath</code> parameters are not supported for tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1589,7 +1474,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -1601,7 +1486,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *         "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html#attributes"
      *         >Attributes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note>
      *         <p>
-     *         This parameter is not supported for tasks run on AWS Fargate.
+     *         This parameter is not supported for tasks run on Fargate.
      *         </p>
      */
 
@@ -1624,7 +1509,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -1637,7 +1522,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html#attributes"
      *        >Attributes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note>
      *        <p>
-     *        This parameter is not supported for tasks run on AWS Fargate.
+     *        This parameter is not supported for tasks run on Fargate.
      *        </p>
      */
 
@@ -1662,7 +1547,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      * <p>
@@ -1680,7 +1565,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html#attributes"
      *        >Attributes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note>
      *        <p>
-     *        This parameter is not supported for tasks run on AWS Fargate.
+     *        This parameter is not supported for tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1707,7 +1592,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -1720,7 +1605,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html#attributes"
      *        >Attributes</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p> <note>
      *        <p>
-     *        This parameter is not supported for tasks run on AWS Fargate.
+     *        This parameter is not supported for tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1736,13 +1621,13 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
      * @return An array of placement constraint objects to use for tasks.</p> <note>
      *         <p>
-     *         This parameter is not supported for tasks run on AWS Fargate.
+     *         This parameter is not supported for tasks run on Fargate.
      *         </p>
      */
 
@@ -1759,14 +1644,14 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
      * @param placementConstraints
      *        An array of placement constraint objects to use for tasks.</p> <note>
      *        <p>
-     *        This parameter is not supported for tasks run on AWS Fargate.
+     *        This parameter is not supported for tasks run on Fargate.
      *        </p>
      */
 
@@ -1785,7 +1670,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      * <p>
@@ -1797,7 +1682,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * @param placementConstraints
      *        An array of placement constraint objects to use for tasks.</p> <note>
      *        <p>
-     *        This parameter is not supported for tasks run on AWS Fargate.
+     *        This parameter is not supported for tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1818,14 +1703,14 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for tasks run on AWS Fargate.
+     * This parameter is not supported for tasks run on Fargate.
      * </p>
      * </note>
      * 
      * @param placementConstraints
      *        An array of placement constraint objects to use for tasks.</p> <note>
      *        <p>
-     *        This parameter is not supported for tasks run on AWS Fargate.
+     *        This parameter is not supported for tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2321,8 +2206,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * >ContainerDefinition</a>.
      * </p>
      * <p>
-     * If your tasks will be run on AWS Fargate, this field is required and you must use one of the following values,
-     * which determines your range of valid values for the <code>cpu</code> parameter:
+     * If your tasks will be run on Fargate, this field is required and you must use one of the following values, which
+     * determines your range of valid values for the <code>cpu</code> parameter:
      * </p>
      * <ul>
      * <li>
@@ -2366,8 +2251,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        >ContainerDefinition</a>.
      *        </p>
      *        <p>
-     *        If your tasks will be run on AWS Fargate, this field is required and you must use one of the following
-     *        values, which determines your range of valid values for the <code>cpu</code> parameter:
+     *        If your tasks will be run on Fargate, this field is required and you must use one of the following values,
+     *        which determines your range of valid values for the <code>cpu</code> parameter:
      *        </p>
      *        <ul>
      *        <li>
@@ -2417,8 +2302,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * >ContainerDefinition</a>.
      * </p>
      * <p>
-     * If your tasks will be run on AWS Fargate, this field is required and you must use one of the following values,
-     * which determines your range of valid values for the <code>cpu</code> parameter:
+     * If your tasks will be run on Fargate, this field is required and you must use one of the following values, which
+     * determines your range of valid values for the <code>cpu</code> parameter:
      * </p>
      * <ul>
      * <li>
@@ -2461,7 +2346,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *         >ContainerDefinition</a>.
      *         </p>
      *         <p>
-     *         If your tasks will be run on AWS Fargate, this field is required and you must use one of the following
+     *         If your tasks will be run on Fargate, this field is required and you must use one of the following
      *         values, which determines your range of valid values for the <code>cpu</code> parameter:
      *         </p>
      *         <ul>
@@ -2512,8 +2397,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * >ContainerDefinition</a>.
      * </p>
      * <p>
-     * If your tasks will be run on AWS Fargate, this field is required and you must use one of the following values,
-     * which determines your range of valid values for the <code>cpu</code> parameter:
+     * If your tasks will be run on Fargate, this field is required and you must use one of the following values, which
+     * determines your range of valid values for the <code>cpu</code> parameter:
      * </p>
      * <ul>
      * <li>
@@ -2557,8 +2442,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        >ContainerDefinition</a>.
      *        </p>
      *        <p>
-     *        If your tasks will be run on AWS Fargate, this field is required and you must use one of the following
-     *        values, which determines your range of valid values for the <code>cpu</code> parameter:
+     *        If your tasks will be run on Fargate, this field is required and you must use one of the following values,
+     *        which determines your range of valid values for the <code>cpu</code> parameter:
      *        </p>
      *        <ul>
      *        <li>
@@ -2687,7 +2572,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -2706,7 +2591,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @see PidMode
      */
@@ -2732,7 +2617,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -2750,7 +2635,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <note>
      *         <p>
-     *         This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *         This parameter is not supported for Windows containers or tasks run on Fargate.
      *         </p>
      * @see PidMode
      */
@@ -2776,7 +2661,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -2795,7 +2680,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PidMode
@@ -2823,7 +2708,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -2842,7 +2727,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @see PidMode
      */
@@ -2868,7 +2753,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -2887,7 +2772,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PidMode
@@ -2937,7 +2822,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -2979,7 +2864,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @see IpcMode
      */
@@ -3027,7 +2912,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -3068,7 +2953,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *         </ul>
      *         <note>
      *         <p>
-     *         This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *         This parameter is not supported for Windows containers or tasks run on Fargate.
      *         </p>
      * @see IpcMode
      */
@@ -3116,7 +3001,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -3158,7 +3043,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpcMode
@@ -3208,7 +3093,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -3250,7 +3135,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @see IpcMode
      */
@@ -3298,7 +3183,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -3340,7 +3225,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpcMode

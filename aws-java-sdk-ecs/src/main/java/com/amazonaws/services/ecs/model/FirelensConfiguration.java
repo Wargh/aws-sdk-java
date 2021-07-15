@@ -50,7 +50,7 @@ public class FirelensConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Tasks hosted on AWS Fargate only support the <code>file</code> configuration file type.
+     * Tasks hosted on Fargate only support the <code>file</code> configuration file type.
      * </p>
      * </note>
      */
@@ -128,7 +128,7 @@ public class FirelensConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Tasks hosted on AWS Fargate only support the <code>file</code> configuration file type.
+     * Tasks hosted on Fargate only support the <code>file</code> configuration file type.
      * </p>
      * </note>
      * 
@@ -141,7 +141,7 @@ public class FirelensConfiguration implements Serializable, Cloneable, Structure
      *         >Creating a Task Definition that Uses a FireLens Configuration</a> in the <i>Amazon Elastic Container
      *         Service Developer Guide</i>.</p> <note>
      *         <p>
-     *         Tasks hosted on AWS Fargate only support the <code>file</code> configuration file type.
+     *         Tasks hosted on Fargate only support the <code>file</code> configuration file type.
      *         </p>
      */
 
@@ -162,7 +162,7 @@ public class FirelensConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Tasks hosted on AWS Fargate only support the <code>file</code> configuration file type.
+     * Tasks hosted on Fargate only support the <code>file</code> configuration file type.
      * </p>
      * </note>
      * 
@@ -176,7 +176,7 @@ public class FirelensConfiguration implements Serializable, Cloneable, Structure
      *        >Creating a Task Definition that Uses a FireLens Configuration</a> in the <i>Amazon Elastic Container
      *        Service Developer Guide</i>.</p> <note>
      *        <p>
-     *        Tasks hosted on AWS Fargate only support the <code>file</code> configuration file type.
+     *        Tasks hosted on Fargate only support the <code>file</code> configuration file type.
      *        </p>
      */
 
@@ -197,7 +197,7 @@ public class FirelensConfiguration implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * Tasks hosted on AWS Fargate only support the <code>file</code> configuration file type.
+     * Tasks hosted on Fargate only support the <code>file</code> configuration file type.
      * </p>
      * </note>
      * 
@@ -211,7 +211,7 @@ public class FirelensConfiguration implements Serializable, Cloneable, Structure
      *        >Creating a Task Definition that Uses a FireLens Configuration</a> in the <i>Amazon Elastic Container
      *        Service Developer Guide</i>.</p> <note>
      *        <p>
-     *        Tasks hosted on AWS Fargate only support the <code>file</code> configuration file type.
+     *        Tasks hosted on Fargate only support the <code>file</code> configuration file type.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

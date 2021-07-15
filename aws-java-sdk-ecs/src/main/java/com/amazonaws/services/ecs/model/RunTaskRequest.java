@@ -33,6 +33,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<CapacityProviderStrategyItem> capacityProviderStrategy;
     /**
@@ -78,14 +82,14 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -98,6 +102,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is specified,
      * the <code>capacityProviderStrategy</code> parameter must be omitted.
+     * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
      * </p>
      */
     private String launchType;
@@ -144,8 +152,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The platform version the task should run. A platform version is only specified for tasks using the Fargate launch
      * type. If one is not specified, the <code>LATEST</code> platform version is used by default. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     * Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
+     * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
     private String platformVersion;
@@ -226,8 +234,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -250,12 +258,20 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
      * 
      * @return The capacity provider strategy to use for the task.</p>
      *         <p>
      *         If a <code>capacityProviderStrategy</code> is specified, the <code>launchType</code> parameter must be
      *         omitted. If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      *         <code>defaultCapacityProviderStrategy</code> for the cluster is used.
+     *         </p>
+     *         <p>
+     *         When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     *         <code>launchType</code>.
      */
 
     public java.util.List<CapacityProviderStrategyItem> getCapacityProviderStrategy() {
@@ -274,6 +290,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
      * 
      * @param capacityProviderStrategy
      *        The capacity provider strategy to use for the task.</p>
@@ -281,6 +301,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        If a <code>capacityProviderStrategy</code> is specified, the <code>launchType</code> parameter must be
      *        omitted. If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      *        <code>defaultCapacityProviderStrategy</code> for the cluster is used.
+     *        </p>
+     *        <p>
+     *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     *        <code>launchType</code>.
      */
 
     public void setCapacityProviderStrategy(java.util.Collection<CapacityProviderStrategyItem> capacityProviderStrategy) {
@@ -302,6 +326,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
      * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCapacityProviderStrategy(java.util.Collection)} or
      * {@link #withCapacityProviderStrategy(java.util.Collection)} if you want to override the existing values.
@@ -313,6 +341,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        If a <code>capacityProviderStrategy</code> is specified, the <code>launchType</code> parameter must be
      *        omitted. If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      *        <code>defaultCapacityProviderStrategy</code> for the cluster is used.
+     *        </p>
+     *        <p>
+     *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     *        <code>launchType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -335,6 +367,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      * <code>defaultCapacityProviderStrategy</code> for the cluster is used.
      * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
      * 
      * @param capacityProviderStrategy
      *        The capacity provider strategy to use for the task.</p>
@@ -342,6 +378,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        If a <code>capacityProviderStrategy</code> is specified, the <code>launchType</code> parameter must be
      *        omitted. If no <code>capacityProviderStrategy</code> or <code>launchType</code> is specified, the
      *        <code>defaultCapacityProviderStrategy</code> for the cluster is used.
+     *        </p>
+     *        <p>
+     *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     *        <code>launchType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -623,14 +663,14 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -644,20 +684,24 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is specified,
      * the <code>capacityProviderStrategy</code> parameter must be omitted.
      * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
      * 
      * @param launchType
      *        The infrastructure on which to run your standalone task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *        <p>
-     *        The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     *        The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      *        </p>
      *        <note>
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -670,6 +714,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is
      *        specified, the <code>capacityProviderStrategy</code> parameter must be omitted.
+     *        </p>
+     *        <p>
+     *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     *        <code>launchType</code>.
      * @see LaunchType
      */
 
@@ -684,14 +732,14 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -705,19 +753,23 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is specified,
      * the <code>capacityProviderStrategy</code> parameter must be omitted.
      * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
      * 
      * @return The infrastructure on which to run your standalone task. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *         types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *         <p>
-     *         The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     *         The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      *         </p>
      *         <note>
      *         <p>
      *         Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     *         capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *         capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *         </p>
      *         </note>
      *         <p>
@@ -730,6 +782,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *         <p>
      *         A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is
      *         specified, the <code>capacityProviderStrategy</code> parameter must be omitted.
+     *         </p>
+     *         <p>
+     *         When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     *         <code>launchType</code>.
      * @see LaunchType
      */
 
@@ -744,14 +800,14 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -765,20 +821,24 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is specified,
      * the <code>capacityProviderStrategy</code> parameter must be omitted.
      * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
      * 
      * @param launchType
      *        The infrastructure on which to run your standalone task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *        <p>
-     *        The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     *        The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      *        </p>
      *        <note>
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -791,6 +851,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is
      *        specified, the <code>capacityProviderStrategy</code> parameter must be omitted.
+     *        </p>
+     *        <p>
+     *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     *        <code>launchType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LaunchType
      */
@@ -807,14 +871,14 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -828,20 +892,24 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is specified,
      * the <code>capacityProviderStrategy</code> parameter must be omitted.
      * </p>
+     * <p>
+     * When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     * <code>launchType</code>.
+     * </p>
      * 
      * @param launchType
      *        The infrastructure on which to run your standalone task. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *        <p>
-     *        The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     *        The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      *        </p>
      *        <note>
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -854,6 +922,10 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <p>
      *        A task can use either a launch type or a capacity provider strategy. If a <code>launchType</code> is
      *        specified, the <code>capacityProviderStrategy</code> parameter must be omitted.
+     *        </p>
+     *        <p>
+     *        When you use cluster auto scaling, you must specify <code>capacityProviderStrategy</code> and not
+     *        <code>launchType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LaunchType
      */
@@ -1184,16 +1256,16 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The platform version the task should run. A platform version is only specified for tasks using the Fargate launch
      * type. If one is not specified, the <code>LATEST</code> platform version is used by default. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     * Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
+     * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param platformVersion
      *        The platform version the task should run. A platform version is only specified for tasks using the Fargate
      *        launch type. If one is not specified, the <code>LATEST</code> platform version is used by default. For
      *        more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     *        Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
+     *        Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public void setPlatformVersion(String platformVersion) {
@@ -1204,14 +1276,14 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The platform version the task should run. A platform version is only specified for tasks using the Fargate launch
      * type. If one is not specified, the <code>LATEST</code> platform version is used by default. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     * Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
+     * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @return The platform version the task should run. A platform version is only specified for tasks using the
      *         Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by
      *         default. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate
      *         Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
@@ -1223,16 +1295,16 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The platform version the task should run. A platform version is only specified for tasks using the Fargate launch
      * type. If one is not specified, the <code>LATEST</code> platform version is used by default. For more information,
-     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     * Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
+     * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @param platformVersion
      *        The platform version the task should run. A platform version is only specified for tasks using the Fargate
      *        launch type. If one is not specified, the <code>LATEST</code> platform version is used by default. For
      *        more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     *        Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
+     *        Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1517,8 +1589,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1564,8 +1636,9 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *         <li>
      *         <p>
      *         Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a
-     *         prefix for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or
-     *         values with this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *         prefix for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete
+     *         tag keys or values with this prefix. Tags with this prefix do not count against your tags per resource
+     *         limit.
      *         </p>
      *         </li>
      */
@@ -1621,8 +1694,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1669,8 +1742,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      */
@@ -1728,8 +1801,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1781,8 +1854,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1842,8 +1915,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1890,8 +1963,8 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

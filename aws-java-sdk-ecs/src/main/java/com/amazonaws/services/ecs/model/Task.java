@@ -256,7 +256,7 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * The platform version on which your task is running. A platform version is only specified for tasks using the
      * Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by default. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate Platform
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
      * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
@@ -357,8 +357,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2052,7 +2052,7 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * The platform version on which your task is running. A platform version is only specified for tasks using the
      * Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by default. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate Platform
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
      * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
@@ -2060,8 +2060,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        The platform version on which your task is running. A platform version is only specified for tasks using
      *        the Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by
      *        default. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     *        Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
+     *        Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public void setPlatformVersion(String platformVersion) {
@@ -2073,14 +2073,14 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * The platform version on which your task is running. A platform version is only specified for tasks using the
      * Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by default. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate Platform
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
      * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @return The platform version on which your task is running. A platform version is only specified for tasks using
      *         the Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by
      *         default. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate
      *         Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
@@ -2093,7 +2093,7 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * The platform version on which your task is running. A platform version is only specified for tasks using the
      * Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by default. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate Platform
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
      * Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
@@ -2101,8 +2101,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        The platform version on which your task is running. A platform version is only specified for tasks using
      *        the Fargate launch type. If one is not specified, the <code>LATEST</code> platform version is used by
      *        default. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     *        Platform Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate Platform
+     *        Versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2522,8 +2522,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2569,8 +2569,9 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a
-     *         prefix for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or
-     *         values with this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *         prefix for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete
+     *         tag keys or values with this prefix. Tags with this prefix do not count against your tags per resource
+     *         limit.
      *         </p>
      *         </li>
      */
@@ -2626,8 +2627,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2674,8 +2675,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      */
@@ -2733,8 +2734,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2786,8 +2787,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2847,8 +2848,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2895,8 +2896,8 @@ public class Task implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

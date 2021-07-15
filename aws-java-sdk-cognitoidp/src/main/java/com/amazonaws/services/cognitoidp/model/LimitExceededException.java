@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when a user exceeds the limit for a requested AWS resource.
+ * This exception is thrown when a user exceeds the limit for a requested Amazon Web Services resource.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

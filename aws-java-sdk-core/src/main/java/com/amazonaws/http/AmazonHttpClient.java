@@ -77,6 +77,7 @@ import com.amazonaws.internal.CRC32MismatchException;
 import com.amazonaws.internal.ReleasableInputStream;
 import com.amazonaws.internal.ResettableInputStream;
 import com.amazonaws.internal.SdkBufferedInputStream;
+import com.amazonaws.internal.TokenBucket;
 import com.amazonaws.internal.auth.SignerProviderContext;
 import com.amazonaws.metrics.AwsSdkMetrics;
 import com.amazonaws.metrics.RequestMetricCollector;
@@ -228,6 +229,11 @@ public class AmazonHttpClient {
     private final CapacityManager retryCapacity;
 
     /**
+     * Token bucket used for rate limiting when {@link RetryMode#ADAPTIVE} retry mode is enabled.
+     */
+    private TokenBucket tokenBucket;
+
+    /**
      * Timer to enforce timeouts on the whole execution of the request (request handlers, retries,
      * backoff strategy, unmarshalling, etc)
      */
@@ -345,12 +351,14 @@ public class AmazonHttpClient {
     @SdkTestInternalApi
     public AmazonHttpClient(ClientConfiguration clientConfig,
                             ConnectionManagerAwareHttpClient httpClient,
-                            RequestMetricCollector requestMetricCollector) {
+                            RequestMetricCollector requestMetricCollector,
+                            TokenBucket tokenBucket) {
         this(clientConfig,
              null,
              requestMetricCollector,
              HttpClientSettings.adapt(clientConfig, false));
         this.httpClient = httpClient;
+        this.tokenBucket = tokenBucket;
     }
 
     private AmazonHttpClient(ClientConfiguration clientConfig,
@@ -376,6 +384,7 @@ public class AmazonHttpClient {
         int throttledRetryMaxCapacity = clientConfig.useThrottledRetries()
                 ? THROTTLED_RETRY_COST * config.getMaxConsecutiveRetriesBeforeThrottling() : -1;
         this.retryCapacity = new CapacityManager(throttledRetryMaxCapacity);
+        this.tokenBucket = new TokenBucket();
         this.sdkRequestHeaderProvider = new SdkRequestRetryHeaderProvider(config, this.retryPolicy, clockSkewAdjuster);
     }
 
@@ -1278,9 +1287,12 @@ public class AmazonHttpClient {
             final AWSCredentials credentials = getCredentialsFromContext();
             final ProgressListener listener = requestConfig.getProgressListener();
 
+            getSendToken();
+
             if (execOneParams.isRetry()) {
                 pauseBeforeRetry(execOneParams, listener);
             }
+
             updateRetryHeaderInfo(request, execOneParams);
             sdkRequestHeaderProvider.addSdkRequestRetryHeader(request, execOneParams.requestCount);
 
@@ -1415,6 +1427,14 @@ public class AmazonHttpClient {
                 SDKGlobalTime.setGlobalTimeOffset(timeOffset);
             }
 
+            // In an error case, we only want to update the sending rate if we
+            // got a throttling exception.
+            //
+            // The success case (throttlingResponse = false) is handled in
+            // handleSuccessResponse, and transient errors don't have an effect.
+            if (RetryUtils.isThrottlingException(exception)) {
+                tokenBucket.updateClientSendingRate(true);
+            }
 
             // Check whether we should internally retry the auth error
             execOneParams.authRetryParam = null;
@@ -1463,6 +1483,9 @@ public class AmazonHttpClient {
             } else {
                 retryCapacity.release();
             }
+
+            tokenBucket.updateClientSendingRate(false);
+
             return new Response<Output>(response, httpResponse);
         }
 
@@ -1632,6 +1655,25 @@ public class AmazonHttpClient {
         }
 
         /**
+         * If ADAPTIVE retry mode is enabled, this attempts to acquire a token from the bucket.
+         * <p>
+         * For other modes, this is a noop.
+         */
+        private void getSendToken() {
+            if (retryMode != RetryMode.ADAPTIVE) {
+                return;
+            }
+
+            if (!tokenBucket.acquire(1, fastFailRateLimiting())) {
+                throw new SdkClientException("Unable to acquire enough send tokens to execute request.");
+            }
+        }
+
+        private boolean fastFailRateLimiting() {
+            return config.getRetryPolicy().isFastFailRateLimiting();
+        }
+
+        /**
          * Attempts to acquire retry capacity.
          *
          * @return true if retry capacity can be acquired, false otherwise.
@@ -1640,6 +1682,7 @@ public class AmazonHttpClient {
             switch (retryMode) {
                 case LEGACY:
                     return legacyAcquireRetryCapacity(context, params);
+                case ADAPTIVE:
                 case STANDARD:
                     return standardAcquireRetryCapacity(context, params);
                 default:

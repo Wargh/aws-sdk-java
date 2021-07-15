@@ -30,7 +30,7 @@ public class CustomDomainConfigType implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate. You use this certificate for the
+     * The Amazon Resource Name (ARN) of an Certificate Manager SSL certificate. You use this certificate for the
      * subdomain of your custom domain.
      * </p>
      */
@@ -38,13 +38,13 @@ public class CustomDomainConfigType implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate. You use this certificate for the
+     * The Amazon Resource Name (ARN) of an Certificate Manager SSL certificate. You use this certificate for the
      * subdomain of your custom domain.
      * </p>
      * 
      * @param certificateArn
-     *        The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate. You use this certificate for
-     *        the subdomain of your custom domain.
+     *        The Amazon Resource Name (ARN) of an Certificate Manager SSL certificate. You use this certificate for the
+     *        subdomain of your custom domain.
      */
 
     public void setCertificateArn(String certificateArn) {
@@ -53,12 +53,12 @@ public class CustomDomainConfigType implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate. You use this certificate for the
+     * The Amazon Resource Name (ARN) of an Certificate Manager SSL certificate. You use this certificate for the
      * subdomain of your custom domain.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate. You use this certificate
-     *         for the subdomain of your custom domain.
+     * @return The Amazon Resource Name (ARN) of an Certificate Manager SSL certificate. You use this certificate for
+     *         the subdomain of your custom domain.
      */
 
     public String getCertificateArn() {
@@ -67,13 +67,13 @@ public class CustomDomainConfigType implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate. You use this certificate for the
+     * The Amazon Resource Name (ARN) of an Certificate Manager SSL certificate. You use this certificate for the
      * subdomain of your custom domain.
      * </p>
      * 
      * @param certificateArn
-     *        The Amazon Resource Name (ARN) of an AWS Certificate Manager SSL certificate. You use this certificate for
-     *        the subdomain of your custom domain.
+     *        The Amazon Resource Name (ARN) of an Certificate Manager SSL certificate. You use this certificate for the
+     *        subdomain of your custom domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

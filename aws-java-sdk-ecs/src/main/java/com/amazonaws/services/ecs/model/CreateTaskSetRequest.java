@@ -41,7 +41,7 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with
-     * a service discovery registry, the tasks in this task set will have the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS
+     * a service discovery registry, the tasks in this task set will have the <code>ECS_TASK_SET_EXTERNAL_ID</code>
      * Cloud Map attribute set to the provided value.
      * </p>
      */
@@ -103,9 +103,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -178,8 +178,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -275,14 +275,14 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with
-     * a service discovery registry, the tasks in this task set will have the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS
+     * a service discovery registry, the tasks in this task set will have the <code>ECS_TASK_SET_EXTERNAL_ID</code>
      * Cloud Map attribute set to the provided value.
      * </p>
      * 
      * @param externalId
      *        An optional non-unique tag that identifies this task set in external systems. If the task set is
      *        associated with a service discovery registry, the tasks in this task set will have the
-     *        <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map attribute set to the provided value.
+     *        <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map attribute set to the provided value.
      */
 
     public void setExternalId(String externalId) {
@@ -292,13 +292,13 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with
-     * a service discovery registry, the tasks in this task set will have the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS
+     * a service discovery registry, the tasks in this task set will have the <code>ECS_TASK_SET_EXTERNAL_ID</code>
      * Cloud Map attribute set to the provided value.
      * </p>
      * 
      * @return An optional non-unique tag that identifies this task set in external systems. If the task set is
      *         associated with a service discovery registry, the tasks in this task set will have the
-     *         <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map attribute set to the provided value.
+     *         <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map attribute set to the provided value.
      */
 
     public String getExternalId() {
@@ -308,14 +308,14 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with
-     * a service discovery registry, the tasks in this task set will have the <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS
+     * a service discovery registry, the tasks in this task set will have the <code>ECS_TASK_SET_EXTERNAL_ID</code>
      * Cloud Map attribute set to the provided value.
      * </p>
      * 
      * @param externalId
      *        An optional non-unique tag that identifies this task set in external systems. If the task set is
      *        associated with a service discovery registry, the tasks in this task set will have the
-     *        <code>ECS_TASK_SET_EXTERNAL_ID</code> AWS Cloud Map attribute set to the provided value.
+     *        <code>ECS_TASK_SET_EXTERNAL_ID</code> Cloud Map attribute set to the provided value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -689,9 +689,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -716,9 +716,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *         </p>
      *         <p>
-     *         To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *         <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *         accounts and only need to be associated with a cluster to be used.
+     *         To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *         capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *         associated with a cluster to be used.
      *         </p>
      *         <p>
      *         The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity
@@ -752,9 +752,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -780,9 +780,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      *        </p>
      *        <p>
      *        The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity
@@ -818,9 +818,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -851,9 +851,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      *        </p>
      *        <p>
      *        The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity
@@ -891,9 +891,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -919,9 +919,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      *        </p>
      *        <p>
      *        The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity
@@ -1116,8 +1116,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1164,8 +1164,9 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <li>
      *         <p>
      *         Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a
-     *         prefix for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or
-     *         values with this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *         prefix for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete
+     *         tag keys or values with this prefix. Tags with this prefix do not count against your tags per resource
+     *         limit.
      *         </p>
      *         </li>
      */
@@ -1221,8 +1222,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1270,8 +1271,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      */
@@ -1329,8 +1330,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1383,8 +1384,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1444,8 +1445,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1493,8 +1494,8 @@ public class CreateTaskSetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

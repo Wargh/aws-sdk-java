@@ -36,7 +36,7 @@ public class DomainDescriptionType implements Serializable, Cloneable, Structure
     private String userPoolId;
     /**
      * <p>
-     * The AWS account ID for the user pool owner.
+     * The account ID for the user pool owner.
      * </p>
      */
     private String aWSAccountId;
@@ -119,11 +119,11 @@ public class DomainDescriptionType implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account ID for the user pool owner.
+     * The account ID for the user pool owner.
      * </p>
      * 
      * @param aWSAccountId
-     *        The AWS account ID for the user pool owner.
+     *        The account ID for the user pool owner.
      */
 
     public void setAWSAccountId(String aWSAccountId) {
@@ -132,10 +132,10 @@ public class DomainDescriptionType implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account ID for the user pool owner.
+     * The account ID for the user pool owner.
      * </p>
      * 
-     * @return The AWS account ID for the user pool owner.
+     * @return The account ID for the user pool owner.
      */
 
     public String getAWSAccountId() {
@@ -144,11 +144,11 @@ public class DomainDescriptionType implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The AWS account ID for the user pool owner.
+     * The account ID for the user pool owner.
      * </p>
      * 
      * @param aWSAccountId
-     *        The AWS account ID for the user pool owner.
+     *        The account ID for the user pool owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

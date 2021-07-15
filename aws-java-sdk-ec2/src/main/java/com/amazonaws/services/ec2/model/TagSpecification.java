@@ -34,17 +34,18 @@ public class TagSpecification implements Serializable, Cloneable {
      * <code>egress-only-internet-gateway</code> | <code>elastic-ip</code> | <code>elastic-gpu</code> |
      * <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> | <code>fpga-image</code>
      * | <code>host-reservation</code> | <code>image</code>| <code>import-image-task</code> |
-     * <code>import-snapshot-task</code> | <code>instance</code> | <code>internet-gateway</code> |
-     * <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
-     * <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> | <code>prefix-list</code>
-     * | <code>natgateway</code> | <code>network-acl</code> | <code>network-interface</code> |
-     * <code>reserved-instances</code> |<code>route-table</code> | <code>security-group</code>| <code>snapshot</code> |
-     * <code>spot-fleet-request</code> | <code>spot-instances-request</code> | <code>snapshot</code> |
-     * <code>subnet</code> | <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> |
-     * <code>traffic-mirror-target</code> | <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
+     * <code>import-snapshot-task</code> | <code>instance</code> | <code>instance-event-window</code> |
+     * <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> |
+     * <code>launch-template</code> | <code>local-gateway-route-table-vpc-association</code> |
+     * <code>placement-group</code> | <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
+     * <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
+     * <code>security-group</code>| <code>snapshot</code> | <code>spot-fleet-request</code> |
+     * <code>spot-instances-request</code> | <code>snapshot</code> | <code>subnet</code> |
+     * <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> | <code>traffic-mirror-target</code> |
+     * <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
      * <code>transit-gateway-multicast-domain</code> | <code>transit-gateway-route-table</code> | <code>volume</code> |
      * <code>vpc</code> | <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway
-     * endpoints) | <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     * endpoints) | <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      * <code>vpn-connection</code> | <code>vpn-gateway</code>.
      * </p>
      * <p>
@@ -68,17 +69,18 @@ public class TagSpecification implements Serializable, Cloneable {
      * <code>egress-only-internet-gateway</code> | <code>elastic-ip</code> | <code>elastic-gpu</code> |
      * <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> | <code>fpga-image</code>
      * | <code>host-reservation</code> | <code>image</code>| <code>import-image-task</code> |
-     * <code>import-snapshot-task</code> | <code>instance</code> | <code>internet-gateway</code> |
-     * <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
-     * <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> | <code>prefix-list</code>
-     * | <code>natgateway</code> | <code>network-acl</code> | <code>network-interface</code> |
-     * <code>reserved-instances</code> |<code>route-table</code> | <code>security-group</code>| <code>snapshot</code> |
-     * <code>spot-fleet-request</code> | <code>spot-instances-request</code> | <code>snapshot</code> |
-     * <code>subnet</code> | <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> |
-     * <code>traffic-mirror-target</code> | <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
+     * <code>import-snapshot-task</code> | <code>instance</code> | <code>instance-event-window</code> |
+     * <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> |
+     * <code>launch-template</code> | <code>local-gateway-route-table-vpc-association</code> |
+     * <code>placement-group</code> | <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
+     * <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
+     * <code>security-group</code>| <code>snapshot</code> | <code>spot-fleet-request</code> |
+     * <code>spot-instances-request</code> | <code>snapshot</code> | <code>subnet</code> |
+     * <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> | <code>traffic-mirror-target</code> |
+     * <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
      * <code>transit-gateway-multicast-domain</code> | <code>transit-gateway-route-table</code> | <code>volume</code> |
      * <code>vpc</code> | <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway
-     * endpoints) | <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     * endpoints) | <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      * <code>vpn-connection</code> | <code>vpn-gateway</code>.
      * </p>
      * <p>
@@ -94,8 +96,8 @@ public class TagSpecification implements Serializable, Cloneable {
      *        <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> |
      *        <code>fpga-image</code> | <code>host-reservation</code> | <code>image</code>|
      *        <code>import-image-task</code> | <code>import-snapshot-task</code> | <code>instance</code> |
-     *        <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> |
-     *        <code>key-pair</code> | <code>launch-template</code> |
+     *        <code>instance-event-window</code> | <code>internet-gateway</code> | <code>ipv4pool-ec2</code> |
+     *        <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
      *        <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> |
      *        <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
      *        <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
@@ -106,7 +108,7 @@ public class TagSpecification implements Serializable, Cloneable {
      *        <code>transit-gateway-attachment</code> | <code>transit-gateway-multicast-domain</code> |
      *        <code>transit-gateway-route-table</code> | <code>volume</code> |<code>vpc</code> |
      *        <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway endpoints) |
-     *        <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     *        <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      *        <code>vpn-connection</code> | <code>vpn-gateway</code>.</p>
      *        <p>
      *        To tag a resource after it has been created, see <a
@@ -126,17 +128,18 @@ public class TagSpecification implements Serializable, Cloneable {
      * <code>egress-only-internet-gateway</code> | <code>elastic-ip</code> | <code>elastic-gpu</code> |
      * <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> | <code>fpga-image</code>
      * | <code>host-reservation</code> | <code>image</code>| <code>import-image-task</code> |
-     * <code>import-snapshot-task</code> | <code>instance</code> | <code>internet-gateway</code> |
-     * <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
-     * <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> | <code>prefix-list</code>
-     * | <code>natgateway</code> | <code>network-acl</code> | <code>network-interface</code> |
-     * <code>reserved-instances</code> |<code>route-table</code> | <code>security-group</code>| <code>snapshot</code> |
-     * <code>spot-fleet-request</code> | <code>spot-instances-request</code> | <code>snapshot</code> |
-     * <code>subnet</code> | <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> |
-     * <code>traffic-mirror-target</code> | <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
+     * <code>import-snapshot-task</code> | <code>instance</code> | <code>instance-event-window</code> |
+     * <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> |
+     * <code>launch-template</code> | <code>local-gateway-route-table-vpc-association</code> |
+     * <code>placement-group</code> | <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
+     * <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
+     * <code>security-group</code>| <code>snapshot</code> | <code>spot-fleet-request</code> |
+     * <code>spot-instances-request</code> | <code>snapshot</code> | <code>subnet</code> |
+     * <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> | <code>traffic-mirror-target</code> |
+     * <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
      * <code>transit-gateway-multicast-domain</code> | <code>transit-gateway-route-table</code> | <code>volume</code> |
      * <code>vpc</code> | <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway
-     * endpoints) | <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     * endpoints) | <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      * <code>vpn-connection</code> | <code>vpn-gateway</code>.
      * </p>
      * <p>
@@ -151,8 +154,8 @@ public class TagSpecification implements Serializable, Cloneable {
      *         <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> |
      *         <code>fpga-image</code> | <code>host-reservation</code> | <code>image</code>|
      *         <code>import-image-task</code> | <code>import-snapshot-task</code> | <code>instance</code> |
-     *         <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> |
-     *         <code>key-pair</code> | <code>launch-template</code> |
+     *         <code>instance-event-window</code> | <code>internet-gateway</code> | <code>ipv4pool-ec2</code> |
+     *         <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
      *         <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> |
      *         <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
      *         <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
@@ -163,7 +166,7 @@ public class TagSpecification implements Serializable, Cloneable {
      *         <code>transit-gateway-attachment</code> | <code>transit-gateway-multicast-domain</code> |
      *         <code>transit-gateway-route-table</code> | <code>volume</code> |<code>vpc</code> |
      *         <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway endpoints) |
-     *         <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     *         <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      *         <code>vpn-connection</code> | <code>vpn-gateway</code>.</p>
      *         <p>
      *         To tag a resource after it has been created, see <a
@@ -183,17 +186,18 @@ public class TagSpecification implements Serializable, Cloneable {
      * <code>egress-only-internet-gateway</code> | <code>elastic-ip</code> | <code>elastic-gpu</code> |
      * <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> | <code>fpga-image</code>
      * | <code>host-reservation</code> | <code>image</code>| <code>import-image-task</code> |
-     * <code>import-snapshot-task</code> | <code>instance</code> | <code>internet-gateway</code> |
-     * <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
-     * <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> | <code>prefix-list</code>
-     * | <code>natgateway</code> | <code>network-acl</code> | <code>network-interface</code> |
-     * <code>reserved-instances</code> |<code>route-table</code> | <code>security-group</code>| <code>snapshot</code> |
-     * <code>spot-fleet-request</code> | <code>spot-instances-request</code> | <code>snapshot</code> |
-     * <code>subnet</code> | <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> |
-     * <code>traffic-mirror-target</code> | <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
+     * <code>import-snapshot-task</code> | <code>instance</code> | <code>instance-event-window</code> |
+     * <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> |
+     * <code>launch-template</code> | <code>local-gateway-route-table-vpc-association</code> |
+     * <code>placement-group</code> | <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
+     * <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
+     * <code>security-group</code>| <code>snapshot</code> | <code>spot-fleet-request</code> |
+     * <code>spot-instances-request</code> | <code>snapshot</code> | <code>subnet</code> |
+     * <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> | <code>traffic-mirror-target</code> |
+     * <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
      * <code>transit-gateway-multicast-domain</code> | <code>transit-gateway-route-table</code> | <code>volume</code> |
      * <code>vpc</code> | <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway
-     * endpoints) | <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     * endpoints) | <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      * <code>vpn-connection</code> | <code>vpn-gateway</code>.
      * </p>
      * <p>
@@ -209,8 +213,8 @@ public class TagSpecification implements Serializable, Cloneable {
      *        <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> |
      *        <code>fpga-image</code> | <code>host-reservation</code> | <code>image</code>|
      *        <code>import-image-task</code> | <code>import-snapshot-task</code> | <code>instance</code> |
-     *        <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> |
-     *        <code>key-pair</code> | <code>launch-template</code> |
+     *        <code>instance-event-window</code> | <code>internet-gateway</code> | <code>ipv4pool-ec2</code> |
+     *        <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
      *        <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> |
      *        <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
      *        <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
@@ -221,7 +225,7 @@ public class TagSpecification implements Serializable, Cloneable {
      *        <code>transit-gateway-attachment</code> | <code>transit-gateway-multicast-domain</code> |
      *        <code>transit-gateway-route-table</code> | <code>volume</code> |<code>vpc</code> |
      *        <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway endpoints) |
-     *        <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     *        <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      *        <code>vpn-connection</code> | <code>vpn-gateway</code>.</p>
      *        <p>
      *        To tag a resource after it has been created, see <a
@@ -243,17 +247,18 @@ public class TagSpecification implements Serializable, Cloneable {
      * <code>egress-only-internet-gateway</code> | <code>elastic-ip</code> | <code>elastic-gpu</code> |
      * <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> | <code>fpga-image</code>
      * | <code>host-reservation</code> | <code>image</code>| <code>import-image-task</code> |
-     * <code>import-snapshot-task</code> | <code>instance</code> | <code>internet-gateway</code> |
-     * <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
-     * <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> | <code>prefix-list</code>
-     * | <code>natgateway</code> | <code>network-acl</code> | <code>network-interface</code> |
-     * <code>reserved-instances</code> |<code>route-table</code> | <code>security-group</code>| <code>snapshot</code> |
-     * <code>spot-fleet-request</code> | <code>spot-instances-request</code> | <code>snapshot</code> |
-     * <code>subnet</code> | <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> |
-     * <code>traffic-mirror-target</code> | <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
+     * <code>import-snapshot-task</code> | <code>instance</code> | <code>instance-event-window</code> |
+     * <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> |
+     * <code>launch-template</code> | <code>local-gateway-route-table-vpc-association</code> |
+     * <code>placement-group</code> | <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
+     * <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
+     * <code>security-group</code>| <code>snapshot</code> | <code>spot-fleet-request</code> |
+     * <code>spot-instances-request</code> | <code>snapshot</code> | <code>subnet</code> |
+     * <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> | <code>traffic-mirror-target</code> |
+     * <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
      * <code>transit-gateway-multicast-domain</code> | <code>transit-gateway-route-table</code> | <code>volume</code> |
      * <code>vpc</code> | <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway
-     * endpoints) | <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     * endpoints) | <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      * <code>vpn-connection</code> | <code>vpn-gateway</code>.
      * </p>
      * <p>
@@ -269,8 +274,8 @@ public class TagSpecification implements Serializable, Cloneable {
      *        <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> |
      *        <code>fpga-image</code> | <code>host-reservation</code> | <code>image</code>|
      *        <code>import-image-task</code> | <code>import-snapshot-task</code> | <code>instance</code> |
-     *        <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> |
-     *        <code>key-pair</code> | <code>launch-template</code> |
+     *        <code>instance-event-window</code> | <code>internet-gateway</code> | <code>ipv4pool-ec2</code> |
+     *        <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
      *        <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> |
      *        <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
      *        <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
@@ -281,7 +286,7 @@ public class TagSpecification implements Serializable, Cloneable {
      *        <code>transit-gateway-attachment</code> | <code>transit-gateway-multicast-domain</code> |
      *        <code>transit-gateway-route-table</code> | <code>volume</code> |<code>vpc</code> |
      *        <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway endpoints) |
-     *        <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     *        <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      *        <code>vpn-connection</code> | <code>vpn-gateway</code>.</p>
      *        <p>
      *        To tag a resource after it has been created, see <a
@@ -301,17 +306,18 @@ public class TagSpecification implements Serializable, Cloneable {
      * <code>egress-only-internet-gateway</code> | <code>elastic-ip</code> | <code>elastic-gpu</code> |
      * <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> | <code>fpga-image</code>
      * | <code>host-reservation</code> | <code>image</code>| <code>import-image-task</code> |
-     * <code>import-snapshot-task</code> | <code>instance</code> | <code>internet-gateway</code> |
-     * <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
-     * <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> | <code>prefix-list</code>
-     * | <code>natgateway</code> | <code>network-acl</code> | <code>network-interface</code> |
-     * <code>reserved-instances</code> |<code>route-table</code> | <code>security-group</code>| <code>snapshot</code> |
-     * <code>spot-fleet-request</code> | <code>spot-instances-request</code> | <code>snapshot</code> |
-     * <code>subnet</code> | <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> |
-     * <code>traffic-mirror-target</code> | <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
+     * <code>import-snapshot-task</code> | <code>instance</code> | <code>instance-event-window</code> |
+     * <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> | <code>key-pair</code> |
+     * <code>launch-template</code> | <code>local-gateway-route-table-vpc-association</code> |
+     * <code>placement-group</code> | <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
+     * <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
+     * <code>security-group</code>| <code>snapshot</code> | <code>spot-fleet-request</code> |
+     * <code>spot-instances-request</code> | <code>snapshot</code> | <code>subnet</code> |
+     * <code>traffic-mirror-filter</code> | <code>traffic-mirror-session</code> | <code>traffic-mirror-target</code> |
+     * <code>transit-gateway</code> | <code>transit-gateway-attachment</code> |
      * <code>transit-gateway-multicast-domain</code> | <code>transit-gateway-route-table</code> | <code>volume</code> |
      * <code>vpc</code> | <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway
-     * endpoints) | <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     * endpoints) | <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      * <code>vpn-connection</code> | <code>vpn-gateway</code>.
      * </p>
      * <p>
@@ -327,8 +333,8 @@ public class TagSpecification implements Serializable, Cloneable {
      *        <code>export-image-task</code> | <code>export-instance-task</code> | <code>fleet</code> |
      *        <code>fpga-image</code> | <code>host-reservation</code> | <code>image</code>|
      *        <code>import-image-task</code> | <code>import-snapshot-task</code> | <code>instance</code> |
-     *        <code>internet-gateway</code> | <code>ipv4pool-ec2</code> | <code>ipv6pool-ec2</code> |
-     *        <code>key-pair</code> | <code>launch-template</code> |
+     *        <code>instance-event-window</code> | <code>internet-gateway</code> | <code>ipv4pool-ec2</code> |
+     *        <code>ipv6pool-ec2</code> | <code>key-pair</code> | <code>launch-template</code> |
      *        <code>local-gateway-route-table-vpc-association</code> | <code>placement-group</code> |
      *        <code>prefix-list</code> | <code>natgateway</code> | <code>network-acl</code> |
      *        <code>network-interface</code> | <code>reserved-instances</code> |<code>route-table</code> |
@@ -339,7 +345,7 @@ public class TagSpecification implements Serializable, Cloneable {
      *        <code>transit-gateway-attachment</code> | <code>transit-gateway-multicast-domain</code> |
      *        <code>transit-gateway-route-table</code> | <code>volume</code> |<code>vpc</code> |
      *        <code> vpc-peering-connection</code> | <code>vpc-endpoint</code> (for interface and gateway endpoints) |
-     *        <code>vpc-endpoint-service</code> (for AWS PrivateLink) | <code>vpc-flow-log</code> |
+     *        <code>vpc-endpoint-service</code> (for PrivateLink) | <code>vpc-flow-log</code> |
      *        <code>vpn-connection</code> | <code>vpn-gateway</code>.</p>
      *        <p>
      *        To tag a resource after it has been created, see <a

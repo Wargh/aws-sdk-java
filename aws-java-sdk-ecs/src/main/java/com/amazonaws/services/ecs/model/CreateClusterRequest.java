@@ -76,8 +76,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -109,9 +109,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -225,8 +225,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -272,8 +272,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <li>
      *         <p>
      *         Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a
-     *         prefix for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or
-     *         values with this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *         prefix for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete
+     *         tag keys or values with this prefix. Tags with this prefix do not count against your tags per resource
+     *         limit.
      *         </p>
      *         </li>
      */
@@ -329,8 +330,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -377,8 +378,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      */
@@ -436,8 +437,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -489,8 +490,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -550,8 +551,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -598,8 +599,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -751,9 +752,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -770,9 +771,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         created with the <a>CreateCapacityProvider</a> API operation.
      *         </p>
      *         <p>
-     *         To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *         <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *         accounts and only need to be associated with a cluster to be used.
+     *         To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *         capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *         associated with a cluster to be used.
      *         </p>
      *         <p>
      *         The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity
@@ -798,9 +799,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -818,9 +819,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      *        </p>
      *        <p>
      *        The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity
@@ -848,9 +849,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -873,9 +874,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      *        </p>
      *        <p>
      *        The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity
@@ -905,9 +906,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity providers
@@ -925,9 +926,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      *        </p>
      *        <p>
      *        The <a>PutClusterCapacityProviders</a> API operation is used to update the list of available capacity

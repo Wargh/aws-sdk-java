@@ -308,6 +308,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateInstanceEventWindowResult> associateInstanceEventWindowAsync(AssociateInstanceEventWindowRequest request) {
+
+        return associateInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateInstanceEventWindowResult> associateInstanceEventWindowAsync(AssociateInstanceEventWindowRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateInstanceEventWindowRequest, AssociateInstanceEventWindowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateRouteTableResult> associateRouteTableAsync(AssociateRouteTableRequest request) {
 
         return associateRouteTableAsync(request, null);
@@ -852,6 +865,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<CreateImageResult> createImageAsync(CreateImageRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateImageRequest, CreateImageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateInstanceEventWindowResult> createInstanceEventWindowAsync(CreateInstanceEventWindowRequest request) {
+
+        return createInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateInstanceEventWindowResult> createInstanceEventWindowAsync(CreateInstanceEventWindowRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateInstanceEventWindowRequest, CreateInstanceEventWindowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1672,6 +1698,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DeleteFpgaImageResult> deleteFpgaImageAsync(DeleteFpgaImageRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteFpgaImageRequest, DeleteFpgaImageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteInstanceEventWindowResult> deleteInstanceEventWindowAsync(DeleteInstanceEventWindowRequest request) {
+
+        return deleteInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteInstanceEventWindowResult> deleteInstanceEventWindowAsync(DeleteInstanceEventWindowRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteInstanceEventWindowRequest, DeleteInstanceEventWindowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -3288,6 +3327,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     public java.util.concurrent.Future<DescribeInstanceEventNotificationAttributesResult> describeInstanceEventNotificationAttributesAsync(
             DescribeInstanceEventNotificationAttributesRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeInstanceEventNotificationAttributesRequest, DescribeInstanceEventNotificationAttributesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInstanceEventWindowsResult> describeInstanceEventWindowsAsync(DescribeInstanceEventWindowsRequest request) {
+
+        return describeInstanceEventWindowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInstanceEventWindowsResult> describeInstanceEventWindowsAsync(DescribeInstanceEventWindowsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeInstanceEventWindowsRequest, DescribeInstanceEventWindowsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -5368,6 +5420,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateInstanceEventWindowResult> disassociateInstanceEventWindowAsync(
+            DisassociateInstanceEventWindowRequest request) {
+
+        return disassociateInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateInstanceEventWindowResult> disassociateInstanceEventWindowAsync(
+            DisassociateInstanceEventWindowRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateInstanceEventWindowRequest, DisassociateInstanceEventWindowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateRouteTableResult> disassociateRouteTableAsync(DisassociateRouteTableRequest request) {
 
         return disassociateRouteTableAsync(request, null);
@@ -6279,6 +6346,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<ModifyInstanceEventStartTimeResult> modifyInstanceEventStartTimeAsync(ModifyInstanceEventStartTimeRequest request,
             com.amazonaws.handlers.AsyncHandler<ModifyInstanceEventStartTimeRequest, ModifyInstanceEventStartTimeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyInstanceEventWindowResult> modifyInstanceEventWindowAsync(ModifyInstanceEventWindowRequest request) {
+
+        return modifyInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyInstanceEventWindowResult> modifyInstanceEventWindowAsync(ModifyInstanceEventWindowRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyInstanceEventWindowRequest, ModifyInstanceEventWindowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

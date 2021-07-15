@@ -50,6 +50,9 @@ public class RetryModeResolverTest {
             new TestData(null, null, "PropertyNotSet", RetryMode.LEGACY),
             new TestData(null, null, "Property_MixedCase", RetryMode.STANDARD),
             new TestData( null, null, "Property_SetToUnsupportedValue", RetryMode.LEGACY),
+            new TestData("adaptive", "legacy", "PropertySetToAdaptive", RetryMode.ADAPTIVE),
+            new TestData( null, "adaptive", "PropertySetToLegacy", RetryMode.ADAPTIVE),
+            new TestData(null, null, "Property_Adaptive_MixedCase", RetryMode.ADAPTIVE),
         });
     }
 

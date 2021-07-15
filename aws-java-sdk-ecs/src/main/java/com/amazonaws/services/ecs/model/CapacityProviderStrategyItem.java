@@ -33,9 +33,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Auto Scaling group capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
  * </p>
  * <p>
- * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
- * providers. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a
- * cluster to be used in a capacity provider strategy.
+ * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+ * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a cluster
+ * to be used in a capacity provider strategy.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/CapacityProviderStrategyItem" target="_top">AWS

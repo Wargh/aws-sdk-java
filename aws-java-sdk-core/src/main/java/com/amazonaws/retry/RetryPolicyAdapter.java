@@ -91,7 +91,8 @@ public class RetryPolicyAdapter implements com.amazonaws.retry.v2.RetryPolicy {
         RetryMode retryMode = clientConfiguration.getRetryMode() == null ? legacyRetryPolicy.getRetryMode()
                                                                          : clientConfiguration.getRetryMode();
 
-        return retryMode.equals(RetryMode.STANDARD) && legacyRetryPolicy.isDefaultMaxErrorRetryInRetryModeHonored();
+        return (retryMode.equals(RetryMode.STANDARD) || retryMode.equals(RetryMode.ADAPTIVE))
+                && legacyRetryPolicy.isDefaultMaxErrorRetryInRetryModeHonored();
     }
 
     public boolean maxRetriesExceeded(RetryPolicyContext context) {

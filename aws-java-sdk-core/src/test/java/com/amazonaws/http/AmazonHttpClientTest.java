@@ -18,6 +18,7 @@
  */
 package com.amazonaws.http;
 
+import com.amazonaws.internal.TokenBucket;
 import com.amazonaws.retry.RetryMode;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -78,7 +79,7 @@ public class AmazonHttpClientTest {
         httpClient = EasyMock.createMock(ConnectionManagerAwareHttpClient.class);
         EasyMock.replay(httpClient);
 
-        client = new AmazonHttpClient(config, httpClient, null);
+        client = new AmazonHttpClient(config, httpClient, null, new TokenBucket());
 
         mockHandler = EasyMock.createStrictMock(RequestHandler2.class);
 
@@ -249,7 +250,7 @@ public class AmazonHttpClientTest {
                 .once();
         EasyMock.replay(httpClient);
 
-        AmazonHttpClient client = new AmazonHttpClient(config, httpClient, null);
+        AmazonHttpClient client = new AmazonHttpClient(config, httpClient, null, new TokenBucket());
 
         client.requestExecutionBuilder().request(request).execute(handler);
 
@@ -277,7 +278,7 @@ public class AmazonHttpClientTest {
             .once();
         EasyMock.replay(httpClient);
 
-        AmazonHttpClient client = new AmazonHttpClient(config, httpClient, null);
+        AmazonHttpClient client = new AmazonHttpClient(config, httpClient, null, new TokenBucket());
 
         client.requestExecutionBuilder().request(request).execute(handler);
 
@@ -303,7 +304,7 @@ public class AmazonHttpClientTest {
             .once();
         EasyMock.replay(httpClient);
 
-        AmazonHttpClient client = new AmazonHttpClient(config, httpClient, null);
+        AmazonHttpClient client = new AmazonHttpClient(config, httpClient, null, new TokenBucket());
 
         client.requestExecutionBuilder().request(request).execute(handler);
 
@@ -320,7 +321,7 @@ public class AmazonHttpClientTest {
                 .once();
         EasyMock.replay(httpClient);
 
-        AmazonHttpClient client = new AmazonHttpClient(new ClientConfiguration(), httpClient, null);
+        AmazonHttpClient client = new AmazonHttpClient(new ClientConfiguration(), httpClient, null, new TokenBucket());
 
         final BasicAWSCredentials credentials = new BasicAWSCredentials("foo", "bar");
 

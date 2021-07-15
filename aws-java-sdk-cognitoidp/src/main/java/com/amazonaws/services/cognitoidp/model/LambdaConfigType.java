@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the configuration for AWS Lambda triggers.
+ * Specifies the configuration for Lambda triggers.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cognito-idp-2016-04-18/LambdaConfigType" target="_top">AWS API
@@ -30,31 +30,31 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A pre-registration AWS Lambda trigger.
+     * A pre-registration Lambda trigger.
      * </p>
      */
     private String preSignUp;
     /**
      * <p>
-     * A custom Message AWS Lambda trigger.
+     * A custom Message Lambda trigger.
      * </p>
      */
     private String customMessage;
     /**
      * <p>
-     * A post-confirmation AWS Lambda trigger.
+     * A post-confirmation Lambda trigger.
      * </p>
      */
     private String postConfirmation;
     /**
      * <p>
-     * A pre-authentication AWS Lambda trigger.
+     * A pre-authentication Lambda trigger.
      * </p>
      */
     private String preAuthentication;
     /**
      * <p>
-     * A post-authentication AWS Lambda trigger.
+     * A post-authentication Lambda trigger.
      * </p>
      */
     private String postAuthentication;
@@ -90,13 +90,13 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
     private String userMigration;
     /**
      * <p>
-     * A custom SMS sender AWS Lambda trigger.
+     * A custom SMS sender Lambda trigger.
      * </p>
      */
     private CustomSMSLambdaVersionConfigType customSMSSender;
     /**
      * <p>
-     * A custom email sender AWS Lambda trigger.
+     * A custom email sender Lambda trigger.
      * </p>
      */
     private CustomEmailLambdaVersionConfigType customEmailSender;
@@ -112,11 +112,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A pre-registration AWS Lambda trigger.
+     * A pre-registration Lambda trigger.
      * </p>
      * 
      * @param preSignUp
-     *        A pre-registration AWS Lambda trigger.
+     *        A pre-registration Lambda trigger.
      */
 
     public void setPreSignUp(String preSignUp) {
@@ -125,10 +125,10 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A pre-registration AWS Lambda trigger.
+     * A pre-registration Lambda trigger.
      * </p>
      * 
-     * @return A pre-registration AWS Lambda trigger.
+     * @return A pre-registration Lambda trigger.
      */
 
     public String getPreSignUp() {
@@ -137,11 +137,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A pre-registration AWS Lambda trigger.
+     * A pre-registration Lambda trigger.
      * </p>
      * 
      * @param preSignUp
-     *        A pre-registration AWS Lambda trigger.
+     *        A pre-registration Lambda trigger.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -152,11 +152,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom Message AWS Lambda trigger.
+     * A custom Message Lambda trigger.
      * </p>
      * 
      * @param customMessage
-     *        A custom Message AWS Lambda trigger.
+     *        A custom Message Lambda trigger.
      */
 
     public void setCustomMessage(String customMessage) {
@@ -165,10 +165,10 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom Message AWS Lambda trigger.
+     * A custom Message Lambda trigger.
      * </p>
      * 
-     * @return A custom Message AWS Lambda trigger.
+     * @return A custom Message Lambda trigger.
      */
 
     public String getCustomMessage() {
@@ -177,11 +177,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom Message AWS Lambda trigger.
+     * A custom Message Lambda trigger.
      * </p>
      * 
      * @param customMessage
-     *        A custom Message AWS Lambda trigger.
+     *        A custom Message Lambda trigger.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,11 +192,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A post-confirmation AWS Lambda trigger.
+     * A post-confirmation Lambda trigger.
      * </p>
      * 
      * @param postConfirmation
-     *        A post-confirmation AWS Lambda trigger.
+     *        A post-confirmation Lambda trigger.
      */
 
     public void setPostConfirmation(String postConfirmation) {
@@ -205,10 +205,10 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A post-confirmation AWS Lambda trigger.
+     * A post-confirmation Lambda trigger.
      * </p>
      * 
-     * @return A post-confirmation AWS Lambda trigger.
+     * @return A post-confirmation Lambda trigger.
      */
 
     public String getPostConfirmation() {
@@ -217,11 +217,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A post-confirmation AWS Lambda trigger.
+     * A post-confirmation Lambda trigger.
      * </p>
      * 
      * @param postConfirmation
-     *        A post-confirmation AWS Lambda trigger.
+     *        A post-confirmation Lambda trigger.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,11 +232,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A pre-authentication AWS Lambda trigger.
+     * A pre-authentication Lambda trigger.
      * </p>
      * 
      * @param preAuthentication
-     *        A pre-authentication AWS Lambda trigger.
+     *        A pre-authentication Lambda trigger.
      */
 
     public void setPreAuthentication(String preAuthentication) {
@@ -245,10 +245,10 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A pre-authentication AWS Lambda trigger.
+     * A pre-authentication Lambda trigger.
      * </p>
      * 
-     * @return A pre-authentication AWS Lambda trigger.
+     * @return A pre-authentication Lambda trigger.
      */
 
     public String getPreAuthentication() {
@@ -257,11 +257,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A pre-authentication AWS Lambda trigger.
+     * A pre-authentication Lambda trigger.
      * </p>
      * 
      * @param preAuthentication
-     *        A pre-authentication AWS Lambda trigger.
+     *        A pre-authentication Lambda trigger.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -272,11 +272,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A post-authentication AWS Lambda trigger.
+     * A post-authentication Lambda trigger.
      * </p>
      * 
      * @param postAuthentication
-     *        A post-authentication AWS Lambda trigger.
+     *        A post-authentication Lambda trigger.
      */
 
     public void setPostAuthentication(String postAuthentication) {
@@ -285,10 +285,10 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A post-authentication AWS Lambda trigger.
+     * A post-authentication Lambda trigger.
      * </p>
      * 
-     * @return A post-authentication AWS Lambda trigger.
+     * @return A post-authentication Lambda trigger.
      */
 
     public String getPostAuthentication() {
@@ -297,11 +297,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A post-authentication AWS Lambda trigger.
+     * A post-authentication Lambda trigger.
      * </p>
      * 
      * @param postAuthentication
-     *        A post-authentication AWS Lambda trigger.
+     *        A post-authentication Lambda trigger.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -512,11 +512,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom SMS sender AWS Lambda trigger.
+     * A custom SMS sender Lambda trigger.
      * </p>
      * 
      * @param customSMSSender
-     *        A custom SMS sender AWS Lambda trigger.
+     *        A custom SMS sender Lambda trigger.
      */
 
     public void setCustomSMSSender(CustomSMSLambdaVersionConfigType customSMSSender) {
@@ -525,10 +525,10 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom SMS sender AWS Lambda trigger.
+     * A custom SMS sender Lambda trigger.
      * </p>
      * 
-     * @return A custom SMS sender AWS Lambda trigger.
+     * @return A custom SMS sender Lambda trigger.
      */
 
     public CustomSMSLambdaVersionConfigType getCustomSMSSender() {
@@ -537,11 +537,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom SMS sender AWS Lambda trigger.
+     * A custom SMS sender Lambda trigger.
      * </p>
      * 
      * @param customSMSSender
-     *        A custom SMS sender AWS Lambda trigger.
+     *        A custom SMS sender Lambda trigger.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -552,11 +552,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom email sender AWS Lambda trigger.
+     * A custom email sender Lambda trigger.
      * </p>
      * 
      * @param customEmailSender
-     *        A custom email sender AWS Lambda trigger.
+     *        A custom email sender Lambda trigger.
      */
 
     public void setCustomEmailSender(CustomEmailLambdaVersionConfigType customEmailSender) {
@@ -565,10 +565,10 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom email sender AWS Lambda trigger.
+     * A custom email sender Lambda trigger.
      * </p>
      * 
-     * @return A custom email sender AWS Lambda trigger.
+     * @return A custom email sender Lambda trigger.
      */
 
     public CustomEmailLambdaVersionConfigType getCustomEmailSender() {
@@ -577,11 +577,11 @@ public class LambdaConfigType implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A custom email sender AWS Lambda trigger.
+     * A custom email sender Lambda trigger.
      * </p>
      * 
      * @param customEmailSender
-     *        A custom email sender AWS Lambda trigger.
+     *        A custom email sender Lambda trigger.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

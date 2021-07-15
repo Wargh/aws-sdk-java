@@ -912,6 +912,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateInstanceEventWindowResult> associateInstanceEventWindowAsync(AssociateInstanceEventWindowRequest request) {
+
+        return associateInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateInstanceEventWindowResult> associateInstanceEventWindowAsync(final AssociateInstanceEventWindowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateInstanceEventWindowRequest, AssociateInstanceEventWindowResult> asyncHandler) {
+        final AssociateInstanceEventWindowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateInstanceEventWindowResult>() {
+            @Override
+            public AssociateInstanceEventWindowResult call() throws Exception {
+                AssociateInstanceEventWindowResult result = null;
+
+                try {
+                    result = executeAssociateInstanceEventWindow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateRouteTableResult> associateRouteTableAsync(AssociateRouteTableRequest request) {
 
         return associateRouteTableAsync(request, null);
@@ -2247,6 +2280,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeCreateImage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateInstanceEventWindowResult> createInstanceEventWindowAsync(CreateInstanceEventWindowRequest request) {
+
+        return createInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateInstanceEventWindowResult> createInstanceEventWindowAsync(final CreateInstanceEventWindowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateInstanceEventWindowRequest, CreateInstanceEventWindowResult> asyncHandler) {
+        final CreateInstanceEventWindowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateInstanceEventWindowResult>() {
+            @Override
+            public CreateInstanceEventWindowResult call() throws Exception {
+                CreateInstanceEventWindowResult result = null;
+
+                try {
+                    result = executeCreateInstanceEventWindow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4231,6 +4297,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeDeleteFpgaImage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteInstanceEventWindowResult> deleteInstanceEventWindowAsync(DeleteInstanceEventWindowRequest request) {
+
+        return deleteInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteInstanceEventWindowResult> deleteInstanceEventWindowAsync(final DeleteInstanceEventWindowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteInstanceEventWindowRequest, DeleteInstanceEventWindowResult> asyncHandler) {
+        final DeleteInstanceEventWindowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteInstanceEventWindowResult>() {
+            @Override
+            public DeleteInstanceEventWindowResult call() throws Exception {
+                DeleteInstanceEventWindowResult result = null;
+
+                try {
+                    result = executeDeleteInstanceEventWindow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -7712,6 +7811,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeDescribeInstanceEventNotificationAttributes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInstanceEventWindowsResult> describeInstanceEventWindowsAsync(DescribeInstanceEventWindowsRequest request) {
+
+        return describeInstanceEventWindowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeInstanceEventWindowsResult> describeInstanceEventWindowsAsync(final DescribeInstanceEventWindowsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeInstanceEventWindowsRequest, DescribeInstanceEventWindowsResult> asyncHandler) {
+        final DescribeInstanceEventWindowsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeInstanceEventWindowsResult>() {
+            @Override
+            public DescribeInstanceEventWindowsResult call() throws Exception {
+                DescribeInstanceEventWindowsResult result = null;
+
+                try {
+                    result = executeDescribeInstanceEventWindows(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -11772,6 +11904,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateInstanceEventWindowResult> disassociateInstanceEventWindowAsync(
+            DisassociateInstanceEventWindowRequest request) {
+
+        return disassociateInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateInstanceEventWindowResult> disassociateInstanceEventWindowAsync(
+            final DisassociateInstanceEventWindowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateInstanceEventWindowRequest, DisassociateInstanceEventWindowResult> asyncHandler) {
+        final DisassociateInstanceEventWindowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateInstanceEventWindowResult>() {
+            @Override
+            public DisassociateInstanceEventWindowResult call() throws Exception {
+                DisassociateInstanceEventWindowResult result = null;
+
+                try {
+                    result = executeDisassociateInstanceEventWindow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateRouteTableResult> disassociateRouteTableAsync(DisassociateRouteTableRequest request) {
 
         return disassociateRouteTableAsync(request, null);
@@ -13955,6 +14122,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeModifyInstanceEventStartTime(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyInstanceEventWindowResult> modifyInstanceEventWindowAsync(ModifyInstanceEventWindowRequest request) {
+
+        return modifyInstanceEventWindowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyInstanceEventWindowResult> modifyInstanceEventWindowAsync(final ModifyInstanceEventWindowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyInstanceEventWindowRequest, ModifyInstanceEventWindowResult> asyncHandler) {
+        final ModifyInstanceEventWindowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifyInstanceEventWindowResult>() {
+            @Override
+            public ModifyInstanceEventWindowResult call() throws Exception {
+                ModifyInstanceEventWindowResult result = null;
+
+                try {
+                    result = executeModifyInstanceEventWindow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

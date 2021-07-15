@@ -42,7 +42,7 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
     private String name;
     /**
      * <p>
-     * The AWS Lambda configuration information in a user pool description.
+     * The Lambda configuration information in a user pool description.
      * </p>
      */
     private LambdaConfigType lambdaConfig;
@@ -147,11 +147,11 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Lambda configuration information in a user pool description.
+     * The Lambda configuration information in a user pool description.
      * </p>
      * 
      * @param lambdaConfig
-     *        The AWS Lambda configuration information in a user pool description.
+     *        The Lambda configuration information in a user pool description.
      */
 
     public void setLambdaConfig(LambdaConfigType lambdaConfig) {
@@ -160,10 +160,10 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Lambda configuration information in a user pool description.
+     * The Lambda configuration information in a user pool description.
      * </p>
      * 
-     * @return The AWS Lambda configuration information in a user pool description.
+     * @return The Lambda configuration information in a user pool description.
      */
 
     public LambdaConfigType getLambdaConfig() {
@@ -172,11 +172,11 @@ public class UserPoolDescriptionType implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Lambda configuration information in a user pool description.
+     * The Lambda configuration information in a user pool description.
      * </p>
      * 
      * @param lambdaConfig
-     *        The AWS Lambda configuration information in a user pool description.
+     *        The Lambda configuration information in a user pool description.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -238,8 +238,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -722,8 +722,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -818,8 +818,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -995,8 +995,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "edge.";
-                String resolvedHostPrefix = String.format("edge.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -1347,8 +1347,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -1433,8 +1433,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -1590,8 +1590,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "edge.";
-                String resolvedHostPrefix = String.format("edge.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -1905,8 +1905,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -1983,8 +1983,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -2073,8 +2073,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -2231,10 +2231,19 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
             HttpResponseHandler<AmazonWebServiceResponse<DescribeDefaultEncryptionConfigurationResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new DescribeDefaultEncryptionConfigurationResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -2304,8 +2313,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "edge.";
-                String resolvedHostPrefix = String.format("edge.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -2389,8 +2398,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "edge.";
-                String resolvedHostPrefix = String.format("edge.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -2468,8 +2477,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -2713,10 +2722,19 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
             HttpResponseHandler<AmazonWebServiceResponse<DescribeStorageConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeStorageConfigurationResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -2789,8 +2807,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -3350,8 +3368,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -3429,8 +3447,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -3528,8 +3546,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -3621,8 +3639,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -3773,8 +3791,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "edge.";
-                String resolvedHostPrefix = String.format("edge.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -4090,9 +4108,18 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -4173,10 +4200,19 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
             HttpResponseHandler<AmazonWebServiceResponse<PutDefaultEncryptionConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new PutDefaultEncryptionConfigurationResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -4249,8 +4285,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -4339,10 +4375,19 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
             HttpResponseHandler<AmazonWebServiceResponse<PutStorageConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new PutStorageConfigurationResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -4428,9 +4473,18 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
             HttpResponseHandler<AmazonWebServiceResponse<TagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new TagResourceResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -4511,9 +4565,18 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
                 awsRequestMetrics.endEvent(Field.RequestMarshallTime);
             }
 
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
 
@@ -4669,8 +4732,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -4778,8 +4841,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -4868,8 +4931,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "model.";
-                String resolvedHostPrefix = String.format("model.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -5027,8 +5090,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "edge.";
-                String resolvedHostPrefix = String.format("edge.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }
@@ -5123,8 +5186,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
             URI endpointTraitHost = null;
             if (!clientConfiguration.isDisableHostPrefixInjection()) {
 
-                String hostPrefix = "edge.";
-                String resolvedHostPrefix = String.format("edge.");
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
 
                 endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
             }

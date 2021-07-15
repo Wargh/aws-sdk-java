@@ -15,8 +15,14 @@
 package com.amazonaws.retry;
 
 import static com.amazonaws.SDKGlobalConfiguration.AWS_RETRY_MODE_SYSTEM_PROPERTY;
+import static org.hamcrest.CoreMatchers.sameInstance;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -49,5 +55,49 @@ public class RetryPolicyTest {
 
 
         assertEquals(RetryMode.LEGACY, retryPolicy.getRetryMode());
+    }
+
+    @Test
+    public void fastFailRateLimiting_defaultToFalse() {
+        RetryPolicy retryPolicy = RetryPolicy.builder()
+                .withRetryMode(RetryMode.ADAPTIVE)
+                .build();
+
+        assertFalse(retryPolicy.isFastFailRateLimiting());
+    }
+
+    @Test
+    public void fastFailRateLimiting_returnsCorrectValue() {
+        RetryPolicy retryPolicy = RetryPolicy.builder()
+                .withRetryMode(RetryMode.ADAPTIVE)
+                .withFastFailRateLimiting(true)
+                .build();
+
+        assertTrue(retryPolicy.isFastFailRateLimiting());
+    }
+
+    @Test
+    public void builder_build_maximal() {
+        RetryPolicy.RetryCondition retryCondition = mock(RetryPolicy.RetryCondition.class);
+        RetryPolicy.BackoffStrategy backoffStrategy = mock(RetryPolicy.BackoffStrategy.class);
+        int maxRetry = 1234;
+
+        RetryPolicy retryPolicy = RetryPolicy.builder()
+                .withRetryCondition(retryCondition)
+                .withBackoffStrategy(backoffStrategy)
+                .withMaxErrorRetry(maxRetry)
+                .withFastFailRateLimiting(true)
+                .withHonorMaxErrorRetryInClientConfig(true)
+                .withHonorDefaultMaxErrorRetryInRetryMode(true)
+                .withRetryMode(RetryMode.ADAPTIVE)
+                .build();
+
+        assertThat(retryPolicy.getRetryCondition(), sameInstance(retryCondition));
+        assertThat(retryPolicy.getBackoffStrategy(), sameInstance(backoffStrategy));
+        assertEquals(maxRetry, retryPolicy.getMaxErrorRetry());
+        assertTrue(retryPolicy.isFastFailRateLimiting());
+        assertTrue(retryPolicy.isMaxErrorRetryInClientConfigHonored());
+        assertTrue(retryPolicy.isDefaultMaxErrorRetryInRetryModeHonored());
+        assertEquals(RetryMode.ADAPTIVE, retryPolicy.getRetryMode());
     }
 }

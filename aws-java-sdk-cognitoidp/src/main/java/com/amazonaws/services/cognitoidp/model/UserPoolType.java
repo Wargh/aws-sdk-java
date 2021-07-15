@@ -48,7 +48,7 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
     private UserPoolPolicyType policies;
     /**
      * <p>
-     * The AWS Lambda triggers associated with the user pool.
+     * The Lambda triggers associated with the user pool.
      * </p>
      */
     private LambdaConfigType lambdaConfig;
@@ -198,9 +198,9 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * SNSSandbox - The AWS account is in SNS Sandbox and messages won’t reach unverified end users. This parameter
-     * won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn
-     * how to move your AWS account out of the sandbox, see <a
+     * SNSSandbox - The account is in SNS Sandbox and messages won’t reach unverified end users. This parameter won’t
+     * get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn how
+     * to move your account out of the sandbox, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS
      * sandbox</a>.
      * </p>
@@ -393,11 +393,11 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Lambda triggers associated with the user pool.
+     * The Lambda triggers associated with the user pool.
      * </p>
      * 
      * @param lambdaConfig
-     *        The AWS Lambda triggers associated with the user pool.
+     *        The Lambda triggers associated with the user pool.
      */
 
     public void setLambdaConfig(LambdaConfigType lambdaConfig) {
@@ -406,10 +406,10 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Lambda triggers associated with the user pool.
+     * The Lambda triggers associated with the user pool.
      * </p>
      * 
-     * @return The AWS Lambda triggers associated with the user pool.
+     * @return The Lambda triggers associated with the user pool.
      */
 
     public LambdaConfigType getLambdaConfig() {
@@ -418,11 +418,11 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Lambda triggers associated with the user pool.
+     * The Lambda triggers associated with the user pool.
      * </p>
      * 
      * @param lambdaConfig
-     *        The AWS Lambda triggers associated with the user pool.
+     *        The Lambda triggers associated with the user pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1649,9 +1649,9 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * SNSSandbox - The AWS account is in SNS Sandbox and messages won’t reach unverified end users. This parameter
-     * won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn
-     * how to move your AWS account out of the sandbox, see <a
+     * SNSSandbox - The account is in SNS Sandbox and messages won’t reach unverified end users. This parameter won’t
+     * get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn how
+     * to move your account out of the sandbox, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS
      * sandbox</a>.
      * </p>
@@ -1675,9 +1675,9 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        SNSSandbox - The AWS account is in SNS Sandbox and messages won’t reach unverified end users. This
-     *        parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
-     *        permissions. To learn how to move your AWS account out of the sandbox, see <a
+     *        SNSSandbox - The account is in SNS Sandbox and messages won’t reach unverified end users. This parameter
+     *        won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions.
+     *        To learn how to move your account out of the sandbox, see <a
      *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of
      *        the SMS sandbox</a>.
      *        </p>
@@ -1707,9 +1707,9 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * SNSSandbox - The AWS account is in SNS Sandbox and messages won’t reach unverified end users. This parameter
-     * won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn
-     * how to move your AWS account out of the sandbox, see <a
+     * SNSSandbox - The account is in SNS Sandbox and messages won’t reach unverified end users. This parameter won’t
+     * get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn how
+     * to move your account out of the sandbox, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS
      * sandbox</a>.
      * </p>
@@ -1732,9 +1732,9 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         SNSSandbox - The AWS account is in SNS Sandbox and messages won’t reach unverified end users. This
-     *         parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
-     *         permissions. To learn how to move your AWS account out of the sandbox, see <a
+     *         SNSSandbox - The account is in SNS Sandbox and messages won’t reach unverified end users. This parameter
+     *         won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions.
+     *         To learn how to move your account out of the sandbox, see <a
      *         href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of
      *         the SMS sandbox</a>.
      *         </p>
@@ -1764,9 +1764,9 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * SNSSandbox - The AWS account is in SNS Sandbox and messages won’t reach unverified end users. This parameter
-     * won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn
-     * how to move your AWS account out of the sandbox, see <a
+     * SNSSandbox - The account is in SNS Sandbox and messages won’t reach unverified end users. This parameter won’t
+     * get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions. To learn how
+     * to move your account out of the sandbox, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of the SMS
      * sandbox</a>.
      * </p>
@@ -1790,9 +1790,9 @@ public class UserPoolType implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        SNSSandbox - The AWS account is in SNS Sandbox and messages won’t reach unverified end users. This
-     *        parameter won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS
-     *        permissions. To learn how to move your AWS account out of the sandbox, see <a
+     *        SNSSandbox - The account is in SNS Sandbox and messages won’t reach unverified end users. This parameter
+     *        won’t get populated with SNSSandbox if the IAM user creating the user pool doesn’t have SNS permissions.
+     *        To learn how to move your account out of the sandbox, see <a
      *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox-moving-to-production.html">Moving out of
      *        the SMS sandbox</a>.
      *        </p>

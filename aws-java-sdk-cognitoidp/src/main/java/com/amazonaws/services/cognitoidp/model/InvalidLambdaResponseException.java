@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when the Amazon Cognito service encounters an invalid AWS Lambda response.
+ * This exception is thrown when the Amazon Cognito service encounters an invalid Lambda response.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

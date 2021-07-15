@@ -41,9 +41,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> capacityProviders;
@@ -66,9 +66,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<CapacityProviderStrategyItem> defaultCapacityProviderStrategy;
@@ -128,9 +128,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * 
      * @return The name of one or more capacity providers to associate with the cluster.</p>
@@ -139,9 +139,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      *         created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *         </p>
      *         <p>
-     *         To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *         <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *         accounts and only need to be associated with a cluster to be used.
+     *         To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *         capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *         associated with a cluster to be used.
      */
 
     public java.util.List<String> getCapacityProviders() {
@@ -160,9 +160,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * 
      * @param capacityProviders
@@ -172,9 +172,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      */
 
     public void setCapacityProviders(java.util.Collection<String> capacityProviders) {
@@ -195,9 +195,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -212,9 +212,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,9 +237,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * 
      * @param capacityProviders
@@ -249,9 +249,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -279,9 +279,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * 
      * @return The capacity provider strategy to use by default for the cluster.</p>
@@ -301,9 +301,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      *         created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *         </p>
      *         <p>
-     *         To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *         <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *         accounts and only need to be associated with a cluster to be used.
+     *         To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *         capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *         associated with a cluster to be used.
      */
 
     public java.util.List<CapacityProviderStrategyItem> getDefaultCapacityProviderStrategy() {
@@ -332,9 +332,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * 
      * @param defaultCapacityProviderStrategy
@@ -355,9 +355,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      */
 
     public void setDefaultCapacityProviderStrategy(java.util.Collection<CapacityProviderStrategyItem> defaultCapacityProviderStrategy) {
@@ -388,9 +388,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -416,9 +416,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -451,9 +451,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      * New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      * </p>
      * <p>
-     * To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
-     * capacity providers. The AWS Fargate capacity providers are available to all accounts and only need to be
-     * associated with a cluster to be used.
+     * To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code> capacity
+     * providers. The Fargate capacity providers are available to all accounts and only need to be associated with a
+     * cluster to be used.
      * </p>
      * 
      * @param defaultCapacityProviderStrategy
@@ -474,9 +474,9 @@ public class PutClusterCapacityProvidersRequest extends com.amazonaws.AmazonWebS
      *        created. New capacity providers can be created with the <a>CreateCapacityProvider</a> API operation.
      *        </p>
      *        <p>
-     *        To use a AWS Fargate capacity provider, specify either the <code>FARGATE</code> or
-     *        <code>FARGATE_SPOT</code> capacity providers. The AWS Fargate capacity providers are available to all
-     *        accounts and only need to be associated with a cluster to be used.
+     *        To use a Fargate capacity provider, specify either the <code>FARGATE</code> or <code>FARGATE_SPOT</code>
+     *        capacity providers. The Fargate capacity providers are available to all accounts and only need to be
+     *        associated with a cluster to be used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

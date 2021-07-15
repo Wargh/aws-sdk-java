@@ -38,15 +38,15 @@ public class FSxWindowsFileServerAuthorizationConfig implements Serializable, Cl
     /**
      * <p>
      * The authorization credential option to use. The authorization credential options can be provided using either the
-     * Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The
-     * ARNs refer to the stored credentials.
+     * Amazon Resource Name (ARN) of an Secrets Manager secret or SSM Parameter Store parameter. The ARNs refer to the
+     * stored credentials.
      * </p>
      */
     private String credentialsParameter;
     /**
      * <p>
      * A fully qualified domain name hosted by an <a
-     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS Directory
+     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">Directory
      * Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      * </p>
      */
@@ -55,14 +55,14 @@ public class FSxWindowsFileServerAuthorizationConfig implements Serializable, Cl
     /**
      * <p>
      * The authorization credential option to use. The authorization credential options can be provided using either the
-     * Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The
-     * ARNs refer to the stored credentials.
+     * Amazon Resource Name (ARN) of an Secrets Manager secret or SSM Parameter Store parameter. The ARNs refer to the
+     * stored credentials.
      * </p>
      * 
      * @param credentialsParameter
      *        The authorization credential option to use. The authorization credential options can be provided using
-     *        either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter
-     *        Store parameter. The ARNs refer to the stored credentials.
+     *        either the Amazon Resource Name (ARN) of an Secrets Manager secret or SSM Parameter Store parameter. The
+     *        ARNs refer to the stored credentials.
      */
 
     public void setCredentialsParameter(String credentialsParameter) {
@@ -72,13 +72,13 @@ public class FSxWindowsFileServerAuthorizationConfig implements Serializable, Cl
     /**
      * <p>
      * The authorization credential option to use. The authorization credential options can be provided using either the
-     * Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The
-     * ARNs refer to the stored credentials.
+     * Amazon Resource Name (ARN) of an Secrets Manager secret or SSM Parameter Store parameter. The ARNs refer to the
+     * stored credentials.
      * </p>
      * 
      * @return The authorization credential option to use. The authorization credential options can be provided using
-     *         either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter
-     *         Store parameter. The ARNs refer to the stored credentials.
+     *         either the Amazon Resource Name (ARN) of an Secrets Manager secret or SSM Parameter Store parameter. The
+     *         ARNs refer to the stored credentials.
      */
 
     public String getCredentialsParameter() {
@@ -88,14 +88,14 @@ public class FSxWindowsFileServerAuthorizationConfig implements Serializable, Cl
     /**
      * <p>
      * The authorization credential option to use. The authorization credential options can be provided using either the
-     * Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The
-     * ARNs refer to the stored credentials.
+     * Amazon Resource Name (ARN) of an Secrets Manager secret or SSM Parameter Store parameter. The ARNs refer to the
+     * stored credentials.
      * </p>
      * 
      * @param credentialsParameter
      *        The authorization credential option to use. The authorization credential options can be provided using
-     *        either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter
-     *        Store parameter. The ARNs refer to the stored credentials.
+     *        either the Amazon Resource Name (ARN) of an Secrets Manager secret or SSM Parameter Store parameter. The
+     *        ARNs refer to the stored credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,14 +107,14 @@ public class FSxWindowsFileServerAuthorizationConfig implements Serializable, Cl
     /**
      * <p>
      * A fully qualified domain name hosted by an <a
-     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS Directory
+     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">Directory
      * Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      * </p>
      * 
      * @param domain
      *        A fully qualified domain name hosted by an <a
-     *        href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS
-     *        Directory Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+     *        href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html"
+     *        >Directory Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      */
 
     public void setDomain(String domain) {
@@ -124,13 +124,13 @@ public class FSxWindowsFileServerAuthorizationConfig implements Serializable, Cl
     /**
      * <p>
      * A fully qualified domain name hosted by an <a
-     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS Directory
+     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">Directory
      * Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      * </p>
      * 
      * @return A fully qualified domain name hosted by an <a
-     *         href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS
-     *         Directory Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+     *         href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html"
+     *         >Directory Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      */
 
     public String getDomain() {
@@ -140,14 +140,14 @@ public class FSxWindowsFileServerAuthorizationConfig implements Serializable, Cl
     /**
      * <p>
      * A fully qualified domain name hosted by an <a
-     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS Directory
+     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">Directory
      * Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      * </p>
      * 
      * @param domain
      *        A fully qualified domain name hosted by an <a
-     *        href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS
-     *        Directory Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
+     *        href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html"
+     *        >Directory Service</a> Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,6 +28,8 @@ public class RetryModeTest {
         assertEquals(RetryMode.LEGACY, RetryMode.fromName("leGaCy"));
         assertEquals(RetryMode.STANDARD, RetryMode.fromName("standard"));
         assertEquals(RetryMode.STANDARD, RetryMode.fromName("sTandArd"));
+        assertEquals(RetryMode.ADAPTIVE, RetryMode.fromName("adaptive"));
+        assertEquals(RetryMode.ADAPTIVE, RetryMode.fromName("aDaPtIvE"));
     }
 
     @Test

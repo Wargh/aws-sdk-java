@@ -137,7 +137,6 @@ public class ClientConfiguration {
 
     public static final int DEFAULT_MAX_CONSECUTIVE_RETRIES_BEFORE_THROTTLING = 100;
 
-
     /** A prefix to the HTTP user agent header passed with all HTTP requests.  */
     private String userAgentPrefix = DEFAULT_USER_AGENT;
 

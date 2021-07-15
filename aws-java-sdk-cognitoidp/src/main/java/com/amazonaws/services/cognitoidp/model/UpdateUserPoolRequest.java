@@ -42,7 +42,7 @@ public class UpdateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
     private UserPoolPolicyType policies;
     /**
      * <p>
-     * The AWS Lambda configuration information from the request to update the user pool.
+     * The Lambda configuration information from the request to update the user pool.
      * </p>
      */
     private LambdaConfigType lambdaConfig;
@@ -240,11 +240,11 @@ public class UpdateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS Lambda configuration information from the request to update the user pool.
+     * The Lambda configuration information from the request to update the user pool.
      * </p>
      * 
      * @param lambdaConfig
-     *        The AWS Lambda configuration information from the request to update the user pool.
+     *        The Lambda configuration information from the request to update the user pool.
      */
 
     public void setLambdaConfig(LambdaConfigType lambdaConfig) {
@@ -253,10 +253,10 @@ public class UpdateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS Lambda configuration information from the request to update the user pool.
+     * The Lambda configuration information from the request to update the user pool.
      * </p>
      * 
-     * @return The AWS Lambda configuration information from the request to update the user pool.
+     * @return The Lambda configuration information from the request to update the user pool.
      */
 
     public LambdaConfigType getLambdaConfig() {
@@ -265,11 +265,11 @@ public class UpdateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS Lambda configuration information from the request to update the user pool.
+     * The Lambda configuration information from the request to update the user pool.
      * </p>
      * 
      * @param lambdaConfig
-     *        The AWS Lambda configuration information from the request to update the user pool.
+     *        The Lambda configuration information from the request to update the user pool.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

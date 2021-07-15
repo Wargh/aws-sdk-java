@@ -31,8 +31,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the container instance, the AWS account ID of the container instance owner,
-     * the <code>container-instance</code> namespace, and then the container instance ID. For example,
+     * namespace, followed by the Region of the container instance, the account ID of the container instance owner, the
+     * <code>container-instance</code> namespace, and then the container instance ID. For example,
      * <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * </p>
      */
@@ -40,7 +40,7 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The ID of the container instance. For Amazon EC2 instances, this value is the Amazon EC2 instance ID. For
-     * external instances, this value is the AWS Systems Manager managed instance ID.
+     * external instances, this value is the Amazon Web Services Systems Manager managed instance ID.
      * </p>
      */
     private String ec2InstanceId;
@@ -206,8 +206,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -217,14 +217,14 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the container instance, the AWS account ID of the container instance owner,
-     * the <code>container-instance</code> namespace, and then the container instance ID. For example,
+     * namespace, followed by the Region of the container instance, the account ID of the container instance owner, the
+     * <code>container-instance</code> namespace, and then the container instance ID. For example,
      * <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * </p>
      * 
      * @param containerInstanceArn
      *        The Amazon Resource Name (ARN) of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     *        namespace, followed by the Region of the container instance, the AWS account ID of the container instance
+     *        namespace, followed by the Region of the container instance, the account ID of the container instance
      *        owner, the <code>container-instance</code> namespace, and then the container instance ID. For example,
      *        <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      */
@@ -236,13 +236,13 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the container instance, the AWS account ID of the container instance owner,
-     * the <code>container-instance</code> namespace, and then the container instance ID. For example,
+     * namespace, followed by the Region of the container instance, the account ID of the container instance owner, the
+     * <code>container-instance</code> namespace, and then the container instance ID. For example,
      * <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     *         namespace, followed by the Region of the container instance, the AWS account ID of the container instance
+     *         namespace, followed by the Region of the container instance, the account ID of the container instance
      *         owner, the <code>container-instance</code> namespace, and then the container instance ID. For example,
      *         <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      */
@@ -254,14 +254,14 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     * namespace, followed by the Region of the container instance, the AWS account ID of the container instance owner,
-     * the <code>container-instance</code> namespace, and then the container instance ID. For example,
+     * namespace, followed by the Region of the container instance, the account ID of the container instance owner, the
+     * <code>container-instance</code> namespace, and then the container instance ID. For example,
      * <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * </p>
      * 
      * @param containerInstanceArn
      *        The Amazon Resource Name (ARN) of the container instance. The ARN contains the <code>arn:aws:ecs</code>
-     *        namespace, followed by the Region of the container instance, the AWS account ID of the container instance
+     *        namespace, followed by the Region of the container instance, the account ID of the container instance
      *        owner, the <code>container-instance</code> namespace, and then the container instance ID. For example,
      *        <code>arn:aws:ecs:region:aws_account_id:container-instance/container_instance_ID</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -275,12 +275,12 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The ID of the container instance. For Amazon EC2 instances, this value is the Amazon EC2 instance ID. For
-     * external instances, this value is the AWS Systems Manager managed instance ID.
+     * external instances, this value is the Amazon Web Services Systems Manager managed instance ID.
      * </p>
      * 
      * @param ec2InstanceId
      *        The ID of the container instance. For Amazon EC2 instances, this value is the Amazon EC2 instance ID. For
-     *        external instances, this value is the AWS Systems Manager managed instance ID.
+     *        external instances, this value is the Amazon Web Services Systems Manager managed instance ID.
      */
 
     public void setEc2InstanceId(String ec2InstanceId) {
@@ -290,11 +290,11 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The ID of the container instance. For Amazon EC2 instances, this value is the Amazon EC2 instance ID. For
-     * external instances, this value is the AWS Systems Manager managed instance ID.
+     * external instances, this value is the Amazon Web Services Systems Manager managed instance ID.
      * </p>
      * 
      * @return The ID of the container instance. For Amazon EC2 instances, this value is the Amazon EC2 instance ID. For
-     *         external instances, this value is the AWS Systems Manager managed instance ID.
+     *         external instances, this value is the Amazon Web Services Systems Manager managed instance ID.
      */
 
     public String getEc2InstanceId() {
@@ -304,12 +304,12 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The ID of the container instance. For Amazon EC2 instances, this value is the Amazon EC2 instance ID. For
-     * external instances, this value is the AWS Systems Manager managed instance ID.
+     * external instances, this value is the Amazon Web Services Systems Manager managed instance ID.
      * </p>
      * 
      * @param ec2InstanceId
      *        The ID of the container instance. For Amazon EC2 instances, this value is the Amazon EC2 instance ID. For
-     *        external instances, this value is the AWS Systems Manager managed instance ID.
+     *        external instances, this value is the Amazon Web Services Systems Manager managed instance ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1333,8 +1333,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1380,8 +1380,9 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      *         <li>
      *         <p>
      *         Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a
-     *         prefix for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or
-     *         values with this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *         prefix for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete
+     *         tag keys or values with this prefix. Tags with this prefix do not count against your tags per resource
+     *         limit.
      *         </p>
      *         </li>
      */
@@ -1437,8 +1438,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1485,8 +1486,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      */
@@ -1544,8 +1545,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1597,8 +1598,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1658,8 +1659,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -1706,8 +1707,8 @@ public class ContainerInstance implements Serializable, Cloneable, StructuredPoj
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

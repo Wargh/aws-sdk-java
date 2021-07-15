@@ -36,6 +36,7 @@ public enum ResourceType {
     ImportImageTask("import-image-task"),
     ImportSnapshotTask("import-snapshot-task"),
     Instance("instance"),
+    InstanceEventWindow("instance-event-window"),
     InternetGateway("internet-gateway"),
     KeyPair("key-pair"),
     LaunchTemplate("launch-template"),

@@ -30,7 +30,7 @@ public class ExecuteCommandConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Specify an AWS Key Management Service key ID to encrypt the data between the local client and the container.
+     * Specify an Key Management Service key ID to encrypt the data between the local client and the container.
      * </p>
      */
     private String kmsKeyId;
@@ -72,12 +72,11 @@ public class ExecuteCommandConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Specify an AWS Key Management Service key ID to encrypt the data between the local client and the container.
+     * Specify an Key Management Service key ID to encrypt the data between the local client and the container.
      * </p>
      * 
      * @param kmsKeyId
-     *        Specify an AWS Key Management Service key ID to encrypt the data between the local client and the
-     *        container.
+     *        Specify an Key Management Service key ID to encrypt the data between the local client and the container.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -86,11 +85,10 @@ public class ExecuteCommandConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Specify an AWS Key Management Service key ID to encrypt the data between the local client and the container.
+     * Specify an Key Management Service key ID to encrypt the data between the local client and the container.
      * </p>
      * 
-     * @return Specify an AWS Key Management Service key ID to encrypt the data between the local client and the
-     *         container.
+     * @return Specify an Key Management Service key ID to encrypt the data between the local client and the container.
      */
 
     public String getKmsKeyId() {
@@ -99,12 +97,11 @@ public class ExecuteCommandConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Specify an AWS Key Management Service key ID to encrypt the data between the local client and the container.
+     * Specify an Key Management Service key ID to encrypt the data between the local client and the container.
      * </p>
      * 
      * @param kmsKeyId
-     *        Specify an AWS Key Management Service key ID to encrypt the data between the local client and the
-     *        container.
+     *        Specify an Key Management Service key ID to encrypt the data between the local client and the container.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

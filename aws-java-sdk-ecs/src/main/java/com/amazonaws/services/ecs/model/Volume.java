@@ -66,7 +66,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Docker volumes are not supported by tasks run on AWS Fargate.
+     * Docker volumes are not supported by tasks run on Fargate.
      * </p>
      * </note>
      */
@@ -240,7 +240,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Docker volumes are not supported by tasks run on AWS Fargate.
+     * Docker volumes are not supported by tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -252,7 +252,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        Docker volumes are not supported by tasks run on AWS Fargate.
+     *        Docker volumes are not supported by tasks run on Fargate.
      *        </p>
      */
 
@@ -270,7 +270,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Docker volumes are not supported by tasks run on AWS Fargate.
+     * Docker volumes are not supported by tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -281,7 +281,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <note>
      *         <p>
-     *         Docker volumes are not supported by tasks run on AWS Fargate.
+     *         Docker volumes are not supported by tasks run on Fargate.
      *         </p>
      */
 
@@ -299,7 +299,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * Docker volumes are not supported by tasks run on AWS Fargate.
+     * Docker volumes are not supported by tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -311,7 +311,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        Docker volumes are not supported by tasks run on AWS Fargate.
+     *        Docker volumes are not supported by tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

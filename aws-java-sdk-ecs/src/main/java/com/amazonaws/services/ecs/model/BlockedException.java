@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Your AWS account has been blocked. For more information, contact <a href="http://aws.amazon.com/contact-us/">AWS
- * Support</a>.
+ * Your Amazon Web Services account has been blocked. For more information, contact <a
+ * href="http://aws.amazon.com/contact-us/"> Amazon Web Services Support</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

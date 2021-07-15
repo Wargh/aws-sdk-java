@@ -585,7 +585,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      */
@@ -4876,7 +4876,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -4888,7 +4888,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        <code>--privileged</code> option to <a
      *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      */
 
@@ -4906,7 +4906,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -4917,7 +4917,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *         <code>--privileged</code> option to <a
      *         href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
      *         <p>
-     *         This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *         This parameter is not supported for Windows containers or tasks run on Fargate.
      *         </p>
      */
 
@@ -4935,7 +4935,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -4947,7 +4947,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        <code>--privileged</code> option to <a
      *        href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
      *        <p>
-     *        This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *        This parameter is not supported for Windows containers or tasks run on Fargate.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -4967,7 +4967,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </p>
      * <note>
      * <p>
-     * This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
      * </p>
      * </note>
      * 
@@ -4978,7 +4978,7 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *         <code>--privileged</code> option to <a
      *         href="https://docs.docker.com/engine/reference/run/#security-configuration">docker run</a>.</p> <note>
      *         <p>
-     *         This parameter is not supported for Windows containers or tasks run on AWS Fargate.
+     *         This parameter is not supported for Windows containers or tasks run on Fargate.
      *         </p>
      */
 

@@ -55,7 +55,7 @@ public class CreateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html"> AddPermission </a>.
      * </p>
      * <p>
-     * For adding permission using the AWS CLI, see <a
+     * For adding permission using the CLI, see <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html"> add-permission </a>.
      * </p>
      * </note>
@@ -281,7 +281,7 @@ public class CreateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html"> AddPermission </a>.
      * </p>
      * <p>
-     * For adding permission using the AWS CLI, see <a
+     * For adding permission using the CLI, see <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html"> add-permission </a>.
      * </p>
      * </note>
@@ -299,7 +299,7 @@ public class CreateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html"> AddPermission </a>.
      *        </p>
      *        <p>
-     *        For adding permission using the AWS CLI, see <a
+     *        For adding permission using the CLI, see <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html"> add-permission </a>.
      *        </p>
      */
@@ -323,7 +323,7 @@ public class CreateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html"> AddPermission </a>.
      * </p>
      * <p>
-     * For adding permission using the AWS CLI, see <a
+     * For adding permission using the CLI, see <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html"> add-permission </a>.
      * </p>
      * </note>
@@ -340,7 +340,7 @@ public class CreateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html"> AddPermission </a>.
      *         </p>
      *         <p>
-     *         For adding permission using the AWS CLI, see <a
+     *         For adding permission using the CLI, see <a
      *         href="https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html"> add-permission </a>.
      *         </p>
      */
@@ -364,7 +364,7 @@ public class CreateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
      * href="https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html"> AddPermission </a>.
      * </p>
      * <p>
-     * For adding permission using the AWS CLI, see <a
+     * For adding permission using the CLI, see <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html"> add-permission </a>.
      * </p>
      * </note>
@@ -382,7 +382,7 @@ public class CreateUserPoolRequest extends com.amazonaws.AmazonWebServiceRequest
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html"> AddPermission </a>.
      *        </p>
      *        <p>
-     *        For adding permission using the AWS CLI, see <a
+     *        For adding permission using the CLI, see <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html"> add-permission </a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.

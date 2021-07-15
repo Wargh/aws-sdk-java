@@ -29,8 +29,8 @@ import com.amazonaws.services.ecs.model.*;
  * <p>
  * Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  * easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless
- * infrastructure that is managed by Amazon ECS by launching your services or tasks on AWS Fargate. For more control,
- * you can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage.
+ * infrastructure that is managed by Amazon ECS by launching your services or tasks on Fargate. For more control, you
+ * can host your tasks on a cluster of Amazon Elastic Compute Cloud (Amazon EC2) instances that you manage.
  * </p>
  * <p>
  * Amazon ECS makes it easy to launch and stop container-based applications with simple API calls, allows you to get the
@@ -51,9 +51,9 @@ public interface AmazonECSAsync extends AmazonECS {
      * capacity provider strategies to facilitate cluster auto scaling.
      * </p>
      * <p>
-     * Only capacity providers using an Auto Scaling group can be created. Amazon ECS tasks on AWS Fargate use the
+     * Only capacity providers using an Auto Scaling group can be created. Amazon ECS tasks on Fargate use the
      * <code>FARGATE</code> and <code>FARGATE_SPOT</code> capacity providers which are already created and available to
-     * all accounts in Regions supported by AWS Fargate.
+     * all accounts in Regions supported by Fargate.
      * </p>
      * 
      * @param createCapacityProviderRequest
@@ -70,9 +70,9 @@ public interface AmazonECSAsync extends AmazonECS {
      * capacity provider strategies to facilitate cluster auto scaling.
      * </p>
      * <p>
-     * Only capacity providers using an Auto Scaling group can be created. Amazon ECS tasks on AWS Fargate use the
+     * Only capacity providers using an Auto Scaling group can be created. Amazon ECS tasks on Fargate use the
      * <code>FARGATE</code> and <code>FARGATE_SPOT</code> capacity providers which are already created and available to
-     * all accounts in Regions supported by AWS Fargate.
+     * all accounts in Regions supported by Fargate.
      * </p>
      * 
      * @param createCapacityProviderRequest
@@ -97,9 +97,9 @@ public interface AmazonECSAsync extends AmazonECS {
      * <note>
      * <p>
      * When you call the <a>CreateCluster</a> API operation, Amazon ECS attempts to create the Amazon ECS service-linked
-     * role for your account so that required resources in other AWS services can be managed on your behalf. However, if
-     * the IAM user that makes the call does not have permissions to create the service-linked role, it is not created.
-     * For more information, see <a
+     * role for your account so that required resources in other Amazon Web Services services can be managed on your
+     * behalf. However, if the IAM user that makes the call does not have permissions to create the service-linked role,
+     * it is not created. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -122,9 +122,9 @@ public interface AmazonECSAsync extends AmazonECS {
      * <note>
      * <p>
      * When you call the <a>CreateCluster</a> API operation, Amazon ECS attempts to create the Amazon ECS service-linked
-     * role for your account so that required resources in other AWS services can be managed on your behalf. However, if
-     * the IAM user that makes the call does not have permissions to create the service-linked role, it is not created.
-     * For more information, see <a
+     * role for your account so that required resources in other Amazon Web Services services can be managed on your
+     * behalf. However, if the IAM user that makes the call does not have permissions to create the service-linked role,
+     * it is not created. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html">Using
      * Service-Linked Roles for Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -1892,10 +1892,10 @@ public interface AmazonECSAsync extends AmazonECS {
      * </p>
      * <p>
      * You can specify an IAM role for your task with the <code>taskRoleArn</code> parameter. When you specify an IAM
-     * role for a task, its containers can then use the latest versions of the AWS CLI or SDKs to make API requests to
-     * the AWS services that are specified in the IAM policy associated with the role. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for Tasks</a> in
-     * the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * role for a task, its containers can then use the latest versions of the CLI or SDKs to make API requests to the
+     * Amazon Web Services services that are specified in the IAM policy associated with the role. For more information,
+     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for
+     * Tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
      * You can specify a Docker networking mode for the containers in your task definition with the
@@ -1926,10 +1926,10 @@ public interface AmazonECSAsync extends AmazonECS {
      * </p>
      * <p>
      * You can specify an IAM role for your task with the <code>taskRoleArn</code> parameter. When you specify an IAM
-     * role for a task, its containers can then use the latest versions of the AWS CLI or SDKs to make API requests to
-     * the AWS services that are specified in the IAM policy associated with the role. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for Tasks</a> in
-     * the <i>Amazon Elastic Container Service Developer Guide</i>.
+     * role for a task, its containers can then use the latest versions of the CLI or SDKs to make API requests to the
+     * Amazon Web Services services that are specified in the IAM policy associated with the role. For more information,
+     * see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html">IAM Roles for
+     * Tasks</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
      * You can specify a Docker networking mode for the containers in your task definition with the
@@ -2703,10 +2703,10 @@ public interface AmazonECSAsync extends AmazonECS {
      * <p>
      * For services using the blue/green (<code>CODE_DEPLOY</code>) deployment controller, only the desired count,
      * deployment configuration, task placement constraints and strategies, and health check grace period can be updated
-     * using this API. If the network configuration, platform version, or task definition need to be updated, a new AWS
+     * using this API. If the network configuration, platform version, or task definition need to be updated, a new
      * CodeDeploy deployment should be created. For more information, see <a
      * href="https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html">CreateDeployment</a>
-     * in the <i>AWS CodeDeploy API Reference</i>.
+     * in the <i>CodeDeploy API Reference</i>.
      * </p>
      * <p>
      * For services using an external deployment controller, you can update only the desired count, task placement
@@ -2843,10 +2843,10 @@ public interface AmazonECSAsync extends AmazonECS {
      * <p>
      * For services using the blue/green (<code>CODE_DEPLOY</code>) deployment controller, only the desired count,
      * deployment configuration, task placement constraints and strategies, and health check grace period can be updated
-     * using this API. If the network configuration, platform version, or task definition need to be updated, a new AWS
+     * using this API. If the network configuration, platform version, or task definition need to be updated, a new
      * CodeDeploy deployment should be created. For more information, see <a
      * href="https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html">CreateDeployment</a>
-     * in the <i>AWS CodeDeploy API Reference</i>.
+     * in the <i>CodeDeploy API Reference</i>.
      * </p>
      * <p>
      * For services using an external deployment controller, you can update only the desired count, task placement

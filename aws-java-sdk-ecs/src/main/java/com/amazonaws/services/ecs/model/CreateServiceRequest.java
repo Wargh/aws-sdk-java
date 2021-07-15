@@ -68,12 +68,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to use either
-     * an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy deployment group, you
-     * specify two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, AWS CodeDeploy
-     * determines which task set in your service has the status <code>PRIMARY</code> and associates one target group
-     * with it, and then associates the other target group with the replacement task set. The load balancer can also
-     * have up to two listeners: a required listener for production traffic and an optional listener that allows you
-     * perform validation tests with Lambda functions before routing production traffic to it.
+     * an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment group, you specify
+     * two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, CodeDeploy determines
+     * which task set in your service has the status <code>PRIMARY</code> and associates one target group with it, and
+     * then associates the other target group with the replacement task set. The load balancer can also have up to two
+     * listeners: a required listener for production traffic and an optional listener that allows you perform validation
+     * tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
      * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
@@ -139,14 +139,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -178,7 +178,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The platform version that your tasks in the service are running on. A platform version is specified only for
      * tasks using the Fargate launch type. If one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate platform
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
      * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      */
@@ -342,8 +342,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -560,12 +560,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to use either
-     * an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy deployment group, you
-     * specify two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, AWS CodeDeploy
-     * determines which task set in your service has the status <code>PRIMARY</code> and associates one target group
-     * with it, and then associates the other target group with the replacement task set. The load balancer can also
-     * have up to two listeners: a required listener for production traffic and an optional listener that allows you
-     * perform validation tests with Lambda functions before routing production traffic to it.
+     * an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment group, you specify
+     * two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, CodeDeploy determines
+     * which task set in your service has the status <code>PRIMARY</code> and associates one target group with it, and
+     * then associates the other target group with the replacement task set. The load balancer can also have up to two
+     * listeners: a required listener for production traffic and an optional listener that allows you perform validation
+     * tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
      * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
@@ -607,12 +607,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         </p>
      *         <p>
      *         If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to
-     *         use either an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy
-     *         deployment group, you specify two target groups (referred to as a <code>targetGroupPair</code>). During a
-     *         deployment, AWS CodeDeploy determines which task set in your service has the status <code>PRIMARY</code>
-     *         and associates one target group with it, and then associates the other target group with the replacement
-     *         task set. The load balancer can also have up to two listeners: a required listener for production traffic
-     *         and an optional listener that allows you perform validation tests with Lambda functions before routing
+     *         use either an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment
+     *         group, you specify two target groups (referred to as a <code>targetGroupPair</code>). During a
+     *         deployment, CodeDeploy determines which task set in your service has the status <code>PRIMARY</code> and
+     *         associates one target group with it, and then associates the other target group with the replacement task
+     *         set. The load balancer can also have up to two listeners: a required listener for production traffic and
+     *         an optional listener that allows you perform validation tests with Lambda functions before routing
      *         production traffic to it.
      *         </p>
      *         <p>
@@ -666,12 +666,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to use either
-     * an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy deployment group, you
-     * specify two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, AWS CodeDeploy
-     * determines which task set in your service has the status <code>PRIMARY</code> and associates one target group
-     * with it, and then associates the other target group with the replacement task set. The load balancer can also
-     * have up to two listeners: a required listener for production traffic and an optional listener that allows you
-     * perform validation tests with Lambda functions before routing production traffic to it.
+     * an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment group, you specify
+     * two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, CodeDeploy determines
+     * which task set in your service has the status <code>PRIMARY</code> and associates one target group with it, and
+     * then associates the other target group with the replacement task set. The load balancer can also have up to two
+     * listeners: a required listener for production traffic and an optional listener that allows you perform validation
+     * tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
      * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
@@ -713,13 +713,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </p>
      *        <p>
      *        If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to use
-     *        either an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy deployment
+     *        either an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment
      *        group, you specify two target groups (referred to as a <code>targetGroupPair</code>). During a deployment,
-     *        AWS CodeDeploy determines which task set in your service has the status <code>PRIMARY</code> and
-     *        associates one target group with it, and then associates the other target group with the replacement task
-     *        set. The load balancer can also have up to two listeners: a required listener for production traffic and
-     *        an optional listener that allows you perform validation tests with Lambda functions before routing
-     *        production traffic to it.
+     *        CodeDeploy determines which task set in your service has the status <code>PRIMARY</code> and associates
+     *        one target group with it, and then associates the other target group with the replacement task set. The
+     *        load balancer can also have up to two listeners: a required listener for production traffic and an
+     *        optional listener that allows you perform validation tests with Lambda functions before routing production
+     *        traffic to it.
      *        </p>
      *        <p>
      *        After you create a service using the <code>ECS</code> deployment controller, the load balancer name or
@@ -774,12 +774,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to use either
-     * an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy deployment group, you
-     * specify two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, AWS CodeDeploy
-     * determines which task set in your service has the status <code>PRIMARY</code> and associates one target group
-     * with it, and then associates the other target group with the replacement task set. The load balancer can also
-     * have up to two listeners: a required listener for production traffic and an optional listener that allows you
-     * perform validation tests with Lambda functions before routing production traffic to it.
+     * an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment group, you specify
+     * two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, CodeDeploy determines
+     * which task set in your service has the status <code>PRIMARY</code> and associates one target group with it, and
+     * then associates the other target group with the replacement task set. The load balancer can also have up to two
+     * listeners: a required listener for production traffic and an optional listener that allows you perform validation
+     * tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
      * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
@@ -826,13 +826,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </p>
      *        <p>
      *        If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to use
-     *        either an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy deployment
+     *        either an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment
      *        group, you specify two target groups (referred to as a <code>targetGroupPair</code>). During a deployment,
-     *        AWS CodeDeploy determines which task set in your service has the status <code>PRIMARY</code> and
-     *        associates one target group with it, and then associates the other target group with the replacement task
-     *        set. The load balancer can also have up to two listeners: a required listener for production traffic and
-     *        an optional listener that allows you perform validation tests with Lambda functions before routing
-     *        production traffic to it.
+     *        CodeDeploy determines which task set in your service has the status <code>PRIMARY</code> and associates
+     *        one target group with it, and then associates the other target group with the replacement task set. The
+     *        load balancer can also have up to two listeners: a required listener for production traffic and an
+     *        optional listener that allows you perform validation tests with Lambda functions before routing production
+     *        traffic to it.
      *        </p>
      *        <p>
      *        After you create a service using the <code>ECS</code> deployment controller, the load balancer name or
@@ -889,12 +889,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <p>
      * If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to use either
-     * an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy deployment group, you
-     * specify two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, AWS CodeDeploy
-     * determines which task set in your service has the status <code>PRIMARY</code> and associates one target group
-     * with it, and then associates the other target group with the replacement task set. The load balancer can also
-     * have up to two listeners: a required listener for production traffic and an optional listener that allows you
-     * perform validation tests with Lambda functions before routing production traffic to it.
+     * an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment group, you specify
+     * two target groups (referred to as a <code>targetGroupPair</code>). During a deployment, CodeDeploy determines
+     * which task set in your service has the status <code>PRIMARY</code> and associates one target group with it, and
+     * then associates the other target group with the replacement task set. The load balancer can also have up to two
+     * listeners: a required listener for production traffic and an optional listener that allows you perform validation
+     * tests with Lambda functions before routing production traffic to it.
      * </p>
      * <p>
      * After you create a service using the <code>ECS</code> deployment controller, the load balancer name or target
@@ -936,13 +936,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </p>
      *        <p>
      *        If the service is using the <code>CODE_DEPLOY</code> deployment controller, the service is required to use
-     *        either an Application Load Balancer or Network Load Balancer. When creating an AWS CodeDeploy deployment
+     *        either an Application Load Balancer or Network Load Balancer. When creating an CodeDeploy deployment
      *        group, you specify two target groups (referred to as a <code>targetGroupPair</code>). During a deployment,
-     *        AWS CodeDeploy determines which task set in your service has the status <code>PRIMARY</code> and
-     *        associates one target group with it, and then associates the other target group with the replacement task
-     *        set. The load balancer can also have up to two listeners: a required listener for production traffic and
-     *        an optional listener that allows you perform validation tests with Lambda functions before routing
-     *        production traffic to it.
+     *        CodeDeploy determines which task set in your service has the status <code>PRIMARY</code> and associates
+     *        one target group with it, and then associates the other target group with the replacement task set. The
+     *        load balancer can also have up to two listeners: a required listener for production traffic and an
+     *        optional listener that allows you perform validation tests with Lambda functions before routing production
+     *        traffic to it.
      *        </p>
      *        <p>
      *        After you create a service using the <code>ECS</code> deployment controller, the load balancer name or
@@ -1220,14 +1220,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1247,14 +1247,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *        <p>
-     *        The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     *        The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      *        </p>
      *        <note>
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -1281,14 +1281,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1307,14 +1307,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *         types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *         <p>
-     *         The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     *         The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      *         </p>
      *         <note>
      *         <p>
      *         Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     *         capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *         capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *         </p>
      *         </note>
      *         <p>
@@ -1341,14 +1341,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1368,14 +1368,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *        <p>
-     *        The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     *        The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      *        </p>
      *        <note>
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -1404,14 +1404,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * <p>
-     * The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     * The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      * </p>
      * <note>
      * <p>
      * Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     * capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate capacity
+     * providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      * </p>
      * </note>
      * <p>
@@ -1431,14 +1431,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html">Amazon ECS launch
      *        types</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.</p>
      *        <p>
-     *        The <code>FARGATE</code> launch type runs your tasks on AWS Fargate On-Demand infrastructure.
+     *        The <code>FARGATE</code> launch type runs your tasks on Fargate On-Demand infrastructure.
      *        </p>
      *        <note>
      *        <p>
      *        Fargate Spot infrastructure is available for use but a capacity provider strategy must be used. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">AWS Fargate
-     *        capacity providers</a> in the <i>Amazon ECS User Guide for AWS Fargate</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/fargate-capacity-providers.html">Fargate
+     *        capacity providers</a> in the <i>Amazon ECS User Guide for Fargate</i>.
      *        </p>
      *        </note>
      *        <p>
@@ -1574,7 +1574,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The platform version that your tasks in the service are running on. A platform version is specified only for
      * tasks using the Fargate launch type. If one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate platform
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
      * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
@@ -1582,8 +1582,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        The platform version that your tasks in the service are running on. A platform version is specified only
      *        for tasks using the Fargate launch type. If one isn't specified, the <code>LATEST</code> platform version
      *        is used by default. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     *        platform versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     *        versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
     public void setPlatformVersion(String platformVersion) {
@@ -1595,14 +1595,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The platform version that your tasks in the service are running on. A platform version is specified only for
      * tasks using the Fargate launch type. If one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate platform
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
      * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @return The platform version that your tasks in the service are running on. A platform version is specified only
      *         for tasks using the Fargate launch type. If one isn't specified, the <code>LATEST</code> platform version
      *         is used by default. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate
      *         platform versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      */
 
@@ -1615,7 +1615,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The platform version that your tasks in the service are running on. A platform version is specified only for
      * tasks using the Fargate launch type. If one isn't specified, the <code>LATEST</code> platform version is used by
      * default. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate platform
+     * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
      * versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
@@ -1623,8 +1623,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        The platform version that your tasks in the service are running on. A platform version is specified only
      *        for tasks using the Fargate launch type. If one isn't specified, the <code>LATEST</code> platform version
      *        is used by default. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS Fargate
-     *        platform versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate platform
+     *        versions</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2542,8 +2542,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2590,8 +2590,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <li>
      *         <p>
      *         Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a
-     *         prefix for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or
-     *         values with this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *         prefix for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete
+     *         tag keys or values with this prefix. Tags with this prefix do not count against your tags per resource
+     *         limit.
      *         </p>
      *         </li>
      */
@@ -2647,8 +2648,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2696,8 +2697,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      */
@@ -2755,8 +2756,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2809,8 +2810,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2870,8 +2871,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <li>
      * <p>
      * Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix for
-     * either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with this
-     * prefix. Tags with this prefix do not count against your tags per resource limit.
+     * either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag keys or values
+     * with this prefix. Tags with this prefix do not count against your tags per resource limit.
      * </p>
      * </li>
      * </ul>
@@ -2919,8 +2920,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <li>
      *        <p>
      *        Do not use <code>aws:</code>, <code>AWS:</code>, or any upper or lowercase combination of such as a prefix
-     *        for either keys or values as it is reserved for AWS use. You cannot edit or delete tag keys or values with
-     *        this prefix. Tags with this prefix do not count against your tags per resource limit.
+     *        for either keys or values as it is reserved for Amazon Web Services use. You cannot edit or delete tag
+     *        keys or values with this prefix. Tags with this prefix do not count against your tags per resource limit.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -1454,6 +1454,68 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Associates one or more targets with an event window. Only one type of target (instance IDs, Dedicated Host IDs,
+     * or tags) can be specified with an event window.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/monitoring-instances-status-check_sched.html#event-windows">Define event
+     * windows for scheduled events</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param associateInstanceEventWindowRequest
+     * @return Result of the AssociateInstanceEventWindow operation returned by the service.
+     * @sample AmazonEC2.AssociateInstanceEventWindow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateInstanceEventWindow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateInstanceEventWindowResult associateInstanceEventWindow(AssociateInstanceEventWindowRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateInstanceEventWindow(request);
+    }
+
+    @SdkInternalApi
+    final AssociateInstanceEventWindowResult executeAssociateInstanceEventWindow(AssociateInstanceEventWindowRequest associateInstanceEventWindowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateInstanceEventWindowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateInstanceEventWindowRequest> request = null;
+        Response<AssociateInstanceEventWindowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateInstanceEventWindowRequestMarshaller().marshall(super.beforeMarshalling(associateInstanceEventWindowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateInstanceEventWindow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AssociateInstanceEventWindowResult> responseHandler = new StaxResponseHandler<AssociateInstanceEventWindowResult>(
+                    new AssociateInstanceEventWindowResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Associates a subnet in your VPC or an internet gateway or virtual private gateway attached to your VPC with a
      * route table in your VPC. This association causes traffic from the subnet or gateway to be routed according to the
      * routes in the route table. The action returns an association ID, which you need in order to disassociate the
@@ -4103,6 +4165,99 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
             }
 
             StaxResponseHandler<CreateImageResult> responseHandler = new StaxResponseHandler<CreateImageResult>(new CreateImageResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an event window in which scheduled events for the associated Amazon EC2 instances can run.
+     * </p>
+     * <p>
+     * You can define either a set of time ranges or a cron expression when creating the event window, but not both. All
+     * event window times are in UTC.
+     * </p>
+     * <p>
+     * You can create up to 200 event windows per Amazon Web Services Region.
+     * </p>
+     * <p>
+     * When you create the event window, targets (instance IDs, Dedicated Host IDs, or tags) are not yet associated with
+     * it. To ensure that the event window can be used, you must associate one or more targets with it by using the
+     * <a>AssociateInstanceEventWindow</a> API.
+     * </p>
+     * <important>
+     * <p>
+     * Event windows are applicable only for scheduled events that stop, reboot, or terminate instances.
+     * </p>
+     * <p>
+     * Event windows are <i>not</i> applicable for:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Expedited scheduled events and network maintenance events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Unscheduled maintenance such as AutoRecovery and unplanned reboots.
+     * </p>
+     * </li>
+     * </ul>
+     * </important>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/monitoring-instances-status-check_sched.html#event-windows">Define event
+     * windows for scheduled events</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param createInstanceEventWindowRequest
+     * @return Result of the CreateInstanceEventWindow operation returned by the service.
+     * @sample AmazonEC2.CreateInstanceEventWindow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateInstanceEventWindow" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateInstanceEventWindowResult createInstanceEventWindow(CreateInstanceEventWindowRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateInstanceEventWindow(request);
+    }
+
+    @SdkInternalApi
+    final CreateInstanceEventWindowResult executeCreateInstanceEventWindow(CreateInstanceEventWindowRequest createInstanceEventWindowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createInstanceEventWindowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateInstanceEventWindowRequest> request = null;
+        Response<CreateInstanceEventWindowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateInstanceEventWindowRequestMarshaller().marshall(super.beforeMarshalling(createInstanceEventWindowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateInstanceEventWindow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateInstanceEventWindowResult> responseHandler = new StaxResponseHandler<CreateInstanceEventWindowResult>(
+                    new CreateInstanceEventWindowResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -7987,6 +8142,67 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Deletes the specified event window.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/monitoring-instances-status-check_sched.html#event-windows">Define event
+     * windows for scheduled events</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param deleteInstanceEventWindowRequest
+     * @return Result of the DeleteInstanceEventWindow operation returned by the service.
+     * @sample AmazonEC2.DeleteInstanceEventWindow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteInstanceEventWindow" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteInstanceEventWindowResult deleteInstanceEventWindow(DeleteInstanceEventWindowRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteInstanceEventWindow(request);
+    }
+
+    @SdkInternalApi
+    final DeleteInstanceEventWindowResult executeDeleteInstanceEventWindow(DeleteInstanceEventWindowRequest deleteInstanceEventWindowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteInstanceEventWindowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteInstanceEventWindowRequest> request = null;
+        Response<DeleteInstanceEventWindowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteInstanceEventWindowRequestMarshaller().marshall(super.beforeMarshalling(deleteInstanceEventWindowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteInstanceEventWindow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteInstanceEventWindowResult> responseHandler = new StaxResponseHandler<DeleteInstanceEventWindowResult>(
+                    new DeleteInstanceEventWindowResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the specified internet gateway. You must detach the internet gateway from the VPC before you can delete
      * it.
      * </p>
@@ -10773,6 +10989,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     }
 
     /**
+     * <p>
+     * c
+     * </p>
      * <p>
      * Deregisters tag keys to prevent tags that have the specified tag keys from being included in scheduled event
      * notifications for resources in the Region.
@@ -13652,6 +13871,75 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<DescribeInstanceEventNotificationAttributesResult> responseHandler = new StaxResponseHandler<DescribeInstanceEventNotificationAttributesResult>(
                     new DescribeInstanceEventNotificationAttributesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes the specified event windows or all event windows.
+     * </p>
+     * <p>
+     * If you specify event window IDs, the output includes information for only the specified event windows. If you
+     * specify filters, the output includes information for only those event windows that meet the filter criteria. If
+     * you do not specify event windows IDs or filters, the output includes information for all event windows, which can
+     * affect performance. We recommend that you use pagination to ensure that the operation returns quickly and
+     * successfully.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/monitoring-instances-status-check_sched.html#event-windows">Define event
+     * windows for scheduled events</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param describeInstanceEventWindowsRequest
+     *        Describe instance event windows by InstanceEventWindow.
+     * @return Result of the DescribeInstanceEventWindows operation returned by the service.
+     * @sample AmazonEC2.DescribeInstanceEventWindows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeInstanceEventWindows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeInstanceEventWindowsResult describeInstanceEventWindows(DescribeInstanceEventWindowsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeInstanceEventWindows(request);
+    }
+
+    @SdkInternalApi
+    final DescribeInstanceEventWindowsResult executeDescribeInstanceEventWindows(DescribeInstanceEventWindowsRequest describeInstanceEventWindowsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeInstanceEventWindowsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeInstanceEventWindowsRequest> request = null;
+        Response<DescribeInstanceEventWindowsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeInstanceEventWindowsRequestMarshaller().marshall(super.beforeMarshalling(describeInstanceEventWindowsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeInstanceEventWindows");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeInstanceEventWindowsResult> responseHandler = new StaxResponseHandler<DescribeInstanceEventWindowsResult>(
+                    new DescribeInstanceEventWindowsResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -19867,6 +20155,68 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Disassociates one or more targets from an event window.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/monitoring-instances-status-check_sched.html#event-windows">Define event
+     * windows for scheduled events</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param disassociateInstanceEventWindowRequest
+     * @return Result of the DisassociateInstanceEventWindow operation returned by the service.
+     * @sample AmazonEC2.DisassociateInstanceEventWindow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateInstanceEventWindow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateInstanceEventWindowResult disassociateInstanceEventWindow(DisassociateInstanceEventWindowRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateInstanceEventWindow(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateInstanceEventWindowResult executeDisassociateInstanceEventWindow(
+            DisassociateInstanceEventWindowRequest disassociateInstanceEventWindowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateInstanceEventWindowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateInstanceEventWindowRequest> request = null;
+        Response<DisassociateInstanceEventWindowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateInstanceEventWindowRequestMarshaller().marshall(super.beforeMarshalling(disassociateInstanceEventWindowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateInstanceEventWindow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisassociateInstanceEventWindowResult> responseHandler = new StaxResponseHandler<DisassociateInstanceEventWindowResult>(
+                    new DisassociateInstanceEventWindowResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disassociates a subnet or gateway from a route table.
      * </p>
      * <p>
@@ -23860,6 +24210,78 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<ModifyInstanceEventStartTimeResult> responseHandler = new StaxResponseHandler<ModifyInstanceEventStartTimeResult>(
                     new ModifyInstanceEventStartTimeResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Modifies the specified event window.
+     * </p>
+     * <p>
+     * You can define either a set of time ranges or a cron expression when modifying the event window, but not both.
+     * </p>
+     * <p>
+     * To modify the targets associated with the event window, use the <a>AssociateInstanceEventWindow</a> and
+     * <a>DisassociateInstanceEventWindow</a> API.
+     * </p>
+     * <p>
+     * If Amazon Web Services has already scheduled an event, modifying an event window won't change the time of the
+     * scheduled event.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/monitoring-instances-status-check_sched.html#event-windows">Define event
+     * windows for scheduled events</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param modifyInstanceEventWindowRequest
+     * @return Result of the ModifyInstanceEventWindow operation returned by the service.
+     * @sample AmazonEC2.ModifyInstanceEventWindow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceEventWindow" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ModifyInstanceEventWindowResult modifyInstanceEventWindow(ModifyInstanceEventWindowRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyInstanceEventWindow(request);
+    }
+
+    @SdkInternalApi
+    final ModifyInstanceEventWindowResult executeModifyInstanceEventWindow(ModifyInstanceEventWindowRequest modifyInstanceEventWindowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyInstanceEventWindowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyInstanceEventWindowRequest> request = null;
+        Response<ModifyInstanceEventWindowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyInstanceEventWindowRequestMarshaller().marshall(super.beforeMarshalling(modifyInstanceEventWindowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyInstanceEventWindow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyInstanceEventWindowResult> responseHandler = new StaxResponseHandler<ModifyInstanceEventWindowResult>(
+                    new ModifyInstanceEventWindowResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

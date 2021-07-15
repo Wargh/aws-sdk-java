@@ -34,9 +34,9 @@ public class RepositoryCredentials implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * When you are using the Amazon ECS API, AWS CLI, or AWS SDK, if the secret exists in the same Region as the task
-     * that you are launching then you can use either the full ARN or the name of the secret. When you are using the AWS
-     * Management Console, you must specify the full ARN of the secret.
+     * When you are using the Amazon ECS API, CLI, or Amazon Web Services SDK, if the secret exists in the same Region
+     * as the task that you are launching then you can use either the full ARN or the name of the secret. When you are
+     * using the Amazon Web Services Management Console, you must specify the full ARN of the secret.
      * </p>
      * </note>
      */
@@ -48,18 +48,19 @@ public class RepositoryCredentials implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * When you are using the Amazon ECS API, AWS CLI, or AWS SDK, if the secret exists in the same Region as the task
-     * that you are launching then you can use either the full ARN or the name of the secret. When you are using the AWS
-     * Management Console, you must specify the full ARN of the secret.
+     * When you are using the Amazon ECS API, CLI, or Amazon Web Services SDK, if the secret exists in the same Region
+     * as the task that you are launching then you can use either the full ARN or the name of the secret. When you are
+     * using the Amazon Web Services Management Console, you must specify the full ARN of the secret.
      * </p>
      * </note>
      * 
      * @param credentialsParameter
      *        The Amazon Resource Name (ARN) of the secret containing the private repository credentials.</p> <note>
      *        <p>
-     *        When you are using the Amazon ECS API, AWS CLI, or AWS SDK, if the secret exists in the same Region as the
-     *        task that you are launching then you can use either the full ARN or the name of the secret. When you are
-     *        using the AWS Management Console, you must specify the full ARN of the secret.
+     *        When you are using the Amazon ECS API, CLI, or Amazon Web Services SDK, if the secret exists in the same
+     *        Region as the task that you are launching then you can use either the full ARN or the name of the secret.
+     *        When you are using the Amazon Web Services Management Console, you must specify the full ARN of the
+     *        secret.
      *        </p>
      */
 
@@ -73,17 +74,18 @@ public class RepositoryCredentials implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * When you are using the Amazon ECS API, AWS CLI, or AWS SDK, if the secret exists in the same Region as the task
-     * that you are launching then you can use either the full ARN or the name of the secret. When you are using the AWS
-     * Management Console, you must specify the full ARN of the secret.
+     * When you are using the Amazon ECS API, CLI, or Amazon Web Services SDK, if the secret exists in the same Region
+     * as the task that you are launching then you can use either the full ARN or the name of the secret. When you are
+     * using the Amazon Web Services Management Console, you must specify the full ARN of the secret.
      * </p>
      * </note>
      * 
      * @return The Amazon Resource Name (ARN) of the secret containing the private repository credentials.</p> <note>
      *         <p>
-     *         When you are using the Amazon ECS API, AWS CLI, or AWS SDK, if the secret exists in the same Region as
-     *         the task that you are launching then you can use either the full ARN or the name of the secret. When you
-     *         are using the AWS Management Console, you must specify the full ARN of the secret.
+     *         When you are using the Amazon ECS API, CLI, or Amazon Web Services SDK, if the secret exists in the same
+     *         Region as the task that you are launching then you can use either the full ARN or the name of the secret.
+     *         When you are using the Amazon Web Services Management Console, you must specify the full ARN of the
+     *         secret.
      *         </p>
      */
 
@@ -97,18 +99,19 @@ public class RepositoryCredentials implements Serializable, Cloneable, Structure
      * </p>
      * <note>
      * <p>
-     * When you are using the Amazon ECS API, AWS CLI, or AWS SDK, if the secret exists in the same Region as the task
-     * that you are launching then you can use either the full ARN or the name of the secret. When you are using the AWS
-     * Management Console, you must specify the full ARN of the secret.
+     * When you are using the Amazon ECS API, CLI, or Amazon Web Services SDK, if the secret exists in the same Region
+     * as the task that you are launching then you can use either the full ARN or the name of the secret. When you are
+     * using the Amazon Web Services Management Console, you must specify the full ARN of the secret.
      * </p>
      * </note>
      * 
      * @param credentialsParameter
      *        The Amazon Resource Name (ARN) of the secret containing the private repository credentials.</p> <note>
      *        <p>
-     *        When you are using the Amazon ECS API, AWS CLI, or AWS SDK, if the secret exists in the same Region as the
-     *        task that you are launching then you can use either the full ARN or the name of the secret. When you are
-     *        using the AWS Management Console, you must specify the full ARN of the secret.
+     *        When you are using the Amazon ECS API, CLI, or Amazon Web Services SDK, if the secret exists in the same
+     *        Region as the task that you are launching then you can use either the full ARN or the name of the secret.
+     *        When you are using the Amazon Web Services Management Console, you must specify the full ARN of the
+     *        secret.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

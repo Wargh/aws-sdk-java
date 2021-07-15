@@ -68,7 +68,7 @@ public class DummyResponseServerIntegrationTests extends MockServerTestBase {
         HttpClientFactory<ConnectionManagerAwareHttpClient> httpClientFactory = new ApacheHttpClientFactory();
         ConnectionManagerAwareHttpClient rawHttpClient = spy(httpClientFactory.create(HttpClientSettings.adapt(config)));
 
-        httpClient = new AmazonHttpClient(config, rawHttpClient, null);
+        httpClient = new AmazonHttpClient(config, rawHttpClient, null, null);
 
         try {
             httpClient.execute(newGetRequest(),

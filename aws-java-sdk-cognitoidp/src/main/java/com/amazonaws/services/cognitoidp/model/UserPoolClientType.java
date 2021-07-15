@@ -247,7 +247,7 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     * <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     * <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      * <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      * </p>
      */
@@ -2193,12 +2193,12 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     * <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     * <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      * <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      * </p>
      * 
      * @return The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     *         <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     *         <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      *         <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      */
 
@@ -2209,13 +2209,13 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     * <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     * <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      * <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      * </p>
      * 
      * @param allowedOAuthScopes
      *        The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     *        <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     *        <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      *        <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      */
 
@@ -2231,7 +2231,7 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     * <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     * <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      * <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      * </p>
      * <p>
@@ -2242,7 +2242,7 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
      * 
      * @param allowedOAuthScopes
      *        The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     *        <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     *        <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      *        <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2260,13 +2260,13 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     * <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     * <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      * <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      * </p>
      * 
      * @param allowedOAuthScopes
      *        The allowed OAuth scopes. Possible values provided by OAuth are: <code>phone</code>, <code>email</code>,
-     *        <code>openid</code>, and <code>profile</code>. Possible values provided by AWS are:
+     *        <code>openid</code>, and <code>profile</code>. Possible values provided by Amazon Web Services are:
      *        <code>aws.cognito.signin.user.admin</code>. Custom scopes created in Resource Servers are also supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

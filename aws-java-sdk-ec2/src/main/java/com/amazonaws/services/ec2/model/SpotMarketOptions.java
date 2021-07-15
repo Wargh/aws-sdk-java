@@ -43,20 +43,7 @@ public class SpotMarketOptions implements Serializable, Cloneable {
     private String spotInstanceType;
     /**
      * <p>
-     * The required duration for the Spot Instances (also known as Spot blocks), in minutes. This value must be a
-     * multiple of 60 (60, 120, 180, 240, 300, or 360).
-     * </p>
-     * <p>
-     * The duration period starts as soon as your Spot Instance receives its instance ID. At the end of the duration
-     * period, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance termination notice, which
-     * gives the instance a two-minute warning before it terminates.
-     * </p>
-     * <p>
-     * You can't specify an Availability Zone group or a launch group if you specify a duration.
-     * </p>
-     * <p>
-     * New accounts or accounts with no previous billing history with Amazon Web Services are not eligible for Spot
-     * Instances with a defined duration (also known as Spot blocks).
+     * Deprecated.
      * </p>
      */
     private Integer blockDurationMinutes;
@@ -214,36 +201,11 @@ public class SpotMarketOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The required duration for the Spot Instances (also known as Spot blocks), in minutes. This value must be a
-     * multiple of 60 (60, 120, 180, 240, 300, or 360).
-     * </p>
-     * <p>
-     * The duration period starts as soon as your Spot Instance receives its instance ID. At the end of the duration
-     * period, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance termination notice, which
-     * gives the instance a two-minute warning before it terminates.
-     * </p>
-     * <p>
-     * You can't specify an Availability Zone group or a launch group if you specify a duration.
-     * </p>
-     * <p>
-     * New accounts or accounts with no previous billing history with Amazon Web Services are not eligible for Spot
-     * Instances with a defined duration (also known as Spot blocks).
+     * Deprecated.
      * </p>
      * 
      * @param blockDurationMinutes
-     *        The required duration for the Spot Instances (also known as Spot blocks), in minutes. This value must be a
-     *        multiple of 60 (60, 120, 180, 240, 300, or 360).</p>
-     *        <p>
-     *        The duration period starts as soon as your Spot Instance receives its instance ID. At the end of the
-     *        duration period, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance
-     *        termination notice, which gives the instance a two-minute warning before it terminates.
-     *        </p>
-     *        <p>
-     *        You can't specify an Availability Zone group or a launch group if you specify a duration.
-     *        </p>
-     *        <p>
-     *        New accounts or accounts with no previous billing history with Amazon Web Services are not eligible for
-     *        Spot Instances with a defined duration (also known as Spot blocks).
+     *        Deprecated.
      */
 
     public void setBlockDurationMinutes(Integer blockDurationMinutes) {
@@ -252,35 +214,10 @@ public class SpotMarketOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The required duration for the Spot Instances (also known as Spot blocks), in minutes. This value must be a
-     * multiple of 60 (60, 120, 180, 240, 300, or 360).
-     * </p>
-     * <p>
-     * The duration period starts as soon as your Spot Instance receives its instance ID. At the end of the duration
-     * period, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance termination notice, which
-     * gives the instance a two-minute warning before it terminates.
-     * </p>
-     * <p>
-     * You can't specify an Availability Zone group or a launch group if you specify a duration.
-     * </p>
-     * <p>
-     * New accounts or accounts with no previous billing history with Amazon Web Services are not eligible for Spot
-     * Instances with a defined duration (also known as Spot blocks).
+     * Deprecated.
      * </p>
      * 
-     * @return The required duration for the Spot Instances (also known as Spot blocks), in minutes. This value must be
-     *         a multiple of 60 (60, 120, 180, 240, 300, or 360).</p>
-     *         <p>
-     *         The duration period starts as soon as your Spot Instance receives its instance ID. At the end of the
-     *         duration period, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance
-     *         termination notice, which gives the instance a two-minute warning before it terminates.
-     *         </p>
-     *         <p>
-     *         You can't specify an Availability Zone group or a launch group if you specify a duration.
-     *         </p>
-     *         <p>
-     *         New accounts or accounts with no previous billing history with Amazon Web Services are not eligible for
-     *         Spot Instances with a defined duration (also known as Spot blocks).
+     * @return Deprecated.
      */
 
     public Integer getBlockDurationMinutes() {
@@ -289,36 +226,11 @@ public class SpotMarketOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The required duration for the Spot Instances (also known as Spot blocks), in minutes. This value must be a
-     * multiple of 60 (60, 120, 180, 240, 300, or 360).
-     * </p>
-     * <p>
-     * The duration period starts as soon as your Spot Instance receives its instance ID. At the end of the duration
-     * period, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance termination notice, which
-     * gives the instance a two-minute warning before it terminates.
-     * </p>
-     * <p>
-     * You can't specify an Availability Zone group or a launch group if you specify a duration.
-     * </p>
-     * <p>
-     * New accounts or accounts with no previous billing history with Amazon Web Services are not eligible for Spot
-     * Instances with a defined duration (also known as Spot blocks).
+     * Deprecated.
      * </p>
      * 
      * @param blockDurationMinutes
-     *        The required duration for the Spot Instances (also known as Spot blocks), in minutes. This value must be a
-     *        multiple of 60 (60, 120, 180, 240, 300, or 360).</p>
-     *        <p>
-     *        The duration period starts as soon as your Spot Instance receives its instance ID. At the end of the
-     *        duration period, Amazon EC2 marks the Spot Instance for termination and provides a Spot Instance
-     *        termination notice, which gives the instance a two-minute warning before it terminates.
-     *        </p>
-     *        <p>
-     *        You can't specify an Availability Zone group or a launch group if you specify a duration.
-     *        </p>
-     *        <p>
-     *        New accounts or accounts with no previous billing history with Amazon Web Services are not eligible for
-     *        Spot Instances with a defined duration (also known as Spot blocks).
+     *        Deprecated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

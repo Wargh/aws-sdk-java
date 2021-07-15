@@ -70,7 +70,7 @@ public class MockedClientTests {
         HttpResponseProxy responseProxy = createHttpResponseProxySpy();
         doReturn(responseProxy).when(rawHttpClient).execute(any(HttpRequestBase.class), any(HttpContext.class));
 
-        httpClient = new AmazonHttpClient(config, rawHttpClient, null);
+        httpClient = new AmazonHttpClient(config, rawHttpClient, null, null);
 
         try {
             execute(httpClient, createMockGetRequest());
@@ -101,7 +101,7 @@ public class MockedClientTests {
         HttpResponseProxy responseProxy = createHttpHeadResponseProxy();
         doReturn(responseProxy).when(rawHttpClient).execute(any(HttpHead.class), any(HttpContext.class));
 
-        httpClient = new AmazonHttpClient(config, rawHttpClient, null);
+        httpClient = new AmazonHttpClient(config, rawHttpClient, null, null);
 
         try {
             execute(httpClient, createMockHeadRequest());
@@ -121,7 +121,7 @@ public class MockedClientTests {
         HttpResponseProxy responseProxy = createHttpResponseProxySpy();
         doReturn(responseProxy).when(rawHttpClient).execute(any(HttpRequestBase.class), any(HttpContext.class));
 
-        httpClient = new AmazonHttpClient(config, rawHttpClient, null);
+        httpClient = new AmazonHttpClient(config, rawHttpClient, null, null);
 
         try {
             execute(httpClient, createMockGetRequest());
@@ -141,7 +141,7 @@ public class MockedClientTests {
         HttpResponseProxy responseProxy = createHttpResponseProxySpy();
         doReturn(responseProxy).when(rawHttpClient).execute(any(HttpRequestBase.class), any(HttpContext.class));
 
-        httpClient = new AmazonHttpClient(config, rawHttpClient, null);
+        httpClient = new AmazonHttpClient(config, rawHttpClient, null, null);
 
         try {
             httpClient.requestExecutionBuilder().request(createMockGetRequest()).execute(new ErrorDuringUnmarshallingResponseHandler().leaveConnectionOpen());

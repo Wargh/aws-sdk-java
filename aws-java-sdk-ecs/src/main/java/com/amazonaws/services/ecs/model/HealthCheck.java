@@ -88,8 +88,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <li>
  * <p>
  * Container health checks are supported for Fargate tasks if you are using platform version 1.1.0 or greater. For more
- * information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS
- * Fargate Platform Versions</a>.
+ * information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">Fargate
+ * Platform Versions</a>.
  * </p>
  * </li>
  * <li>

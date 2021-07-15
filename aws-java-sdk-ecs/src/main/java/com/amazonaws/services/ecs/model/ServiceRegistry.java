@@ -30,8 +30,8 @@ public class ServiceRegistry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS Cloud
-     * Map. For more information, see <a
+     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is Cloud Map.
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html">CreateService</a>.
      * </p>
      */
@@ -68,14 +68,14 @@ public class ServiceRegistry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS Cloud
-     * Map. For more information, see <a
+     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is Cloud Map.
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html">CreateService</a>.
      * </p>
      * 
      * @param registryArn
-     *        The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS
-     *        Cloud Map. For more information, see <a
+     *        The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is Cloud
+     *        Map. For more information, see <a
      *        href="https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html">CreateService</a>.
      */
 
@@ -85,13 +85,13 @@ public class ServiceRegistry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS Cloud
-     * Map. For more information, see <a
+     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is Cloud Map.
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html">CreateService</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS
-     *         Cloud Map. For more information, see <a
+     * @return The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is Cloud
+     *         Map. For more information, see <a
      *         href="https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html">CreateService</a>.
      */
 
@@ -101,14 +101,14 @@ public class ServiceRegistry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS Cloud
-     * Map. For more information, see <a
+     * The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is Cloud Map.
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html">CreateService</a>.
      * </p>
      * 
      * @param registryArn
-     *        The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is AWS
-     *        Cloud Map. For more information, see <a
+     *        The Amazon Resource Name (ARN) of the service registry. The currently supported service registry is Cloud
+     *        Map. For more information, see <a
      *        href="https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html">CreateService</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

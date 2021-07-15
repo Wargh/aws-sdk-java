@@ -71,8 +71,7 @@ public class TaskOverride implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on AWS Fargate using platform version <code>1.4.0</code> or
-     * later.
+     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
      * </p>
      * </note>
      */
@@ -396,16 +395,15 @@ public class TaskOverride implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on AWS Fargate using platform version <code>1.4.0</code> or
-     * later.
+     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
      * </p>
      * </note>
      * 
      * @param ephemeralStorage
      *        The ephemeral storage setting override for the task.</p> <note>
      *        <p>
-     *        This parameter is only supported for tasks hosted on AWS Fargate using platform version <code>1.4.0</code>
-     *        or later.
+     *        This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
+     *        later.
      *        </p>
      */
 
@@ -419,15 +417,14 @@ public class TaskOverride implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on AWS Fargate using platform version <code>1.4.0</code> or
-     * later.
+     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
      * </p>
      * </note>
      * 
      * @return The ephemeral storage setting override for the task.</p> <note>
      *         <p>
-     *         This parameter is only supported for tasks hosted on AWS Fargate using platform version
-     *         <code>1.4.0</code> or later.
+     *         This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
+     *         later.
      *         </p>
      */
 
@@ -441,16 +438,15 @@ public class TaskOverride implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on AWS Fargate using platform version <code>1.4.0</code> or
-     * later.
+     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
      * </p>
      * </note>
      * 
      * @param ephemeralStorage
      *        The ephemeral storage setting override for the task.</p> <note>
      *        <p>
-     *        This parameter is only supported for tasks hosted on AWS Fargate using platform version <code>1.4.0</code>
-     *        or later.
+     *        This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
+     *        later.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

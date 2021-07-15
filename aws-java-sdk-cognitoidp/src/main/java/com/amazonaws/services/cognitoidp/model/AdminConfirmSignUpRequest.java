@@ -45,12 +45,12 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * A map of custom key-value pairs that you can provide as input for any custom workflows that this action triggers.
      * </p>
      * <p>
-     * If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the AWS Lambda
-     * function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this function,
-     * it passes a JSON payload, which the function receives as input. In this payload, the <code>clientMetadata</code>
-     * attribute provides the data that you assigned to the ClientMetadata parameter in your AdminConfirmSignUp request.
-     * In your function code in AWS Lambda, you can process the ClientMetadata value to enhance your workflow for your
-     * specific needs.
+     * If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the Lambda function
+     * that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this function, it passes
+     * a JSON payload, which the function receives as input. In this payload, the <code>clientMetadata</code> attribute
+     * provides the data that you assigned to the ClientMetadata parameter in your AdminConfirmSignUp request. In your
+     * function code in Lambda, you can process the ClientMetadata value to enhance your workflow for your specific
+     * needs.
      * </p>
      * <p>
      * For more information, see <a href=
@@ -64,9 +64,9 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS Lambda triggers that
-     * are assigned to a user pool to support custom workflows. If your user pool configuration does not include
-     * triggers, the ClientMetadata parameter serves no purpose.
+     * Amazon Cognito does not store the ClientMetadata value. This data is available only to Lambda triggers that are
+     * assigned to a user pool to support custom workflows. If your user pool configuration does not include triggers,
+     * the ClientMetadata parameter serves no purpose.
      * </p>
      * </li>
      * <li>
@@ -169,12 +169,12 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * A map of custom key-value pairs that you can provide as input for any custom workflows that this action triggers.
      * </p>
      * <p>
-     * If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the AWS Lambda
-     * function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this function,
-     * it passes a JSON payload, which the function receives as input. In this payload, the <code>clientMetadata</code>
-     * attribute provides the data that you assigned to the ClientMetadata parameter in your AdminConfirmSignUp request.
-     * In your function code in AWS Lambda, you can process the ClientMetadata value to enhance your workflow for your
-     * specific needs.
+     * If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the Lambda function
+     * that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this function, it passes
+     * a JSON payload, which the function receives as input. In this payload, the <code>clientMetadata</code> attribute
+     * provides the data that you assigned to the ClientMetadata parameter in your AdminConfirmSignUp request. In your
+     * function code in Lambda, you can process the ClientMetadata value to enhance your workflow for your specific
+     * needs.
      * </p>
      * <p>
      * For more information, see <a href=
@@ -188,9 +188,9 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS Lambda triggers that
-     * are assigned to a user pool to support custom workflows. If your user pool configuration does not include
-     * triggers, the ClientMetadata parameter serves no purpose.
+     * Amazon Cognito does not store the ClientMetadata value. This data is available only to Lambda triggers that are
+     * assigned to a user pool to support custom workflows. If your user pool configuration does not include triggers,
+     * the ClientMetadata parameter serves no purpose.
      * </p>
      * </li>
      * <li>
@@ -209,12 +209,12 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * @return A map of custom key-value pairs that you can provide as input for any custom workflows that this action
      *         triggers. </p>
      *         <p>
-     *         If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the AWS
-     *         Lambda function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes
-     *         this function, it passes a JSON payload, which the function receives as input. In this payload, the
+     *         If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the Lambda
+     *         function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this
+     *         function, it passes a JSON payload, which the function receives as input. In this payload, the
      *         <code>clientMetadata</code> attribute provides the data that you assigned to the ClientMetadata parameter
-     *         in your AdminConfirmSignUp request. In your function code in AWS Lambda, you can process the
-     *         ClientMetadata value to enhance your workflow for your specific needs.
+     *         in your AdminConfirmSignUp request. In your function code in Lambda, you can process the ClientMetadata
+     *         value to enhance your workflow for your specific needs.
      *         </p>
      *         <p>
      *         For more information, see <a href=
@@ -228,9 +228,9 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      *         <ul>
      *         <li>
      *         <p>
-     *         Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS Lambda
-     *         triggers that are assigned to a user pool to support custom workflows. If your user pool configuration
-     *         does not include triggers, the ClientMetadata parameter serves no purpose.
+     *         Amazon Cognito does not store the ClientMetadata value. This data is available only to Lambda triggers
+     *         that are assigned to a user pool to support custom workflows. If your user pool configuration does not
+     *         include triggers, the ClientMetadata parameter serves no purpose.
      *         </p>
      *         </li>
      *         <li>
@@ -256,12 +256,12 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * A map of custom key-value pairs that you can provide as input for any custom workflows that this action triggers.
      * </p>
      * <p>
-     * If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the AWS Lambda
-     * function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this function,
-     * it passes a JSON payload, which the function receives as input. In this payload, the <code>clientMetadata</code>
-     * attribute provides the data that you assigned to the ClientMetadata parameter in your AdminConfirmSignUp request.
-     * In your function code in AWS Lambda, you can process the ClientMetadata value to enhance your workflow for your
-     * specific needs.
+     * If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the Lambda function
+     * that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this function, it passes
+     * a JSON payload, which the function receives as input. In this payload, the <code>clientMetadata</code> attribute
+     * provides the data that you assigned to the ClientMetadata parameter in your AdminConfirmSignUp request. In your
+     * function code in Lambda, you can process the ClientMetadata value to enhance your workflow for your specific
+     * needs.
      * </p>
      * <p>
      * For more information, see <a href=
@@ -275,9 +275,9 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS Lambda triggers that
-     * are assigned to a user pool to support custom workflows. If your user pool configuration does not include
-     * triggers, the ClientMetadata parameter serves no purpose.
+     * Amazon Cognito does not store the ClientMetadata value. This data is available only to Lambda triggers that are
+     * assigned to a user pool to support custom workflows. If your user pool configuration does not include triggers,
+     * the ClientMetadata parameter serves no purpose.
      * </p>
      * </li>
      * <li>
@@ -297,12 +297,12 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      *        A map of custom key-value pairs that you can provide as input for any custom workflows that this action
      *        triggers. </p>
      *        <p>
-     *        If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the AWS
-     *        Lambda function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes
-     *        this function, it passes a JSON payload, which the function receives as input. In this payload, the
+     *        If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the Lambda
+     *        function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this
+     *        function, it passes a JSON payload, which the function receives as input. In this payload, the
      *        <code>clientMetadata</code> attribute provides the data that you assigned to the ClientMetadata parameter
-     *        in your AdminConfirmSignUp request. In your function code in AWS Lambda, you can process the
-     *        ClientMetadata value to enhance your workflow for your specific needs.
+     *        in your AdminConfirmSignUp request. In your function code in Lambda, you can process the ClientMetadata
+     *        value to enhance your workflow for your specific needs.
      *        </p>
      *        <p>
      *        For more information, see <a href=
@@ -316,7 +316,7 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS Lambda triggers
+     *        Amazon Cognito does not store the ClientMetadata value. This data is available only to Lambda triggers
      *        that are assigned to a user pool to support custom workflows. If your user pool configuration does not
      *        include triggers, the ClientMetadata parameter serves no purpose.
      *        </p>
@@ -344,12 +344,12 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * A map of custom key-value pairs that you can provide as input for any custom workflows that this action triggers.
      * </p>
      * <p>
-     * If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the AWS Lambda
-     * function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this function,
-     * it passes a JSON payload, which the function receives as input. In this payload, the <code>clientMetadata</code>
-     * attribute provides the data that you assigned to the ClientMetadata parameter in your AdminConfirmSignUp request.
-     * In your function code in AWS Lambda, you can process the ClientMetadata value to enhance your workflow for your
-     * specific needs.
+     * If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the Lambda function
+     * that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this function, it passes
+     * a JSON payload, which the function receives as input. In this payload, the <code>clientMetadata</code> attribute
+     * provides the data that you assigned to the ClientMetadata parameter in your AdminConfirmSignUp request. In your
+     * function code in Lambda, you can process the ClientMetadata value to enhance your workflow for your specific
+     * needs.
      * </p>
      * <p>
      * For more information, see <a href=
@@ -363,9 +363,9 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS Lambda triggers that
-     * are assigned to a user pool to support custom workflows. If your user pool configuration does not include
-     * triggers, the ClientMetadata parameter serves no purpose.
+     * Amazon Cognito does not store the ClientMetadata value. This data is available only to Lambda triggers that are
+     * assigned to a user pool to support custom workflows. If your user pool configuration does not include triggers,
+     * the ClientMetadata parameter serves no purpose.
      * </p>
      * </li>
      * <li>
@@ -385,12 +385,12 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      *        A map of custom key-value pairs that you can provide as input for any custom workflows that this action
      *        triggers. </p>
      *        <p>
-     *        If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the AWS
-     *        Lambda function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes
-     *        this function, it passes a JSON payload, which the function receives as input. In this payload, the
+     *        If your user pool configuration includes triggers, the AdminConfirmSignUp API action invokes the Lambda
+     *        function that is specified for the <i>post confirmation</i> trigger. When Amazon Cognito invokes this
+     *        function, it passes a JSON payload, which the function receives as input. In this payload, the
      *        <code>clientMetadata</code> attribute provides the data that you assigned to the ClientMetadata parameter
-     *        in your AdminConfirmSignUp request. In your function code in AWS Lambda, you can process the
-     *        ClientMetadata value to enhance your workflow for your specific needs.
+     *        in your AdminConfirmSignUp request. In your function code in Lambda, you can process the ClientMetadata
+     *        value to enhance your workflow for your specific needs.
      *        </p>
      *        <p>
      *        For more information, see <a href=
@@ -404,7 +404,7 @@ public class AdminConfirmSignUpRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        Amazon Cognito does not store the ClientMetadata value. This data is available only to AWS Lambda triggers
+     *        Amazon Cognito does not store the ClientMetadata value. This data is available only to Lambda triggers
      *        that are assigned to a user pool to support custom workflows. If your user pool configuration does not
      *        include triggers, the ClientMetadata parameter serves no purpose.
      *        </p>

@@ -57,9 +57,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * For tasks on AWS Fargate, because you do not have access to the underlying infrastructure your tasks are hosted on,
- * any additional software needed will have to be installed outside of the task. For example, the Fluentd output
- * aggregators or a remote host running Logstash to send Gelf logs to.
+ * For tasks on Fargate, because you do not have access to the underlying infrastructure your tasks are hosted on, any
+ * additional software needed will have to be installed outside of the task. For example, the Fluentd output aggregators
+ * or a remote host running Logstash to send Gelf logs to.
  * </p>
  * </li>
  * </ul>
@@ -75,7 +75,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * The log driver to use for the container.
      * </p>
      * <p>
-     * For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     * For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      * <code>awsfirelens</code>.
      * </p>
      * <p>
@@ -126,7 +126,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * The log driver to use for the container.
      * </p>
      * <p>
-     * For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     * For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      * <code>awsfirelens</code>.
      * </p>
      * <p>
@@ -156,7 +156,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * @param logDriver
      *        The log driver to use for the container.</p>
      *        <p>
-     *        For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     *        For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      *        <code>awsfirelens</code>.
      *        </p>
      *        <p>
@@ -193,7 +193,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * The log driver to use for the container.
      * </p>
      * <p>
-     * For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     * For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      * <code>awsfirelens</code>.
      * </p>
      * <p>
@@ -222,7 +222,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * 
      * @return The log driver to use for the container.</p>
      *         <p>
-     *         For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     *         For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      *         <code>awsfirelens</code>.
      *         </p>
      *         <p>
@@ -259,7 +259,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * The log driver to use for the container.
      * </p>
      * <p>
-     * For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     * For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      * <code>awsfirelens</code>.
      * </p>
      * <p>
@@ -289,7 +289,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * @param logDriver
      *        The log driver to use for the container.</p>
      *        <p>
-     *        For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     *        For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      *        <code>awsfirelens</code>.
      *        </p>
      *        <p>
@@ -328,7 +328,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * The log driver to use for the container.
      * </p>
      * <p>
-     * For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     * For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      * <code>awsfirelens</code>.
      * </p>
      * <p>
@@ -358,7 +358,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * @param logDriver
      *        The log driver to use for the container.</p>
      *        <p>
-     *        For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     *        For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      *        <code>awsfirelens</code>.
      *        </p>
      *        <p>
@@ -395,7 +395,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * The log driver to use for the container.
      * </p>
      * <p>
-     * For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     * For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      * <code>awsfirelens</code>.
      * </p>
      * <p>
@@ -425,7 +425,7 @@ public class LogConfiguration implements Serializable, Cloneable, StructuredPojo
      * @param logDriver
      *        The log driver to use for the container.</p>
      *        <p>
-     *        For tasks on AWS Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
+     *        For tasks on Fargate, the supported log drivers are <code>awslogs</code>, <code>splunk</code>, and
      *        <code>awsfirelens</code>.
      *        </p>
      *        <p>

@@ -136,6 +136,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public AssociateInstanceEventWindowResult associateInstanceEventWindow(AssociateInstanceEventWindowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateRouteTableResult associateRouteTable(AssociateRouteTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -337,6 +342,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public CreateImageResult createImage(CreateImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateInstanceEventWindowResult createInstanceEventWindow(CreateInstanceEventWindowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -637,6 +647,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DeleteFpgaImageResult deleteFpgaImage(DeleteFpgaImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteInstanceEventWindowResult deleteInstanceEventWindow(DeleteInstanceEventWindowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1186,6 +1201,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     @Override
     public DescribeInstanceEventNotificationAttributesResult describeInstanceEventNotificationAttributes(
             DescribeInstanceEventNotificationAttributesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeInstanceEventWindowsResult describeInstanceEventWindows(DescribeInstanceEventWindowsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1842,6 +1862,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisassociateInstanceEventWindowResult disassociateInstanceEventWindow(DisassociateInstanceEventWindowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociateRouteTableResult disassociateRouteTable(DisassociateRouteTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2172,6 +2197,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public ModifyInstanceEventStartTimeResult modifyInstanceEventStartTime(ModifyInstanceEventStartTimeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyInstanceEventWindowResult modifyInstanceEventWindow(ModifyInstanceEventWindowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
