@@ -25,17 +25,17 @@ public class GetServicesInScopeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The metadata associated with the aAWS service.
+     * The metadata associated with the Amazon Web Service.
      * </p>
      */
     private java.util.List<ServiceMetadata> serviceMetadata;
 
     /**
      * <p>
-     * The metadata associated with the aAWS service.
+     * The metadata associated with the Amazon Web Service.
      * </p>
      * 
-     * @return The metadata associated with the aAWS service.
+     * @return The metadata associated with the Amazon Web Service.
      */
 
     public java.util.List<ServiceMetadata> getServiceMetadata() {
@@ -44,11 +44,11 @@ public class GetServicesInScopeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The metadata associated with the aAWS service.
+     * The metadata associated with the Amazon Web Service.
      * </p>
      * 
      * @param serviceMetadata
-     *        The metadata associated with the aAWS service.
+     *        The metadata associated with the Amazon Web Service.
      */
 
     public void setServiceMetadata(java.util.Collection<ServiceMetadata> serviceMetadata) {
@@ -62,7 +62,7 @@ public class GetServicesInScopeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The metadata associated with the aAWS service.
+     * The metadata associated with the Amazon Web Service.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -71,7 +71,7 @@ public class GetServicesInScopeResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param serviceMetadata
-     *        The metadata associated with the aAWS service.
+     *        The metadata associated with the Amazon Web Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,11 +87,11 @@ public class GetServicesInScopeResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The metadata associated with the aAWS service.
+     * The metadata associated with the Amazon Web Service.
      * </p>
      * 
      * @param serviceMetadata
-     *        The metadata associated with the aAWS service.
+     *        The metadata associated with the Amazon Web Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

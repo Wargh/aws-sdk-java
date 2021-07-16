@@ -78,6 +78,10 @@ public class AccountJsonUnmarshaller implements Unmarshaller<Account, JsonUnmars
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("AccountStatus", targetDepth)) {
+                    context.nextToken();
+                    account.setAccountStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("SigninDelegateGroups", targetDepth)) {
                     context.nextToken();
                     account.setSigninDelegateGroups(new ListUnmarshaller<SigninDelegateGroup>(SigninDelegateGroupJsonUnmarshaller.getInstance())

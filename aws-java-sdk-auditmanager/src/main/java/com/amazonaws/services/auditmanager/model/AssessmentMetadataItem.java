@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A metadata object associated with an assessment in AWS Audit Manager.
+ * A metadata object associated with an assessment in Audit Manager.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentMetadataItem"

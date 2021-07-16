@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Evidence that is uploaded to AWS Audit Manager manually.
+ * Evidence that is uploaded to Audit Manager manually.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ManualEvidence" target="_top">AWS API

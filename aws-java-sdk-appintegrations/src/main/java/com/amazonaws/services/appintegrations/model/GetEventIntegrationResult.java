@@ -43,7 +43,7 @@ public class GetEventIntegrationResult extends com.amazonaws.AmazonWebServiceRes
     private String eventIntegrationArn;
     /**
      * <p>
-     * The Eventbridge bus.
+     * The EventBridge bus.
      * </p>
      */
     private String eventBridgeBus;
@@ -182,11 +182,11 @@ public class GetEventIntegrationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Eventbridge bus.
+     * The EventBridge bus.
      * </p>
      * 
      * @param eventBridgeBus
-     *        The Eventbridge bus.
+     *        The EventBridge bus.
      */
 
     public void setEventBridgeBus(String eventBridgeBus) {
@@ -195,10 +195,10 @@ public class GetEventIntegrationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Eventbridge bus.
+     * The EventBridge bus.
      * </p>
      * 
-     * @return The Eventbridge bus.
+     * @return The EventBridge bus.
      */
 
     public String getEventBridgeBus() {
@@ -207,11 +207,11 @@ public class GetEventIntegrationResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The Eventbridge bus.
+     * The EventBridge bus.
      * </p>
      * 
      * @param eventBridgeBus
-     *        The Eventbridge bus.
+     *        The EventBridge bus.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

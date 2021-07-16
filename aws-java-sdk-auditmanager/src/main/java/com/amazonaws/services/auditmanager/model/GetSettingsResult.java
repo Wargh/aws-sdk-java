@@ -25,18 +25,18 @@ public class GetSettingsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The settings object that holds all supported AWS Audit Manager settings.
+     * The settings object that holds all supported Audit Manager settings.
      * </p>
      */
     private Settings settings;
 
     /**
      * <p>
-     * The settings object that holds all supported AWS Audit Manager settings.
+     * The settings object that holds all supported Audit Manager settings.
      * </p>
      * 
      * @param settings
-     *        The settings object that holds all supported AWS Audit Manager settings.
+     *        The settings object that holds all supported Audit Manager settings.
      */
 
     public void setSettings(Settings settings) {
@@ -45,10 +45,10 @@ public class GetSettingsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The settings object that holds all supported AWS Audit Manager settings.
+     * The settings object that holds all supported Audit Manager settings.
      * </p>
      * 
-     * @return The settings object that holds all supported AWS Audit Manager settings.
+     * @return The settings object that holds all supported Audit Manager settings.
      */
 
     public Settings getSettings() {
@@ -57,11 +57,11 @@ public class GetSettingsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The settings object that holds all supported AWS Audit Manager settings.
+     * The settings object that holds all supported Audit Manager settings.
      * </p>
      * 
      * @param settings
-     *        The settings object that holds all supported AWS Audit Manager settings.
+     *        The settings object that holds all supported Audit Manager settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

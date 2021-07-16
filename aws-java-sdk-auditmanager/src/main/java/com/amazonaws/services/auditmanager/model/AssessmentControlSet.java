@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents a set of controls in an AWS Audit Manager assessment.
+ * Represents a set of controls in an Audit Manager assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentControlSet" target="_top">AWS

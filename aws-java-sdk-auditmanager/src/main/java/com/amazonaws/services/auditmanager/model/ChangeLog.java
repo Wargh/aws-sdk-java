@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The record of a change within AWS Audit Manager, such as a modified assessment, a delegated control set, and so on.
+ * The record of a change within Audit Manager, such as a modified assessment, a delegated control set, and so on.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ChangeLog" target="_top">AWS API

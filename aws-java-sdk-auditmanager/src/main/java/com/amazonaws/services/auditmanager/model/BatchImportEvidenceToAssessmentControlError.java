@@ -32,7 +32,7 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * Manual evidence that cannot be collected automatically by AWS Audit Manager.
+     * Manual evidence that cannot be collected automatically by Audit Manager.
      * </p>
      */
     private ManualEvidence manualEvidence;
@@ -51,11 +51,11 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * Manual evidence that cannot be collected automatically by AWS Audit Manager.
+     * Manual evidence that cannot be collected automatically by Audit Manager.
      * </p>
      * 
      * @param manualEvidence
-     *        Manual evidence that cannot be collected automatically by AWS Audit Manager.
+     *        Manual evidence that cannot be collected automatically by Audit Manager.
      */
 
     public void setManualEvidence(ManualEvidence manualEvidence) {
@@ -64,10 +64,10 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * Manual evidence that cannot be collected automatically by AWS Audit Manager.
+     * Manual evidence that cannot be collected automatically by Audit Manager.
      * </p>
      * 
-     * @return Manual evidence that cannot be collected automatically by AWS Audit Manager.
+     * @return Manual evidence that cannot be collected automatically by Audit Manager.
      */
 
     public ManualEvidence getManualEvidence() {
@@ -76,11 +76,11 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * Manual evidence that cannot be collected automatically by AWS Audit Manager.
+     * Manual evidence that cannot be collected automatically by Audit Manager.
      * </p>
      * 
      * @param manualEvidence
-     *        Manual evidence that cannot be collected automatically by AWS Audit Manager.
+     *        Manual evidence that cannot be collected automatically by Audit Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

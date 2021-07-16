@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The notification used to inform a user of an update in AWS Audit Manager. For example, this includes the notification
+ * The notification used to inform a user of an update in Audit Manager. For example, this includes the notification
  * that is sent when a control set is delegated for review.
  * </p>
  * 

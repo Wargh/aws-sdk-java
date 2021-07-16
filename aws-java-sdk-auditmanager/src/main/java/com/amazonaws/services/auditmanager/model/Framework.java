@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The file used to structure and automate AWS Audit Manager assessments for a given compliance standard.
+ * The file used to structure and automate Audit Manager assessments for a given compliance standard.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Framework" target="_top">AWS API
@@ -72,7 +72,7 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
     private String logo;
     /**
      * <p>
-     * The sources from which AWS Audit Manager collects evidence for the control.
+     * The sources from which Audit Manager collects evidence for the control.
      * </p>
      */
     private String controlSources;
@@ -414,11 +414,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources from which AWS Audit Manager collects evidence for the control.
+     * The sources from which Audit Manager collects evidence for the control.
      * </p>
      * 
      * @param controlSources
-     *        The sources from which AWS Audit Manager collects evidence for the control.
+     *        The sources from which Audit Manager collects evidence for the control.
      */
 
     public void setControlSources(String controlSources) {
@@ -427,10 +427,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources from which AWS Audit Manager collects evidence for the control.
+     * The sources from which Audit Manager collects evidence for the control.
      * </p>
      * 
-     * @return The sources from which AWS Audit Manager collects evidence for the control.
+     * @return The sources from which Audit Manager collects evidence for the control.
      */
 
     public String getControlSources() {
@@ -439,11 +439,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources from which AWS Audit Manager collects evidence for the control.
+     * The sources from which Audit Manager collects evidence for the control.
      * </p>
      * 
      * @param controlSources
-     *        The sources from which AWS Audit Manager collects evidence for the control.
+     *        The sources from which Audit Manager collects evidence for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

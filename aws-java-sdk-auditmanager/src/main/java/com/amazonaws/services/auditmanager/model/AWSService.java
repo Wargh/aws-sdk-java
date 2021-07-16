@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An AWS service such as Amazon S3, AWS CloudTrail, and so on.
+ * An Amazon Web Service such as Amazon S3, CloudTrail, and so on.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AWSService" target="_top">AWS API
@@ -30,18 +30,18 @@ public class AWSService implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Service.
      * </p>
      */
     private String serviceName;
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Service.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service.
+     *        The name of the Amazon Web Service.
      */
 
     public void setServiceName(String serviceName) {
@@ -50,10 +50,10 @@ public class AWSService implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Service.
      * </p>
      * 
-     * @return The name of the AWS service.
+     * @return The name of the Amazon Web Service.
      */
 
     public String getServiceName() {
@@ -62,11 +62,11 @@ public class AWSService implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Service.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service.
+     *        The name of the Amazon Web Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

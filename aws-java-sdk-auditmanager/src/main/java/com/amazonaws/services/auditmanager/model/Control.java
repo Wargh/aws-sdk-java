@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A control in AWS Audit Manager.
+ * A control in Audit Manager.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Control" target="_top">AWS API
@@ -78,7 +78,7 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
     private String actionPlanInstructions;
     /**
      * <p>
-     * The data source that determines from where AWS Audit Manager collects evidence for the control.
+     * The data source that determines from where Audit Manager collects evidence for the control.
      * </p>
      */
     private String controlSources;
@@ -460,11 +460,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source that determines from where AWS Audit Manager collects evidence for the control.
+     * The data source that determines from where Audit Manager collects evidence for the control.
      * </p>
      * 
      * @param controlSources
-     *        The data source that determines from where AWS Audit Manager collects evidence for the control.
+     *        The data source that determines from where Audit Manager collects evidence for the control.
      */
 
     public void setControlSources(String controlSources) {
@@ -473,10 +473,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source that determines from where AWS Audit Manager collects evidence for the control.
+     * The data source that determines from where Audit Manager collects evidence for the control.
      * </p>
      * 
-     * @return The data source that determines from where AWS Audit Manager collects evidence for the control.
+     * @return The data source that determines from where Audit Manager collects evidence for the control.
      */
 
     public String getControlSources() {
@@ -485,11 +485,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source that determines from where AWS Audit Manager collects evidence for the control.
+     * The data source that determines from where Audit Manager collects evidence for the control.
      * </p>
      * 
      * @param controlSources
-     *        The data source that determines from where AWS Audit Manager collects evidence for the control.
+     *        The data source that determines from where Audit Manager collects evidence for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

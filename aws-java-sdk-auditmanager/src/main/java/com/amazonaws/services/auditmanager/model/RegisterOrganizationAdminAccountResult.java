@@ -32,7 +32,7 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
     private String adminAccountId;
     /**
      * <p>
-     * The identifier for the specified AWS organization.
+     * The identifier for the specified organization.
      * </p>
      */
     private String organizationId;
@@ -79,11 +79,11 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified AWS organization.
+     * The identifier for the specified organization.
      * </p>
      * 
      * @param organizationId
-     *        The identifier for the specified AWS organization.
+     *        The identifier for the specified organization.
      */
 
     public void setOrganizationId(String organizationId) {
@@ -92,10 +92,10 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified AWS organization.
+     * The identifier for the specified organization.
      * </p>
      * 
-     * @return The identifier for the specified AWS organization.
+     * @return The identifier for the specified organization.
      */
 
     public String getOrganizationId() {
@@ -104,11 +104,11 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified AWS organization.
+     * The identifier for the specified organization.
      * </p>
      * 
      * @param organizationId
-     *        The identifier for the specified AWS organization.
+     *        The identifier for the specified organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A system asset that is evaluated in an AWS Audit Manager assessment.
+ * A system asset that is evaluated in an Audit Manager assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Resource" target="_top">AWS API

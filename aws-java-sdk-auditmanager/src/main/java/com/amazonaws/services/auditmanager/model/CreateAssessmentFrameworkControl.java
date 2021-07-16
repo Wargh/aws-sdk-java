@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Control entity attributes that uniquely identify an existing control to be added to a framework in AWS Audit Manager.
+ * Control entity attributes that uniquely identify an existing control to be added to a framework in Audit Manager.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessmentFrameworkControl"

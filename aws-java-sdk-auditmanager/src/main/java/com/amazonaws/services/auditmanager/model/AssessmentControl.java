@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The control entity that represents a standard or custom control used in an AWS Audit Manager assessment.
+ * The control entity that represents a standard or custom control used in an Audit Manager assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentControl" target="_top">AWS API

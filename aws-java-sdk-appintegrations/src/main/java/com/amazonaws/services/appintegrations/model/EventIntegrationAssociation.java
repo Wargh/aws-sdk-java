@@ -19,9 +19,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon AppIntegrations APIs are in preview release and are subject to change.
- * </p>
- * <p>
  * The event integration association.
  * </p>
  * 
@@ -57,7 +54,7 @@ public class EventIntegrationAssociation implements Serializable, Cloneable, Str
     private String clientId;
     /**
      * <p>
-     * The name of the Eventbridge rule.
+     * The name of the EventBridge rule.
      * </p>
      */
     private String eventBridgeRuleName;
@@ -230,11 +227,11 @@ public class EventIntegrationAssociation implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the Eventbridge rule.
+     * The name of the EventBridge rule.
      * </p>
      * 
      * @param eventBridgeRuleName
-     *        The name of the Eventbridge rule.
+     *        The name of the EventBridge rule.
      */
 
     public void setEventBridgeRuleName(String eventBridgeRuleName) {
@@ -243,10 +240,10 @@ public class EventIntegrationAssociation implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the Eventbridge rule.
+     * The name of the EventBridge rule.
      * </p>
      * 
-     * @return The name of the Eventbridge rule.
+     * @return The name of the EventBridge rule.
      */
 
     public String getEventBridgeRuleName() {
@@ -255,11 +252,11 @@ public class EventIntegrationAssociation implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the Eventbridge rule.
+     * The name of the EventBridge rule.
      * </p>
      * 
      * @param eventBridgeRuleName
-     *        The name of the Eventbridge rule.
+     *        The name of the EventBridge rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,18 +25,18 @@ public class GetAccountStatusResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The status of the specified AWS account.
+     * The status of the specified account.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The status of the specified AWS account.
+     * The status of the specified account.
      * </p>
      * 
      * @param status
-     *        The status of the specified AWS account.
+     *        The status of the specified account.
      * @see AccountStatus
      */
 
@@ -46,10 +46,10 @@ public class GetAccountStatusResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The status of the specified AWS account.
+     * The status of the specified account.
      * </p>
      * 
-     * @return The status of the specified AWS account.
+     * @return The status of the specified account.
      * @see AccountStatus
      */
 
@@ -59,11 +59,11 @@ public class GetAccountStatusResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The status of the specified AWS account.
+     * The status of the specified account.
      * </p>
      * 
      * @param status
-     *        The status of the specified AWS account.
+     *        The status of the specified account.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccountStatus
      */
@@ -75,11 +75,11 @@ public class GetAccountStatusResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The status of the specified AWS account.
+     * The status of the specified account.
      * </p>
      * 
      * @param status
-     *        The status of the specified AWS account.
+     *        The status of the specified account.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccountStatus
      */

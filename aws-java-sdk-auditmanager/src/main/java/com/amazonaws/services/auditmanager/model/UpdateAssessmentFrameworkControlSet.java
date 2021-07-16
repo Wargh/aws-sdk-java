@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A <code>controlSet</code> entity that represents a collection of controls in AWS Audit Manager. This does not contain
- * the control set ID.
+ * A <code>controlSet</code> entity that represents a collection of controls in Audit Manager. This does not contain the
+ * control set ID.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFrameworkControlSet"

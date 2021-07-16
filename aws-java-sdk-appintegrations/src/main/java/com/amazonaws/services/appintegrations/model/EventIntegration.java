@@ -19,9 +19,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon AppIntegrations APIs are in preview release and are subject to change.
- * </p>
- * <p>
  * The event integration.
  * </p>
  * 
@@ -57,7 +54,7 @@ public class EventIntegration implements Serializable, Cloneable, StructuredPojo
     private EventFilter eventFilter;
     /**
      * <p>
-     * The Amazon Eventbridge bus for the event integration.
+     * The Amazon EventBridge bus for the event integration.
      * </p>
      */
     private String eventBridgeBus;
@@ -230,11 +227,11 @@ public class EventIntegration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Eventbridge bus for the event integration.
+     * The Amazon EventBridge bus for the event integration.
      * </p>
      * 
      * @param eventBridgeBus
-     *        The Amazon Eventbridge bus for the event integration.
+     *        The Amazon EventBridge bus for the event integration.
      */
 
     public void setEventBridgeBus(String eventBridgeBus) {
@@ -243,10 +240,10 @@ public class EventIntegration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Eventbridge bus for the event integration.
+     * The Amazon EventBridge bus for the event integration.
      * </p>
      * 
-     * @return The Amazon Eventbridge bus for the event integration.
+     * @return The Amazon EventBridge bus for the event integration.
      */
 
     public String getEventBridgeBus() {
@@ -255,11 +252,11 @@ public class EventIntegration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Eventbridge bus for the event integration.
+     * The Amazon EventBridge bus for the event integration.
      * </p>
      * 
      * @param eventBridgeBus
-     *        The Amazon Eventbridge bus for the event integration.
+     *        The Amazon EventBridge bus for the event integration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

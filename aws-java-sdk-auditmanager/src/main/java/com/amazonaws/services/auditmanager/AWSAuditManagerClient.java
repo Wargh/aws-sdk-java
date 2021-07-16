@@ -51,33 +51,33 @@ import com.amazonaws.services.auditmanager.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * Welcome to the AWS Audit Manager API reference. This guide is for developers who need detailed information about the
- * AWS Audit Manager API operations, data types, and errors.
+ * Welcome to the Audit Manager API reference. This guide is for developers who need detailed information about the
+ * Audit Manager API operations, data types, and errors.
  * </p>
  * <p>
- * AWS Audit Manager is a service that provides automated evidence collection so that you can continuously audit your
- * AWS usage, and assess the effectiveness of your controls to better manage risk and simplify compliance.
+ * Audit Manager is a service that provides automated evidence collection so that you can continuously audit your Amazon
+ * Web Services usage, and assess the effectiveness of your controls to better manage risk and simplify compliance.
  * </p>
  * <p>
- * AWS Audit Manager provides pre-built frameworks that structure and automate assessments for a given compliance
- * standard. Frameworks include a pre-built collection of controls with descriptions and testing procedures, which are
- * grouped according to the requirements of the specified compliance standard or regulation. You can also customize
- * frameworks and controls to support internal audits with unique requirements.
+ * Audit Manager provides pre-built frameworks that structure and automate assessments for a given compliance standard.
+ * Frameworks include a pre-built collection of controls with descriptions and testing procedures, which are grouped
+ * according to the requirements of the specified compliance standard or regulation. You can also customize frameworks
+ * and controls to support internal audits with unique requirements.
  * </p>
  * <p>
- * Use the following links to get started with the AWS Audit Manager API:
+ * Use the following links to get started with the Audit Manager API:
  * </p>
  * <ul>
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Operations.html">Actions</a>: An
- * alphabetical list of all AWS Audit Manager API operations.
+ * alphabetical list of all Audit Manager API operations.
  * </p>
  * </li>
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_Types.html">Data types</a>: An
- * alphabetical list of all AWS Audit Manager data types.
+ * alphabetical list of all Audit Manager data types.
  * </p>
  * </li>
  * <li>
@@ -94,8 +94,8 @@ import com.amazonaws.services.auditmanager.model.transform.*;
  * </li>
  * </ul>
  * <p>
- * If you're new to AWS Audit Manager, we recommend that you review the <a
- * href="https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html"> AWS Audit Manager User Guide</a>.
+ * If you're new to Audit Manager, we recommend that you review the <a
+ * href="https://docs.aws.amazon.com/audit-manager/latest/userguide/what-is.html"> Audit Manager User Guide</a>.
  * </p>
  */
 @ThreadSafe
@@ -183,7 +183,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Associates an evidence folder to the specified assessment report in AWS Audit Manager.
+     * Associates an evidence folder to the specified assessment report in Audit Manager.
      * </p>
      * 
      * @param associateAssessmentReportEvidenceFolderRequest
@@ -191,8 +191,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -251,7 +251,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Associates a list of evidence to an assessment report in an AWS Audit Manager assessment.
+     * Associates a list of evidence to an assessment report in an Audit Manager assessment.
      * </p>
      * 
      * @param batchAssociateAssessmentReportEvidenceRequest
@@ -259,8 +259,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -319,7 +319,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Create a batch of delegations for a specified assessment in AWS Audit Manager.
+     * Create a batch of delegations for a specified assessment in Audit Manager.
      * </p>
      * 
      * @param batchCreateDelegationByAssessmentRequest
@@ -327,8 +327,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ResourceNotFoundException
      *         The resource specified in the request cannot be found.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -386,7 +386,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deletes the delegations in the specified AWS Audit Manager assessment.
+     * Deletes the delegations in the specified Audit Manager assessment.
      * </p>
      * 
      * @param batchDeleteDelegationByAssessmentRequest
@@ -394,8 +394,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ResourceNotFoundException
      *         The resource specified in the request cannot be found.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -453,7 +453,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Disassociates a list of evidence from the specified assessment report in AWS Audit Manager.
+     * Disassociates a list of evidence from the specified assessment report in Audit Manager.
      * </p>
      * 
      * @param batchDisassociateAssessmentReportEvidenceRequest
@@ -461,8 +461,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -521,7 +521,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Uploads one or more pieces of evidence to the specified control in the assessment in AWS Audit Manager.
+     * Uploads one or more pieces of evidence to the specified control in the assessment in Audit Manager.
      * </p>
      * 
      * @param batchImportEvidenceToAssessmentControlRequest
@@ -529,8 +529,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ResourceNotFoundException
      *         The resource specified in the request cannot be found.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -589,7 +589,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Creates an assessment in AWS Audit Manager.
+     * Creates an assessment in Audit Manager.
      * </p>
      * 
      * @param createAssessmentRequest
@@ -599,8 +599,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.CreateAssessment
@@ -653,7 +653,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Creates a custom framework in AWS Audit Manager.
+     * Creates a custom framework in Audit Manager.
      * </p>
      * 
      * @param createAssessmentFrameworkRequest
@@ -663,8 +663,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.CreateAssessmentFramework
@@ -727,8 +727,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -784,7 +784,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Creates a new custom control in AWS Audit Manager.
+     * Creates a new custom control in Audit Manager.
      * </p>
      * 
      * @param createControlRequest
@@ -794,8 +794,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.CreateControl
@@ -848,7 +848,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deletes an assessment in AWS Audit Manager.
+     * Deletes an assessment in Audit Manager.
      * </p>
      * 
      * @param deleteAssessmentRequest
@@ -858,8 +858,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.DeleteAssessment
@@ -912,7 +912,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deletes a custom framework in AWS Audit Manager.
+     * Deletes a custom framework in Audit Manager.
      * </p>
      * 
      * @param deleteAssessmentFrameworkRequest
@@ -922,8 +922,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.DeleteAssessmentFramework
@@ -978,7 +978,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deletes an assessment report from an assessment in AWS Audit Manager.
+     * Deletes an assessment report from an assessment in Audit Manager.
      * </p>
      * 
      * @param deleteAssessmentReportRequest
@@ -986,8 +986,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -1043,7 +1043,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deletes a custom control in AWS Audit Manager.
+     * Deletes a custom control in Audit Manager.
      * </p>
      * 
      * @param deleteControlRequest
@@ -1053,8 +1053,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.DeleteControl
@@ -1107,7 +1107,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deregisters an account in AWS Audit Manager.
+     * Deregisters an account in Audit Manager.
      * </p>
      * 
      * @param deregisterAccountRequest
@@ -1115,8 +1115,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -1171,16 +1171,24 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deregisters the delegated AWS administrator account from the AWS organization.
+     * Removes the specified member account as a delegated administrator for Audit Manager.
      * </p>
+     * <important>
+     * <p>
+     * When you remove a delegated administrator from your Audit Manager settings, or when you deregister a delegated
+     * administrator from Organizations, you continue to have access to the evidence that you previously collected under
+     * that account. However, Audit Manager will stop collecting and attaching evidence to that delegated administrator
+     * account moving forward.
+     * </p>
+     * </important>
      * 
      * @param deregisterOrganizationAdminAccountRequest
      * @return Result of the DeregisterOrganizationAdminAccount operation returned by the service.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -1238,7 +1246,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Disassociates an evidence folder from the specified assessment report in AWS Audit Manager.
+     * Disassociates an evidence folder from the specified assessment report in Audit Manager.
      * </p>
      * 
      * @param disassociateAssessmentReportEvidenceFolderRequest
@@ -1246,8 +1254,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -1306,7 +1314,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns the registration status of an account in AWS Audit Manager.
+     * Returns the registration status of an account in Audit Manager.
      * </p>
      * 
      * @param getAccountStatusRequest
@@ -1363,7 +1371,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns an assessment from AWS Audit Manager.
+     * Returns an assessment from Audit Manager.
      * </p>
      * 
      * @param getAssessmentRequest
@@ -1373,8 +1381,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetAssessment
@@ -1427,7 +1435,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a framework from AWS Audit Manager.
+     * Returns a framework from Audit Manager.
      * </p>
      * 
      * @param getAssessmentFrameworkRequest
@@ -1437,8 +1445,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetAssessmentFramework
@@ -1492,7 +1500,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns the URL of a specified assessment report in AWS Audit Manager.
+     * Returns the URL of a specified assessment report in Audit Manager.
      * </p>
      * 
      * @param getAssessmentReportUrlRequest
@@ -1500,8 +1508,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -1557,14 +1565,14 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of changelogs from AWS Audit Manager.
+     * Returns a list of changelogs from Audit Manager.
      * </p>
      * 
      * @param getChangeLogsRequest
      * @return Result of the GetChangeLogs operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ResourceNotFoundException
      *         The resource specified in the request cannot be found.
      * @throws ValidationException
@@ -1621,7 +1629,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a control from AWS Audit Manager.
+     * Returns a control from Audit Manager.
      * </p>
      * 
      * @param getControlRequest
@@ -1631,8 +1639,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetControl
@@ -1693,8 +1701,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetDelegations
@@ -1747,7 +1755,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns evidence from AWS Audit Manager.
+     * Returns evidence from Audit Manager.
      * </p>
      * 
      * @param getEvidenceRequest
@@ -1757,8 +1765,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetEvidence
@@ -1811,7 +1819,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns all evidence from a specified evidence folder in AWS Audit Manager.
+     * Returns all evidence from a specified evidence folder in Audit Manager.
      * </p>
      * 
      * @param getEvidenceByEvidenceFolderRequest
@@ -1821,8 +1829,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetEvidenceByEvidenceFolder
@@ -1877,7 +1885,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns an evidence folder from the specified assessment in AWS Audit Manager.
+     * Returns an evidence folder from the specified assessment in Audit Manager.
      * </p>
      * 
      * @param getEvidenceFolderRequest
@@ -1887,8 +1895,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetEvidenceFolder
@@ -1941,7 +1949,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns the evidence folders from a specified assessment in AWS Audit Manager.
+     * Returns the evidence folders from a specified assessment in Audit Manager.
      * </p>
      * 
      * @param getEvidenceFoldersByAssessmentRequest
@@ -1949,8 +1957,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ResourceNotFoundException
      *         The resource specified in the request cannot be found.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -2007,7 +2015,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of evidence folders associated with a specified control of an assessment in AWS Audit Manager.
+     * Returns a list of evidence folders associated with a specified control of an assessment in Audit Manager.
      * </p>
      * 
      * @param getEvidenceFoldersByAssessmentControlRequest
@@ -2017,8 +2025,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetEvidenceFoldersByAssessmentControl
@@ -2075,7 +2083,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns the name of the delegated AWS administrator account for the AWS organization.
+     * Returns the name of the delegated Amazon Web Services administrator account for the organization.
      * </p>
      * 
      * @param getOrganizationAdminAccountRequest
@@ -2083,8 +2091,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -2141,14 +2149,14 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of the in-scope AWS services for the specified assessment.
+     * Returns a list of the in-scope Amazon Web Services services for the specified assessment.
      * </p>
      * 
      * @param getServicesInScopeRequest
      * @return Result of the GetServicesInScope operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -2203,14 +2211,14 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns the settings for the specified AWS account.
+     * Returns the settings for the specified account.
      * </p>
      * 
      * @param getSettingsRequest
      * @return Result of the GetSettings operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.GetSettings
@@ -2263,7 +2271,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of the frameworks available in the AWS Audit Manager framework library.
+     * Returns a list of the frameworks available in the Audit Manager framework library.
      * </p>
      * 
      * @param listAssessmentFrameworksRequest
@@ -2271,8 +2279,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.ListAssessmentFrameworks
@@ -2327,7 +2335,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of assessment reports created in AWS Audit Manager.
+     * Returns a list of assessment reports created in Audit Manager.
      * </p>
      * 
      * @param listAssessmentReportsRequest
@@ -2335,8 +2343,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.ListAssessmentReports
@@ -2390,14 +2398,14 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of current and past assessments from AWS Audit Manager.
+     * Returns a list of current and past assessments from Audit Manager.
      * </p>
      * 
      * @param listAssessmentsRequest
      * @return Result of the ListAssessments operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -2452,14 +2460,14 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of controls from AWS Audit Manager.
+     * Returns a list of controls from Audit Manager.
      * </p>
      * 
      * @param listControlsRequest
      * @return Result of the ListControls operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -2520,8 +2528,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @param listKeywordsForDataSourceRequest
      * @return Result of the ListKeywordsForDataSource operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -2578,14 +2586,14 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of all AWS Audit Manager notifications.
+     * Returns a list of all Audit Manager notifications.
      * </p>
      * 
      * @param listNotificationsRequest
      * @return Result of the ListNotifications operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -2640,7 +2648,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of tags for the specified resource in AWS Audit Manager.
+     * Returns a list of tags for the specified resource in Audit Manager.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -2701,7 +2709,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Enables AWS Audit Manager for the specified AWS account.
+     * Enables Audit Manager for the specified account.
      * </p>
      * 
      * @param registerAccountRequest
@@ -2709,8 +2717,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -2765,7 +2773,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Enables an AWS account within the organization as the delegated administrator for AWS Audit Manager.
+     * Enables an account within the organization as the delegated administrator for Audit Manager.
      * </p>
      * 
      * @param registerOrganizationAdminAccountRequest
@@ -2773,8 +2781,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
@@ -2832,7 +2840,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Tags the specified resource in AWS Audit Manager.
+     * Tags the specified resource in Audit Manager.
      * </p>
      * 
      * @param tagResourceRequest
@@ -2893,7 +2901,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Removes a tag from a resource in AWS Audit Manager.
+     * Removes a tag from a resource in Audit Manager.
      * </p>
      * 
      * @param untagResourceRequest
@@ -2954,7 +2962,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Edits an AWS Audit Manager assessment.
+     * Edits an Audit Manager assessment.
      * </p>
      * 
      * @param updateAssessmentRequest
@@ -2964,8 +2972,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.UpdateAssessment
@@ -3018,7 +3026,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Updates a control within an assessment in AWS Audit Manager.
+     * Updates a control within an assessment in Audit Manager.
      * </p>
      * 
      * @param updateAssessmentControlRequest
@@ -3028,8 +3036,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.UpdateAssessmentControl
@@ -3084,7 +3092,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Updates the status of a control set in an AWS Audit Manager assessment.
+     * Updates the status of a control set in an Audit Manager assessment.
      * </p>
      * 
      * @param updateAssessmentControlSetStatusRequest
@@ -3094,8 +3102,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.UpdateAssessmentControlSetStatus
@@ -3151,7 +3159,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Updates a custom framework in AWS Audit Manager.
+     * Updates a custom framework in Audit Manager.
      * </p>
      * 
      * @param updateAssessmentFrameworkRequest
@@ -3161,8 +3169,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.UpdateAssessmentFramework
@@ -3217,7 +3225,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Updates the status of an assessment in AWS Audit Manager.
+     * Updates the status of an assessment in Audit Manager.
      * </p>
      * 
      * @param updateAssessmentStatusRequest
@@ -3227,8 +3235,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.UpdateAssessmentStatus
@@ -3282,7 +3290,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Updates a custom control in AWS Audit Manager.
+     * Updates a custom control in Audit Manager.
      * </p>
      * 
      * @param updateControlRequest
@@ -3292,8 +3300,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.UpdateControl
@@ -3346,7 +3354,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Updates AWS Audit Manager settings for the current user account.
+     * Updates Audit Manager settings for the current user account.
      * </p>
      * 
      * @param updateSettingsRequest
@@ -3354,8 +3362,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @sample AWSAuditManager.UpdateSettings
@@ -3408,7 +3416,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Validates the integrity of an assessment report in AWS Audit Manager.
+     * Validates the integrity of an assessment report in Audit Manager.
      * </p>
      * 
      * @param validateAssessmentReportIntegrityRequest
@@ -3416,8 +3424,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with AWS Audit Manager. Check the delegated administrator setup on the AWS
-     *         Audit Manager settings page, and try again.
+     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException

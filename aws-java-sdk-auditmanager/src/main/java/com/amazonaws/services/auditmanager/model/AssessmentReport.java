@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A finalized document generated from an AWS Audit Manager assessment. These reports summarize the relevant evidence
+ * A finalized document generated from an Audit Manager assessment. These reports summarize the relevant evidence
  * collected for your audit, and link to the relevant evidence folders which are named and organized according to the
  * controls specified in your assessment.
  * </p>
@@ -50,7 +50,7 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
     private String description;
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      */
     private String awsAccountId;
@@ -207,11 +207,11 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified AWS account.
+     *        The identifier for the specified account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -220,10 +220,10 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
-     * @return The identifier for the specified AWS account.
+     * @return The identifier for the specified account.
      */
 
     public String getAwsAccountId() {
@@ -232,11 +232,11 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified AWS account.
+     *        The identifier for the specified account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

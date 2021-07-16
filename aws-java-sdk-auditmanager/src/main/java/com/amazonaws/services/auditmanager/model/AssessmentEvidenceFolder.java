@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The folder in which AWS Audit Manager stores evidence for an assessment.
+ * The folder in which Audit Manager stores evidence for an assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentEvidenceFolder"
@@ -66,7 +66,7 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     private String id;
     /**
      * <p>
-     * The AWS service from which the evidence was collected.
+     * The Amazon Web Service from which the evidence was collected.
      * </p>
      */
     private String dataSource;
@@ -103,7 +103,7 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The number of evidence that falls under the configuration data category. This evidence is collected from
-     * configuration snapshots of other AWS services such as Amazon EC2, Amazon S3, or IAM.
+     * configuration snapshots of other Amazon Web Services services such as Amazon EC2, Amazon S3, or IAM.
      * </p>
      */
     private Integer evidenceByTypeConfigurationDataCount;
@@ -115,27 +115,27 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     private Integer evidenceByTypeManualCount;
     /**
      * <p>
-     * The number of evidence that falls under the compliance check category. This evidence is collected from AWS Config
-     * or AWS Security Hub.
+     * The number of evidence that falls under the compliance check category. This evidence is collected from Config or
+     * Security Hub.
      * </p>
      */
     private Integer evidenceByTypeComplianceCheckCount;
     /**
      * <p>
-     * The total number of issues that were reported directly from AWS Security Hub, AWS Config, or both.
+     * The total number of issues that were reported directly from Security Hub, Config, or both.
      * </p>
      */
     private Integer evidenceByTypeComplianceCheckIssuesCount;
     /**
      * <p>
-     * The number of evidence that falls under the user activity category. This evidence is collected from AWS
-     * CloudTrail logs.
+     * The number of evidence that falls under the user activity category. This evidence is collected from CloudTrail
+     * logs.
      * </p>
      */
     private Integer evidenceByTypeUserActivityCount;
     /**
      * <p>
-     * The total number of AWS resources assessed to generate the evidence.
+     * The total number of Amazon Web Services resources assessed to generate the evidence.
      * </p>
      */
     private Integer evidenceAwsServiceSourceCount;
@@ -382,11 +382,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS service from which the evidence was collected.
+     * The Amazon Web Service from which the evidence was collected.
      * </p>
      * 
      * @param dataSource
-     *        The AWS service from which the evidence was collected.
+     *        The Amazon Web Service from which the evidence was collected.
      */
 
     public void setDataSource(String dataSource) {
@@ -395,10 +395,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS service from which the evidence was collected.
+     * The Amazon Web Service from which the evidence was collected.
      * </p>
      * 
-     * @return The AWS service from which the evidence was collected.
+     * @return The Amazon Web Service from which the evidence was collected.
      */
 
     public String getDataSource() {
@@ -407,11 +407,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS service from which the evidence was collected.
+     * The Amazon Web Service from which the evidence was collected.
      * </p>
      * 
      * @param dataSource
-     *        The AWS service from which the evidence was collected.
+     *        The Amazon Web Service from which the evidence was collected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -623,12 +623,12 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The number of evidence that falls under the configuration data category. This evidence is collected from
-     * configuration snapshots of other AWS services such as Amazon EC2, Amazon S3, or IAM.
+     * configuration snapshots of other Amazon Web Services services such as Amazon EC2, Amazon S3, or IAM.
      * </p>
      * 
      * @param evidenceByTypeConfigurationDataCount
      *        The number of evidence that falls under the configuration data category. This evidence is collected from
-     *        configuration snapshots of other AWS services such as Amazon EC2, Amazon S3, or IAM.
+     *        configuration snapshots of other Amazon Web Services services such as Amazon EC2, Amazon S3, or IAM.
      */
 
     public void setEvidenceByTypeConfigurationDataCount(Integer evidenceByTypeConfigurationDataCount) {
@@ -638,11 +638,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The number of evidence that falls under the configuration data category. This evidence is collected from
-     * configuration snapshots of other AWS services such as Amazon EC2, Amazon S3, or IAM.
+     * configuration snapshots of other Amazon Web Services services such as Amazon EC2, Amazon S3, or IAM.
      * </p>
      * 
      * @return The number of evidence that falls under the configuration data category. This evidence is collected from
-     *         configuration snapshots of other AWS services such as Amazon EC2, Amazon S3, or IAM.
+     *         configuration snapshots of other Amazon Web Services services such as Amazon EC2, Amazon S3, or IAM.
      */
 
     public Integer getEvidenceByTypeConfigurationDataCount() {
@@ -652,12 +652,12 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The number of evidence that falls under the configuration data category. This evidence is collected from
-     * configuration snapshots of other AWS services such as Amazon EC2, Amazon S3, or IAM.
+     * configuration snapshots of other Amazon Web Services services such as Amazon EC2, Amazon S3, or IAM.
      * </p>
      * 
      * @param evidenceByTypeConfigurationDataCount
      *        The number of evidence that falls under the configuration data category. This evidence is collected from
-     *        configuration snapshots of other AWS services such as Amazon EC2, Amazon S3, or IAM.
+     *        configuration snapshots of other Amazon Web Services services such as Amazon EC2, Amazon S3, or IAM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -708,13 +708,13 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of evidence that falls under the compliance check category. This evidence is collected from AWS Config
-     * or AWS Security Hub.
+     * The number of evidence that falls under the compliance check category. This evidence is collected from Config or
+     * Security Hub.
      * </p>
      * 
      * @param evidenceByTypeComplianceCheckCount
-     *        The number of evidence that falls under the compliance check category. This evidence is collected from AWS
-     *        Config or AWS Security Hub.
+     *        The number of evidence that falls under the compliance check category. This evidence is collected from
+     *        Config or Security Hub.
      */
 
     public void setEvidenceByTypeComplianceCheckCount(Integer evidenceByTypeComplianceCheckCount) {
@@ -723,12 +723,12 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of evidence that falls under the compliance check category. This evidence is collected from AWS Config
-     * or AWS Security Hub.
+     * The number of evidence that falls under the compliance check category. This evidence is collected from Config or
+     * Security Hub.
      * </p>
      * 
      * @return The number of evidence that falls under the compliance check category. This evidence is collected from
-     *         AWS Config or AWS Security Hub.
+     *         Config or Security Hub.
      */
 
     public Integer getEvidenceByTypeComplianceCheckCount() {
@@ -737,13 +737,13 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of evidence that falls under the compliance check category. This evidence is collected from AWS Config
-     * or AWS Security Hub.
+     * The number of evidence that falls under the compliance check category. This evidence is collected from Config or
+     * Security Hub.
      * </p>
      * 
      * @param evidenceByTypeComplianceCheckCount
-     *        The number of evidence that falls under the compliance check category. This evidence is collected from AWS
-     *        Config or AWS Security Hub.
+     *        The number of evidence that falls under the compliance check category. This evidence is collected from
+     *        Config or Security Hub.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -754,11 +754,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of issues that were reported directly from AWS Security Hub, AWS Config, or both.
+     * The total number of issues that were reported directly from Security Hub, Config, or both.
      * </p>
      * 
      * @param evidenceByTypeComplianceCheckIssuesCount
-     *        The total number of issues that were reported directly from AWS Security Hub, AWS Config, or both.
+     *        The total number of issues that were reported directly from Security Hub, Config, or both.
      */
 
     public void setEvidenceByTypeComplianceCheckIssuesCount(Integer evidenceByTypeComplianceCheckIssuesCount) {
@@ -767,10 +767,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of issues that were reported directly from AWS Security Hub, AWS Config, or both.
+     * The total number of issues that were reported directly from Security Hub, Config, or both.
      * </p>
      * 
-     * @return The total number of issues that were reported directly from AWS Security Hub, AWS Config, or both.
+     * @return The total number of issues that were reported directly from Security Hub, Config, or both.
      */
 
     public Integer getEvidenceByTypeComplianceCheckIssuesCount() {
@@ -779,11 +779,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of issues that were reported directly from AWS Security Hub, AWS Config, or both.
+     * The total number of issues that were reported directly from Security Hub, Config, or both.
      * </p>
      * 
      * @param evidenceByTypeComplianceCheckIssuesCount
-     *        The total number of issues that were reported directly from AWS Security Hub, AWS Config, or both.
+     *        The total number of issues that were reported directly from Security Hub, Config, or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -794,12 +794,12 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of evidence that falls under the user activity category. This evidence is collected from AWS
-     * CloudTrail logs.
+     * The number of evidence that falls under the user activity category. This evidence is collected from CloudTrail
+     * logs.
      * </p>
      * 
      * @param evidenceByTypeUserActivityCount
-     *        The number of evidence that falls under the user activity category. This evidence is collected from AWS
+     *        The number of evidence that falls under the user activity category. This evidence is collected from
      *        CloudTrail logs.
      */
 
@@ -809,11 +809,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of evidence that falls under the user activity category. This evidence is collected from AWS
-     * CloudTrail logs.
+     * The number of evidence that falls under the user activity category. This evidence is collected from CloudTrail
+     * logs.
      * </p>
      * 
-     * @return The number of evidence that falls under the user activity category. This evidence is collected from AWS
+     * @return The number of evidence that falls under the user activity category. This evidence is collected from
      *         CloudTrail logs.
      */
 
@@ -823,12 +823,12 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of evidence that falls under the user activity category. This evidence is collected from AWS
-     * CloudTrail logs.
+     * The number of evidence that falls under the user activity category. This evidence is collected from CloudTrail
+     * logs.
      * </p>
      * 
      * @param evidenceByTypeUserActivityCount
-     *        The number of evidence that falls under the user activity category. This evidence is collected from AWS
+     *        The number of evidence that falls under the user activity category. This evidence is collected from
      *        CloudTrail logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -840,11 +840,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of AWS resources assessed to generate the evidence.
+     * The total number of Amazon Web Services resources assessed to generate the evidence.
      * </p>
      * 
      * @param evidenceAwsServiceSourceCount
-     *        The total number of AWS resources assessed to generate the evidence.
+     *        The total number of Amazon Web Services resources assessed to generate the evidence.
      */
 
     public void setEvidenceAwsServiceSourceCount(Integer evidenceAwsServiceSourceCount) {
@@ -853,10 +853,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of AWS resources assessed to generate the evidence.
+     * The total number of Amazon Web Services resources assessed to generate the evidence.
      * </p>
      * 
-     * @return The total number of AWS resources assessed to generate the evidence.
+     * @return The total number of Amazon Web Services resources assessed to generate the evidence.
      */
 
     public Integer getEvidenceAwsServiceSourceCount() {
@@ -865,11 +865,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of AWS resources assessed to generate the evidence.
+     * The total number of Amazon Web Services resources assessed to generate the evidence.
      * </p>
      * 
      * @param evidenceAwsServiceSourceCount
-     *        The total number of AWS resources assessed to generate the evidence.
+     *        The total number of Amazon Web Services resources assessed to generate the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

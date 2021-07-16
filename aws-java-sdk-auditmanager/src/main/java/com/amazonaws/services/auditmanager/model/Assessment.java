@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An entity that defines the scope of audit evidence collected by AWS Audit Manager. An AWS Audit Manager assessment is
- * an implementation of an AWS Audit Manager framework.
+ * An entity that defines the scope of audit evidence collected by Audit Manager. An Audit Manager assessment is an
+ * implementation of an Audit Manager framework.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Assessment" target="_top">AWS API
@@ -37,7 +37,7 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The AWS account associated with the assessment.
+     * The account associated with the assessment.
      * </p>
      */
     private AWSAccount awsAccount;
@@ -102,11 +102,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account associated with the assessment.
+     * The account associated with the assessment.
      * </p>
      * 
      * @param awsAccount
-     *        The AWS account associated with the assessment.
+     *        The account associated with the assessment.
      */
 
     public void setAwsAccount(AWSAccount awsAccount) {
@@ -115,10 +115,10 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account associated with the assessment.
+     * The account associated with the assessment.
      * </p>
      * 
-     * @return The AWS account associated with the assessment.
+     * @return The account associated with the assessment.
      */
 
     public AWSAccount getAwsAccount() {
@@ -127,11 +127,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account associated with the assessment.
+     * The account associated with the assessment.
      * </p>
      * 
      * @param awsAccount
-     *        The AWS account associated with the assessment.
+     *        The account associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

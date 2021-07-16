@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The location in which AWS Audit Manager saves assessment reports for the given assessment.
+ * The location in which Audit Manager saves assessment reports for the given assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentReportsDestination"

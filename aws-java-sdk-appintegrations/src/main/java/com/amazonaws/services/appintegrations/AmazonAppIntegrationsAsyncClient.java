@@ -26,9 +26,6 @@ import java.util.concurrent.ExecutorService;
  * receive notification when an asynchronous operation completes.
  * <p>
  * <p>
- * The Amazon AppIntegrations APIs are in preview release and are subject to change.
- * </p>
- * <p>
  * The Amazon AppIntegrations service enables you to configure and reuse connections to external applications.
  * </p>
  * <p>

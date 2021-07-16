@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The wrapper of AWS account details, such as account ID, email address, and so on.
+ * The wrapper of account details, such as account ID, email address, and so on.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AWSAccount" target="_top">AWS API
@@ -30,30 +30,30 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The email address associated with the specified AWS account.
+     * The email address associated with the specified account.
      * </p>
      */
     private String emailAddress;
     /**
      * <p>
-     * The name of the specified AWS account.
+     * The name of the specified account.
      * </p>
      */
     private String name;
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
      * @param id
-     *        The identifier for the specified AWS account.
+     *        The identifier for the specified account.
      */
 
     public void setId(String id) {
@@ -62,10 +62,10 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
-     * @return The identifier for the specified AWS account.
+     * @return The identifier for the specified account.
      */
 
     public String getId() {
@@ -74,11 +74,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
      * @param id
-     *        The identifier for the specified AWS account.
+     *        The identifier for the specified account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the specified AWS account.
+     * The email address associated with the specified account.
      * </p>
      * 
      * @param emailAddress
-     *        The email address associated with the specified AWS account.
+     *        The email address associated with the specified account.
      */
 
     public void setEmailAddress(String emailAddress) {
@@ -102,10 +102,10 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the specified AWS account.
+     * The email address associated with the specified account.
      * </p>
      * 
-     * @return The email address associated with the specified AWS account.
+     * @return The email address associated with the specified account.
      */
 
     public String getEmailAddress() {
@@ -114,11 +114,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the specified AWS account.
+     * The email address associated with the specified account.
      * </p>
      * 
      * @param emailAddress
-     *        The email address associated with the specified AWS account.
+     *        The email address associated with the specified account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified AWS account.
+     * The name of the specified account.
      * </p>
      * 
      * @param name
-     *        The name of the specified AWS account.
+     *        The name of the specified account.
      */
 
     public void setName(String name) {
@@ -142,10 +142,10 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified AWS account.
+     * The name of the specified account.
      * </p>
      * 
-     * @return The name of the specified AWS account.
+     * @return The name of the specified account.
      */
 
     public String getName() {
@@ -154,11 +154,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified AWS account.
+     * The name of the specified account.
      * </p>
      * 
      * @param name
-     *        The name of the specified AWS account.
+     *        The name of the specified account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

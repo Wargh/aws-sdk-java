@@ -37,7 +37,7 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     private String dataSource;
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      */
     private String evidenceAwsAccountId;
@@ -49,7 +49,7 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date time;
     /**
      * <p>
-     * The AWS service from which the evidence is collected.
+     * The Amazon Web Service from which the evidence is collected.
      * </p>
      */
     private String eventSource;
@@ -87,20 +87,20 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The evaluation status for evidence that falls under the compliance check category. For evidence collected from
-     * AWS Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from AWS Config, a
+     * Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from Config, a
      * <i>Compliant</i> or <i>Noncompliant</i> result is shown.
      * </p>
      */
     private String complianceCheck;
     /**
      * <p>
-     * The AWS account from which the evidence is collected, and its AWS organization path.
+     * The account from which the evidence is collected, and its organization path.
      * </p>
      */
     private String awsOrganization;
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      */
     private String awsAccountId;
@@ -165,11 +165,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
      * @param evidenceAwsAccountId
-     *        The identifier for the specified AWS account.
+     *        The identifier for the specified account.
      */
 
     public void setEvidenceAwsAccountId(String evidenceAwsAccountId) {
@@ -178,10 +178,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
-     * @return The identifier for the specified AWS account.
+     * @return The identifier for the specified account.
      */
 
     public String getEvidenceAwsAccountId() {
@@ -190,11 +190,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
      * @param evidenceAwsAccountId
-     *        The identifier for the specified AWS account.
+     *        The identifier for the specified account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,11 +245,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS service from which the evidence is collected.
+     * The Amazon Web Service from which the evidence is collected.
      * </p>
      * 
      * @param eventSource
-     *        The AWS service from which the evidence is collected.
+     *        The Amazon Web Service from which the evidence is collected.
      */
 
     public void setEventSource(String eventSource) {
@@ -258,10 +258,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS service from which the evidence is collected.
+     * The Amazon Web Service from which the evidence is collected.
      * </p>
      * 
-     * @return The AWS service from which the evidence is collected.
+     * @return The Amazon Web Service from which the evidence is collected.
      */
 
     public String getEventSource() {
@@ -270,11 +270,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS service from which the evidence is collected.
+     * The Amazon Web Service from which the evidence is collected.
      * </p>
      * 
      * @param eventSource
-     *        The AWS service from which the evidence is collected.
+     *        The Amazon Web Service from which the evidence is collected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -550,14 +550,14 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The evaluation status for evidence that falls under the compliance check category. For evidence collected from
-     * AWS Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from AWS Config, a
+     * Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from Config, a
      * <i>Compliant</i> or <i>Noncompliant</i> result is shown.
      * </p>
      * 
      * @param complianceCheck
      *        The evaluation status for evidence that falls under the compliance check category. For evidence collected
-     *        from AWS Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from AWS
-     *        Config, a <i>Compliant</i> or <i>Noncompliant</i> result is shown.
+     *        from Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from Config, a
+     *        <i>Compliant</i> or <i>Noncompliant</i> result is shown.
      */
 
     public void setComplianceCheck(String complianceCheck) {
@@ -567,13 +567,13 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The evaluation status for evidence that falls under the compliance check category. For evidence collected from
-     * AWS Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from AWS Config, a
+     * Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from Config, a
      * <i>Compliant</i> or <i>Noncompliant</i> result is shown.
      * </p>
      * 
      * @return The evaluation status for evidence that falls under the compliance check category. For evidence collected
-     *         from AWS Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from AWS
-     *         Config, a <i>Compliant</i> or <i>Noncompliant</i> result is shown.
+     *         from Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from Config, a
+     *         <i>Compliant</i> or <i>Noncompliant</i> result is shown.
      */
 
     public String getComplianceCheck() {
@@ -583,14 +583,14 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The evaluation status for evidence that falls under the compliance check category. For evidence collected from
-     * AWS Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from AWS Config, a
+     * Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from Config, a
      * <i>Compliant</i> or <i>Noncompliant</i> result is shown.
      * </p>
      * 
      * @param complianceCheck
      *        The evaluation status for evidence that falls under the compliance check category. For evidence collected
-     *        from AWS Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from AWS
-     *        Config, a <i>Compliant</i> or <i>Noncompliant</i> result is shown.
+     *        from Security Hub, a <i>Pass</i> or <i>Fail</i> result is shown. For evidence collected from Config, a
+     *        <i>Compliant</i> or <i>Noncompliant</i> result is shown.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -601,11 +601,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account from which the evidence is collected, and its AWS organization path.
+     * The account from which the evidence is collected, and its organization path.
      * </p>
      * 
      * @param awsOrganization
-     *        The AWS account from which the evidence is collected, and its AWS organization path.
+     *        The account from which the evidence is collected, and its organization path.
      */
 
     public void setAwsOrganization(String awsOrganization) {
@@ -614,10 +614,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account from which the evidence is collected, and its AWS organization path.
+     * The account from which the evidence is collected, and its organization path.
      * </p>
      * 
-     * @return The AWS account from which the evidence is collected, and its AWS organization path.
+     * @return The account from which the evidence is collected, and its organization path.
      */
 
     public String getAwsOrganization() {
@@ -626,11 +626,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account from which the evidence is collected, and its AWS organization path.
+     * The account from which the evidence is collected, and its organization path.
      * </p>
      * 
      * @param awsOrganization
-     *        The AWS account from which the evidence is collected, and its AWS organization path.
+     *        The account from which the evidence is collected, and its organization path.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -641,11 +641,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified AWS account.
+     *        The identifier for the specified account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -654,10 +654,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
-     * @return The identifier for the specified AWS account.
+     * @return The identifier for the specified account.
      */
 
     public String getAwsAccountId() {
@@ -666,11 +666,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified AWS account.
+     * The identifier for the specified account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified AWS account.
+     *        The identifier for the specified account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

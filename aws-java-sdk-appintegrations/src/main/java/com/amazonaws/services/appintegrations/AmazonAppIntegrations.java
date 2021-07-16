@@ -27,9 +27,6 @@ import com.amazonaws.services.appintegrations.model.*;
  * </p>
  * <p>
  * <p>
- * The Amazon AppIntegrations APIs are in preview release and are subject to change.
- * </p>
- * <p>
  * The Amazon AppIntegrations service enables you to configure and reuse connections to external applications.
  * </p>
  * <p>
@@ -51,11 +48,8 @@ public interface AmazonAppIntegrations {
 
     /**
      * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
-     * <p>
-     * Creates an EventIntegration, given a specified name, description, and a reference to an Amazon Eventbridge bus in
-     * your account and a partner event source that will push events to that bus. No objects are created in the your
+     * Creates an EventIntegration, given a specified name, description, and a reference to an Amazon EventBridge bus in
+     * your account and a partner event source that pushes events to that bus. No objects are created in the your
      * account, only metadata that is persisted on the EventIntegration control plane.
      * </p>
      * 
@@ -81,9 +75,6 @@ public interface AmazonAppIntegrations {
 
     /**
      * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
-     * <p>
      * Deletes the specified existing event integration. If the event integration is associated with clients, the
      * request is rejected.
      * </p>
@@ -108,9 +99,6 @@ public interface AmazonAppIntegrations {
 
     /**
      * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
-     * <p>
      * Return information about the event integration.
      * </p>
      * 
@@ -133,9 +121,6 @@ public interface AmazonAppIntegrations {
     GetEventIntegrationResult getEventIntegration(GetEventIntegrationRequest getEventIntegrationRequest);
 
     /**
-     * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
      * <p>
      * Returns a paginated list of event integration associations in the account.
      * </p>
@@ -160,9 +145,6 @@ public interface AmazonAppIntegrations {
 
     /**
      * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
-     * <p>
      * Returns a paginated list of event integrations in the account.
      * </p>
      * 
@@ -183,9 +165,6 @@ public interface AmazonAppIntegrations {
     ListEventIntegrationsResult listEventIntegrations(ListEventIntegrationsRequest listEventIntegrationsRequest);
 
     /**
-     * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
      * <p>
      * Lists the tags for the specified resource.
      * </p>
@@ -208,9 +187,6 @@ public interface AmazonAppIntegrations {
 
     /**
      * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
-     * <p>
      * Adds the specified tags to the specified resource.
      * </p>
      * 
@@ -232,9 +208,6 @@ public interface AmazonAppIntegrations {
 
     /**
      * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
-     * <p>
      * Removes the specified tags from the specified resource.
      * </p>
      * 
@@ -255,9 +228,6 @@ public interface AmazonAppIntegrations {
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
-     * <p>
-     * The Amazon AppIntegrations APIs are in preview release and are subject to change.
-     * </p>
      * <p>
      * Updates the description of an event integration.
      * </p>

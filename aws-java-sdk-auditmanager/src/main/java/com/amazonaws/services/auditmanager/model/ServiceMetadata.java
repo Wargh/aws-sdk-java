@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metadata associated with the specified AWS service.
+ * The metadata associated with the specified Amazon Web Service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ServiceMetadata" target="_top">AWS API
@@ -30,36 +30,36 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Service.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The display name of the AWS service.
+     * The display name of the Amazon Web Service.
      * </p>
      */
     private String displayName;
     /**
      * <p>
-     * The description of the specified AWS service.
+     * The description of the specified Amazon Web Service.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The category in which the AWS service belongs, such as compute, storage, database, and so on.
+     * The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
      * </p>
      */
     private String category;
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Service.
      * </p>
      * 
      * @param name
-     *        The name of the AWS service.
+     *        The name of the Amazon Web Service.
      */
 
     public void setName(String name) {
@@ -68,10 +68,10 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Service.
      * </p>
      * 
-     * @return The name of the AWS service.
+     * @return The name of the Amazon Web Service.
      */
 
     public String getName() {
@@ -80,11 +80,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the AWS service.
+     * The name of the Amazon Web Service.
      * </p>
      * 
      * @param name
-     *        The name of the AWS service.
+     *        The name of the Amazon Web Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +95,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The display name of the AWS service.
+     * The display name of the Amazon Web Service.
      * </p>
      * 
      * @param displayName
-     *        The display name of the AWS service.
+     *        The display name of the Amazon Web Service.
      */
 
     public void setDisplayName(String displayName) {
@@ -108,10 +108,10 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The display name of the AWS service.
+     * The display name of the Amazon Web Service.
      * </p>
      * 
-     * @return The display name of the AWS service.
+     * @return The display name of the Amazon Web Service.
      */
 
     public String getDisplayName() {
@@ -120,11 +120,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The display name of the AWS service.
+     * The display name of the Amazon Web Service.
      * </p>
      * 
      * @param displayName
-     *        The display name of the AWS service.
+     *        The display name of the Amazon Web Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The description of the specified AWS service.
+     * The description of the specified Amazon Web Service.
      * </p>
      * 
      * @param description
-     *        The description of the specified AWS service.
+     *        The description of the specified Amazon Web Service.
      */
 
     public void setDescription(String description) {
@@ -148,10 +148,10 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The description of the specified AWS service.
+     * The description of the specified Amazon Web Service.
      * </p>
      * 
-     * @return The description of the specified AWS service.
+     * @return The description of the specified Amazon Web Service.
      */
 
     public String getDescription() {
@@ -160,11 +160,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The description of the specified AWS service.
+     * The description of the specified Amazon Web Service.
      * </p>
      * 
      * @param description
-     *        The description of the specified AWS service.
+     *        The description of the specified Amazon Web Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +175,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The category in which the AWS service belongs, such as compute, storage, database, and so on.
+     * The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
      * </p>
      * 
      * @param category
-     *        The category in which the AWS service belongs, such as compute, storage, database, and so on.
+     *        The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
      */
 
     public void setCategory(String category) {
@@ -188,10 +188,10 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The category in which the AWS service belongs, such as compute, storage, database, and so on.
+     * The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
      * </p>
      * 
-     * @return The category in which the AWS service belongs, such as compute, storage, database, and so on.
+     * @return The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
      */
 
     public String getCategory() {
@@ -200,11 +200,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The category in which the AWS service belongs, such as compute, storage, database, and so on.
+     * The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
      * </p>
      * 
      * @param category
-     *        The category in which the AWS service belongs, such as compute, storage, database, and so on.
+     *        The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

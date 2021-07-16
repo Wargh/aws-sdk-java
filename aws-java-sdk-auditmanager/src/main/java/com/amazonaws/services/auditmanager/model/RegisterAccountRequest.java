@@ -27,24 +27,24 @@ public class RegisterAccountRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      */
     private String kmsKey;
     /**
      * <p>
-     * The delegated administrator account for AWS Audit Manager.
+     * The delegated administrator account for Audit Manager.
      * </p>
      */
     private String delegatedAdminAccount;
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
      * @param kmsKey
-     *        The AWS KMS key details.
+     *        The KMS key details.
      */
 
     public void setKmsKey(String kmsKey) {
@@ -53,10 +53,10 @@ public class RegisterAccountRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
-     * @return The AWS KMS key details.
+     * @return The KMS key details.
      */
 
     public String getKmsKey() {
@@ -65,11 +65,11 @@ public class RegisterAccountRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
      * @param kmsKey
-     *        The AWS KMS key details.
+     *        The KMS key details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class RegisterAccountRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The delegated administrator account for AWS Audit Manager.
+     * The delegated administrator account for Audit Manager.
      * </p>
      * 
      * @param delegatedAdminAccount
-     *        The delegated administrator account for AWS Audit Manager.
+     *        The delegated administrator account for Audit Manager.
      */
 
     public void setDelegatedAdminAccount(String delegatedAdminAccount) {
@@ -93,10 +93,10 @@ public class RegisterAccountRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The delegated administrator account for AWS Audit Manager.
+     * The delegated administrator account for Audit Manager.
      * </p>
      * 
-     * @return The delegated administrator account for AWS Audit Manager.
+     * @return The delegated administrator account for Audit Manager.
      */
 
     public String getDelegatedAdminAccount() {
@@ -105,11 +105,11 @@ public class RegisterAccountRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The delegated administrator account for AWS Audit Manager.
+     * The delegated administrator account for Audit Manager.
      * </p>
      * 
      * @param delegatedAdminAccount
-     *        The delegated administrator account for AWS Audit Manager.
+     *        The delegated administrator account for Audit Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

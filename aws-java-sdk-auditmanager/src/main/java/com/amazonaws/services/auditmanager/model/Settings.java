@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The settings object that holds all supported AWS Audit Manager settings.
+ * The settings object that holds all supported Audit Manager settings.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Settings" target="_top">AWS API
@@ -30,7 +30,7 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Organizations is enabled.
+     * Specifies whether Organizations is enabled.
      * </p>
      */
     private Boolean isAwsOrgEnabled;
@@ -54,18 +54,18 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<Role> defaultProcessOwners;
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      */
     private String kmsKey;
 
     /**
      * <p>
-     * Specifies whether AWS Organizations is enabled.
+     * Specifies whether Organizations is enabled.
      * </p>
      * 
      * @param isAwsOrgEnabled
-     *        Specifies whether AWS Organizations is enabled.
+     *        Specifies whether Organizations is enabled.
      */
 
     public void setIsAwsOrgEnabled(Boolean isAwsOrgEnabled) {
@@ -74,10 +74,10 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Organizations is enabled.
+     * Specifies whether Organizations is enabled.
      * </p>
      * 
-     * @return Specifies whether AWS Organizations is enabled.
+     * @return Specifies whether Organizations is enabled.
      */
 
     public Boolean getIsAwsOrgEnabled() {
@@ -86,11 +86,11 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Organizations is enabled.
+     * Specifies whether Organizations is enabled.
      * </p>
      * 
      * @param isAwsOrgEnabled
-     *        Specifies whether AWS Organizations is enabled.
+     *        Specifies whether Organizations is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,10 +101,10 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether AWS Organizations is enabled.
+     * Specifies whether Organizations is enabled.
      * </p>
      * 
-     * @return Specifies whether AWS Organizations is enabled.
+     * @return Specifies whether Organizations is enabled.
      */
 
     public Boolean isAwsOrgEnabled() {
@@ -263,11 +263,11 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
      * @param kmsKey
-     *        The AWS KMS key details.
+     *        The KMS key details.
      */
 
     public void setKmsKey(String kmsKey) {
@@ -276,10 +276,10 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
-     * @return The AWS KMS key details.
+     * @return The KMS key details.
      */
 
     public String getKmsKey() {
@@ -288,11 +288,11 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
      * @param kmsKey
-     *        The AWS KMS key details.
+     *        The KMS key details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

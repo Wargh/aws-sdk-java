@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The file used to structure and automate AWS Audit Manager assessments for a given compliance standard.
+ * The file used to structure and automate Audit Manager assessments for a given compliance standard.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentFramework" target="_top">AWS

@@ -1,3 +1,16 @@
+# __1.12.26__ __2021-07-16__
+## __AWS Audit Manager__
+  - ### Features
+    - This release relaxes the S3 URL character restrictions in AWS Audit Manager. Regex patterns have been updated for the following attributes: s3RelativePath, destination, and s3ResourcePath. 'AWS' terms have also been replaced with entities to align with China Rebrand documentation efforts.
+
+## __Amazon AppIntegrations Service__
+  - ### Features
+    - Documentation update for AppIntegrations Service
+
+## __Amazon Chime__
+  - ### Features
+    - This SDK release adds Account Status as one of the attributes in Account API response
+
 # __1.12.25__ __2021-07-15__
 ## __AWS IoT SiteWise__
   - ### Features

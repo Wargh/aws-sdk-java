@@ -27,7 +27,7 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Simple Notification Service (Amazon SNS) topic to which AWS Audit Manager sends notifications.
+     * The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
      * </p>
      */
     private String snsTopic;
@@ -45,18 +45,18 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
     private java.util.List<Role> defaultProcessOwners;
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      */
     private String kmsKey;
 
     /**
      * <p>
-     * The Amazon Simple Notification Service (Amazon SNS) topic to which AWS Audit Manager sends notifications.
+     * The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
      * </p>
      * 
      * @param snsTopic
-     *        The Amazon Simple Notification Service (Amazon SNS) topic to which AWS Audit Manager sends notifications.
+     *        The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
      */
 
     public void setSnsTopic(String snsTopic) {
@@ -65,10 +65,10 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Simple Notification Service (Amazon SNS) topic to which AWS Audit Manager sends notifications.
+     * The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
      * </p>
      * 
-     * @return The Amazon Simple Notification Service (Amazon SNS) topic to which AWS Audit Manager sends notifications.
+     * @return The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
      */
 
     public String getSnsTopic() {
@@ -77,11 +77,11 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Simple Notification Service (Amazon SNS) topic to which AWS Audit Manager sends notifications.
+     * The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
      * </p>
      * 
      * @param snsTopic
-     *        The Amazon Simple Notification Service (Amazon SNS) topic to which AWS Audit Manager sends notifications.
+     *        The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,11 +202,11 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
      * @param kmsKey
-     *        The AWS KMS key details.
+     *        The KMS key details.
      */
 
     public void setKmsKey(String kmsKey) {
@@ -215,10 +215,10 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
-     * @return The AWS KMS key details.
+     * @return The KMS key details.
      */
 
     public String getKmsKey() {
@@ -227,11 +227,11 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS KMS key details.
+     * The KMS key details.
      * </p>
      * 
      * @param kmsKey
-     *        The AWS KMS key details.
+     *        The KMS key details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

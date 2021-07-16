@@ -37,8 +37,7 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
     private String sourceName;
     /**
      * <p>
-     * The description of the data source that determines from where AWS Audit Manager collects evidence for the
-     * control.
+     * The description of the data source that determines from where Audit Manager collects evidence for the control.
      * </p>
      */
     private String sourceDescription;
@@ -111,12 +110,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The description of the data source that determines from where AWS Audit Manager collects evidence for the
-     * control.
+     * The description of the data source that determines from where Audit Manager collects evidence for the control.
      * </p>
      * 
      * @param sourceDescription
-     *        The description of the data source that determines from where AWS Audit Manager collects evidence for the
+     *        The description of the data source that determines from where Audit Manager collects evidence for the
      *        control.
      */
 
@@ -126,11 +124,10 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The description of the data source that determines from where AWS Audit Manager collects evidence for the
-     * control.
+     * The description of the data source that determines from where Audit Manager collects evidence for the control.
      * </p>
      * 
-     * @return The description of the data source that determines from where AWS Audit Manager collects evidence for the
+     * @return The description of the data source that determines from where Audit Manager collects evidence for the
      *         control.
      */
 
@@ -140,12 +137,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The description of the data source that determines from where AWS Audit Manager collects evidence for the
-     * control.
+     * The description of the data source that determines from where Audit Manager collects evidence for the control.
      * </p>
      * 
      * @param sourceDescription
-     *        The description of the data source that determines from where AWS Audit Manager collects evidence for the
+     *        The description of the data source that determines from where Audit Manager collects evidence for the
      *        control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

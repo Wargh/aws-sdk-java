@@ -45,7 +45,7 @@ public class CreateEventIntegrationRequest extends com.amazonaws.AmazonWebServic
     private EventFilter eventFilter;
     /**
      * <p>
-     * The Eventbridge bus.
+     * The EventBridge bus.
      * </p>
      */
     private String eventBridgeBus;
@@ -184,11 +184,11 @@ public class CreateEventIntegrationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Eventbridge bus.
+     * The EventBridge bus.
      * </p>
      * 
      * @param eventBridgeBus
-     *        The Eventbridge bus.
+     *        The EventBridge bus.
      */
 
     public void setEventBridgeBus(String eventBridgeBus) {
@@ -197,10 +197,10 @@ public class CreateEventIntegrationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Eventbridge bus.
+     * The EventBridge bus.
      * </p>
      * 
-     * @return The Eventbridge bus.
+     * @return The EventBridge bus.
      */
 
     public String getEventBridgeBus() {
@@ -209,11 +209,11 @@ public class CreateEventIntegrationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Eventbridge bus.
+     * The EventBridge bus.
      * </p>
      * 
      * @param eventBridgeBus
-     *        The Eventbridge bus.
+     *        The EventBridge bus.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

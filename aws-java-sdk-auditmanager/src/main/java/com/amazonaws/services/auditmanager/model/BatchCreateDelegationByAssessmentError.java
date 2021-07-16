@@ -31,7 +31,7 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      */
     private CreateDelegationRequest createDelegationRequest;
@@ -50,11 +50,11 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      * 
      * @param createDelegationRequest
-     *        The API request to batch create delegations in AWS Audit Manager.
+     *        The API request to batch create delegations in Audit Manager.
      */
 
     public void setCreateDelegationRequest(CreateDelegationRequest createDelegationRequest) {
@@ -63,10 +63,10 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      * 
-     * @return The API request to batch create delegations in AWS Audit Manager.
+     * @return The API request to batch create delegations in Audit Manager.
      */
 
     public CreateDelegationRequest getCreateDelegationRequest() {
@@ -75,11 +75,11 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      * 
      * @param createDelegationRequest
-     *        The API request to batch create delegations in AWS Audit Manager.
+     *        The API request to batch create delegations in Audit Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

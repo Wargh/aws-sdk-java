@@ -27,7 +27,7 @@ public class BatchCreateDelegationByAssessmentRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      */
     private java.util.List<CreateDelegationRequest> createDelegationRequests;
@@ -40,10 +40,10 @@ public class BatchCreateDelegationByAssessmentRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      * 
-     * @return The API request to batch create delegations in AWS Audit Manager.
+     * @return The API request to batch create delegations in Audit Manager.
      */
 
     public java.util.List<CreateDelegationRequest> getCreateDelegationRequests() {
@@ -52,11 +52,11 @@ public class BatchCreateDelegationByAssessmentRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      * 
      * @param createDelegationRequests
-     *        The API request to batch create delegations in AWS Audit Manager.
+     *        The API request to batch create delegations in Audit Manager.
      */
 
     public void setCreateDelegationRequests(java.util.Collection<CreateDelegationRequest> createDelegationRequests) {
@@ -70,7 +70,7 @@ public class BatchCreateDelegationByAssessmentRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,7 +79,7 @@ public class BatchCreateDelegationByAssessmentRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param createDelegationRequests
-     *        The API request to batch create delegations in AWS Audit Manager.
+     *        The API request to batch create delegations in Audit Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +95,11 @@ public class BatchCreateDelegationByAssessmentRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The API request to batch create delegations in AWS Audit Manager.
+     * The API request to batch create delegations in Audit Manager.
      * </p>
      * 
      * @param createDelegationRequests
-     *        The API request to batch create delegations in AWS Audit Manager.
+     *        The API request to batch create delegations in Audit Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

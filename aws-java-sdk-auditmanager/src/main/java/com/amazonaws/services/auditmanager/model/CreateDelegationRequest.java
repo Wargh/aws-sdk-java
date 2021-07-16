@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A collection of attributes used to create a delegation for an assessment in AWS Audit Manager.
+ * A collection of attributes used to create a delegation for an assessment in Audit Manager.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateDelegationRequest"

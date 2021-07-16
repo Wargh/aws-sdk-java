@@ -66,7 +66,7 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
     private AssessmentReportsDestination assessmentReportsDestination;
     /**
      * <p>
-     * The wrapper of AWS accounts and services in scope for the assessment.
+     * The wrapper of accounts and services in scope for the assessment.
      * </p>
      */
     private Scope scope;
@@ -356,11 +356,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The wrapper of AWS accounts and services in scope for the assessment.
+     * The wrapper of accounts and services in scope for the assessment.
      * </p>
      * 
      * @param scope
-     *        The wrapper of AWS accounts and services in scope for the assessment.
+     *        The wrapper of accounts and services in scope for the assessment.
      */
 
     public void setScope(Scope scope) {
@@ -369,10 +369,10 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The wrapper of AWS accounts and services in scope for the assessment.
+     * The wrapper of accounts and services in scope for the assessment.
      * </p>
      * 
-     * @return The wrapper of AWS accounts and services in scope for the assessment.
+     * @return The wrapper of accounts and services in scope for the assessment.
      */
 
     public Scope getScope() {
@@ -381,11 +381,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The wrapper of AWS accounts and services in scope for the assessment.
+     * The wrapper of accounts and services in scope for the assessment.
      * </p>
      * 
      * @param scope
-     *        The wrapper of AWS accounts and services in scope for the assessment.
+     *        The wrapper of accounts and services in scope for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
