@@ -106,6 +106,14 @@ public class EndpointJsonUnmarshaller implements Unmarshaller<Endpoint, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("stateDetails", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setStateDetails(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("failureReason", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setFailureReason(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     endpoint.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))

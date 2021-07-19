@@ -614,4 +614,69 @@ public class AbstractAmazonLocationAsync extends AbstractAmazonLocation implemen
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateGeofenceCollectionResult> updateGeofenceCollectionAsync(UpdateGeofenceCollectionRequest request) {
+
+        return updateGeofenceCollectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateGeofenceCollectionResult> updateGeofenceCollectionAsync(UpdateGeofenceCollectionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateGeofenceCollectionRequest, UpdateGeofenceCollectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMapResult> updateMapAsync(UpdateMapRequest request) {
+
+        return updateMapAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMapResult> updateMapAsync(UpdateMapRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateMapRequest, UpdateMapResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePlaceIndexResult> updatePlaceIndexAsync(UpdatePlaceIndexRequest request) {
+
+        return updatePlaceIndexAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePlaceIndexResult> updatePlaceIndexAsync(UpdatePlaceIndexRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdatePlaceIndexRequest, UpdatePlaceIndexResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRouteCalculatorResult> updateRouteCalculatorAsync(UpdateRouteCalculatorRequest request) {
+
+        return updateRouteCalculatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRouteCalculatorResult> updateRouteCalculatorAsync(UpdateRouteCalculatorRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateRouteCalculatorRequest, UpdateRouteCalculatorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTrackerResult> updateTrackerAsync(UpdateTrackerRequest request) {
+
+        return updateTrackerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTrackerResult> updateTrackerAsync(UpdateTrackerRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateTrackerRequest, UpdateTrackerResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

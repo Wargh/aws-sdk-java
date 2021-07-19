@@ -29,6 +29,13 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String resourceArn;
 
@@ -36,9 +43,22 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.
+     *        The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *        </p>
+     *        </li>
      */
 
     public void setResourceArn(String resourceArn) {
@@ -49,8 +69,21 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.
+     * @return The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *         </p>
+     *         </li>
      */
 
     public String getResourceArn() {
@@ -61,9 +94,22 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.
+     *        The Amazon Resource Name (ARN) of the resource whose tags you want to retrieve.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

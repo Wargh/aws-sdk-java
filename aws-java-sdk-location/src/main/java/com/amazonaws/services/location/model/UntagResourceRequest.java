@@ -29,11 +29,18 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The Amazon Resource Name (ARN) of the resource from which you want to remove tags.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String resourceArn;
     /**
      * <p>
-     * The list of tag keys to remove from the resource.
+     * The list of tag keys to remove from the specified resource.
      * </p>
      */
     private java.util.List<String> tagKeys;
@@ -42,9 +49,22 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The Amazon Resource Name (ARN) of the resource from which you want to remove tags.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource from which you want to remove tags.
+     *        The Amazon Resource Name (ARN) of the resource from which you want to remove tags.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *        </p>
+     *        </li>
      */
 
     public void setResourceArn(String resourceArn) {
@@ -55,8 +75,21 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The Amazon Resource Name (ARN) of the resource from which you want to remove tags.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource from which you want to remove tags.
+     * @return The Amazon Resource Name (ARN) of the resource from which you want to remove tags.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *         </p>
+     *         </li>
      */
 
     public String getResourceArn() {
@@ -67,9 +100,22 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The Amazon Resource Name (ARN) of the resource from which you want to remove tags.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource from which you want to remove tags.
+     *        The Amazon Resource Name (ARN) of the resource from which you want to remove tags.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +126,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of tag keys to remove from the resource.
+     * The list of tag keys to remove from the specified resource.
      * </p>
      * 
-     * @return The list of tag keys to remove from the resource.
+     * @return The list of tag keys to remove from the specified resource.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -92,11 +138,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of tag keys to remove from the resource.
+     * The list of tag keys to remove from the specified resource.
      * </p>
      * 
      * @param tagKeys
-     *        The list of tag keys to remove from the resource.
+     *        The list of tag keys to remove from the specified resource.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -110,7 +156,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of tag keys to remove from the resource.
+     * The list of tag keys to remove from the specified resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +165,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        The list of tag keys to remove from the resource.
+     *        The list of tag keys to remove from the specified resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +181,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of tag keys to remove from the resource.
+     * The list of tag keys to remove from the specified resource.
      * </p>
      * 
      * @param tagKeys
-     *        The list of tag keys to remove from the resource.
+     *        The list of tag keys to remove from the specified resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -3690,7 +3690,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "maxResults",
-        "c2jShape" : "maxResults",
+        "c2jShape" : "maxResultsLowerRange",
         "deprecated" : false,
         "documentation" : "<p>The maximum number of items to return in one batch, between 10 and 100, inclusive.</p>",
         "endpointDiscoveryId" : false,
@@ -3831,7 +3831,7 @@
         },
         "MaxResults" : {
           "c2jName" : "maxResults",
-          "c2jShape" : "maxResults",
+          "c2jShape" : "maxResultsLowerRange",
           "deprecated" : false,
           "documentation" : "<p>The maximum number of items to return in one batch, between 10 and 100, inclusive.</p>",
           "endpointDiscoveryId" : false,
@@ -11412,7 +11412,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "maxResults",
-        "c2jShape" : "maxResults",
+        "c2jShape" : "maxResultsLowerRange",
         "deprecated" : false,
         "documentation" : "<p>The maximum number of items to return in one batch, between 10 and 100, inclusive.</p>",
         "endpointDiscoveryId" : false,
@@ -11692,7 +11692,7 @@
         },
         "MaxResults" : {
           "c2jName" : "maxResults",
-          "c2jShape" : "maxResults",
+          "c2jShape" : "maxResultsLowerRange",
           "deprecated" : false,
           "documentation" : "<p>The maximum number of items to return in one batch, between 10 and 100, inclusive.</p>",
           "endpointDiscoveryId" : false,

@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was unsuccessful due to a conflict.
+ * The request was unsuccessful because of a conflict.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

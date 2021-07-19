@@ -27,9 +27,53 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A comma-separated list of fonts to load glyphs from in order of preference.. For example,
-     * <code>Noto Sans, Arial Unicode</code>.
+     * A comma-separated list of fonts to load glyphs from in order of preference. For example,
+     * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
+     * <p>
+     * Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a> styles:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * VectorEsriDarkGrayCanvas – <code>Ubuntu Medium Italic</code> | <code>Ubuntu Medium</code> |
+     * <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriLightGrayCanvas – <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Light</code>
+     * | <code>Ubuntu Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriTopographic – <code>Noto Sans Italic</code> | <code>Noto Sans Regular</code> |
+     * <code>Noto Sans Bold</code> | <code>Noto Serif Regular</code> | <code>Roboto Condensed Light Italic</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriStreets – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/HERE.html">HERE
+     * Technologies</a> styles:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorHereBerlin</code> – <code>Fira GO Regular</code> | <code>Fira GO Bold</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String fontStack;
     /**
@@ -49,13 +93,101 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A comma-separated list of fonts to load glyphs from in order of preference.. For example,
-     * <code>Noto Sans, Arial Unicode</code>.
+     * A comma-separated list of fonts to load glyphs from in order of preference. For example,
+     * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
+     * <p>
+     * Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a> styles:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * VectorEsriDarkGrayCanvas – <code>Ubuntu Medium Italic</code> | <code>Ubuntu Medium</code> |
+     * <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriLightGrayCanvas – <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Light</code>
+     * | <code>Ubuntu Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriTopographic – <code>Noto Sans Italic</code> | <code>Noto Sans Regular</code> |
+     * <code>Noto Sans Bold</code> | <code>Noto Serif Regular</code> | <code>Roboto Condensed Light Italic</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriStreets – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/HERE.html">HERE
+     * Technologies</a> styles:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorHereBerlin</code> – <code>Fira GO Regular</code> | <code>Fira GO Bold</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param fontStack
-     *        A comma-separated list of fonts to load glyphs from in order of preference.. For example,
-     *        <code>Noto Sans, Arial Unicode</code>.
+     *        A comma-separated list of fonts to load glyphs from in order of preference. For example,
+     *        <code>Noto Sans Regular, Arial Unicode</code>.</p>
+     *        <p>
+     *        Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
+     *        styles:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        VectorEsriDarkGrayCanvas – <code>Ubuntu Medium Italic</code> | <code>Ubuntu Medium</code> |
+     *        <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Bold</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        VectorEsriLightGrayCanvas – <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> |
+     *        <code>Ubuntu Light</code> | <code>Ubuntu Bold</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        VectorEsriTopographic – <code>Noto Sans Italic</code> | <code>Noto Sans Regular</code> |
+     *        <code>Noto Sans Bold</code> | <code>Noto Serif Regular</code> | <code>Roboto Condensed Light Italic</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        VectorEsriStreets – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/HERE.html">HERE
+     *        Technologies</a> styles:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VectorHereBerlin</code> – <code>Fira GO Regular</code> | <code>Fira GO Bold</code>
+     *        </p>
+     *        </li>
      */
 
     public void setFontStack(String fontStack) {
@@ -64,12 +196,101 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A comma-separated list of fonts to load glyphs from in order of preference.. For example,
-     * <code>Noto Sans, Arial Unicode</code>.
+     * A comma-separated list of fonts to load glyphs from in order of preference. For example,
+     * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
+     * <p>
+     * Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a> styles:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * VectorEsriDarkGrayCanvas – <code>Ubuntu Medium Italic</code> | <code>Ubuntu Medium</code> |
+     * <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriLightGrayCanvas – <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Light</code>
+     * | <code>Ubuntu Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriTopographic – <code>Noto Sans Italic</code> | <code>Noto Sans Regular</code> |
+     * <code>Noto Sans Bold</code> | <code>Noto Serif Regular</code> | <code>Roboto Condensed Light Italic</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriStreets – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/HERE.html">HERE
+     * Technologies</a> styles:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorHereBerlin</code> – <code>Fira GO Regular</code> | <code>Fira GO Bold</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return A comma-separated list of fonts to load glyphs from in order of preference.. For example,
-     *         <code>Noto Sans, Arial Unicode</code>.
+     * @return A comma-separated list of fonts to load glyphs from in order of preference. For example,
+     *         <code>Noto Sans Regular, Arial Unicode</code>.</p>
+     *         <p>
+     *         Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
+     *         styles:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         VectorEsriDarkGrayCanvas – <code>Ubuntu Medium Italic</code> | <code>Ubuntu Medium</code> |
+     *         <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Bold</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         VectorEsriLightGrayCanvas – <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> |
+     *         <code>Ubuntu Light</code> | <code>Ubuntu Bold</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         VectorEsriTopographic – <code>Noto Sans Italic</code> | <code>Noto Sans Regular</code> |
+     *         <code>Noto Sans Bold</code> | <code>Noto Serif Regular</code> |
+     *         <code>Roboto Condensed Light Italic</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         VectorEsriStreets – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/HERE.html">HERE
+     *         Technologies</a> styles:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>VectorHereBerlin</code> – <code>Fira GO Regular</code> | <code>Fira GO Bold</code>
+     *         </p>
+     *         </li>
      */
 
     public String getFontStack() {
@@ -78,13 +299,101 @@ public class GetMapGlyphsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A comma-separated list of fonts to load glyphs from in order of preference.. For example,
-     * <code>Noto Sans, Arial Unicode</code>.
+     * A comma-separated list of fonts to load glyphs from in order of preference. For example,
+     * <code>Noto Sans Regular, Arial Unicode</code>.
      * </p>
+     * <p>
+     * Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a> styles:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * VectorEsriDarkGrayCanvas – <code>Ubuntu Medium Italic</code> | <code>Ubuntu Medium</code> |
+     * <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriLightGrayCanvas – <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Light</code>
+     * | <code>Ubuntu Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriTopographic – <code>Noto Sans Italic</code> | <code>Noto Sans Regular</code> |
+     * <code>Noto Sans Bold</code> | <code>Noto Serif Regular</code> | <code>Roboto Condensed Light Italic</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriStreets – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/HERE.html">HERE
+     * Technologies</a> styles:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>VectorHereBerlin</code> – <code>Fira GO Regular</code> | <code>Fira GO Bold</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param fontStack
-     *        A comma-separated list of fonts to load glyphs from in order of preference.. For example,
-     *        <code>Noto Sans, Arial Unicode</code>.
+     *        A comma-separated list of fonts to load glyphs from in order of preference. For example,
+     *        <code>Noto Sans Regular, Arial Unicode</code>.</p>
+     *        <p>
+     *        Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html">Esri</a>
+     *        styles:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        VectorEsriDarkGrayCanvas – <code>Ubuntu Medium Italic</code> | <code>Ubuntu Medium</code> |
+     *        <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> | <code>Ubuntu Bold</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        VectorEsriLightGrayCanvas – <code>Ubuntu Italic</code> | <code>Ubuntu Regular</code> |
+     *        <code>Ubuntu Light</code> | <code>Ubuntu Bold</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        VectorEsriTopographic – <code>Noto Sans Italic</code> | <code>Noto Sans Regular</code> |
+     *        <code>Noto Sans Bold</code> | <code>Noto Serif Regular</code> | <code>Roboto Condensed Light Italic</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        VectorEsriStreets – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        VectorEsriNavigation – <code>Arial Regular</code> | <code>Arial Italic</code> | <code>Arial Bold</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Valid fonts for <a href="https://docs.aws.amazon.com/location/latest/developerguide/HERE.html">HERE
+     *        Technologies</a> styles:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>VectorHereBerlin</code> – <code>Fira GO Regular</code> | <code>Fira GO Bold</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

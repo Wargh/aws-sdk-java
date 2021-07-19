@@ -33,6 +33,19 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <p>
      * The list of image semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      */
     private java.util.List<ImageVersion> imageVersionList;
     /**
@@ -87,8 +100,32 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <p>
      * The list of image semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * 
-     * @return The list of image semantic versions.
+     * @return The list of image semantic versions.</p> <note>
+     *         <p>
+     *         The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *         assign values for the first three, and can filter on all of them.
+     *         </p>
+     *         <p>
+     *         <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use
+     *         wildcards (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the
+     *         first wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list
+     *         results, but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
+     *         automatically uses a wildcard for that, if applicable.
+     *         </p>
      */
 
     public java.util.List<ImageVersion> getImageVersionList() {
@@ -99,9 +136,33 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <p>
      * The list of image semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * 
      * @param imageVersionList
-     *        The list of image semantic versions.
+     *        The list of image semantic versions.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
+     *        <p>
+     *        <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards
+     *        (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the first
+     *        wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results,
+     *        but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
+     *        automatically uses a wildcard for that, if applicable.
+     *        </p>
      */
 
     public void setImageVersionList(java.util.Collection<ImageVersion> imageVersionList) {
@@ -117,6 +178,19 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <p>
      * The list of image semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setImageVersionList(java.util.Collection)} or {@link #withImageVersionList(java.util.Collection)} if you
@@ -124,7 +198,18 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * 
      * @param imageVersionList
-     *        The list of image semantic versions.
+     *        The list of image semantic versions.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
+     *        <p>
+     *        <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards
+     *        (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the first
+     *        wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results,
+     *        but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
+     *        automatically uses a wildcard for that, if applicable.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,9 +227,33 @@ public class ListImagesResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <p>
      * The list of image semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * 
      * @param imageVersionList
-     *        The list of image semantic versions.
+     *        The list of image semantic versions.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
+     *        <p>
+     *        <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards
+     *        (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the first
+     *        wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results,
+     *        but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
+     *        automatically uses a wildcard for that, if applicable.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -37,6 +37,9 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * Creates an association between a geofence collection and a tracker resource. This allows the tracker resource to
      * communicate location data to the linked geofence collection.
      * </p>
+     * <p>
+     * You can associate up to five geofence collections to each tracker resource.
+     * </p>
      * <note>
      * <p>
      * Currently not supported — Cross-account configurations, such as creating associations between a tracker resource
@@ -56,6 +59,9 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <p>
      * Creates an association between a geofence collection and a tracker resource. This allows the tracker resource to
      * communicate location data to the linked geofence collection.
+     * </p>
+     * <p>
+     * You can associate up to five geofence collections to each tracker resource.
      * </p>
      * <note>
      * <p>
@@ -155,14 +161,29 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Evaluates device positions against the geofence geometries from a given geofence collection. The evaluation
-     * determines if the device has entered or exited a geofenced area, which publishes ENTER or EXIT geofence events to
-     * Amazon EventBridge.
+     * Evaluates device positions against the geofence geometries from a given geofence collection.
      * </p>
+     * <p>
+     * This operation always returns an empty response because geofences are asynchronously evaluated. The evaluation
+     * determines if the device has entered or exited a geofenced area, and then publishes one of the following events
+     * to Amazon EventBridge:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ENTER</code> if Amazon Location determines that the tracked device has entered a geofenced area.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EXIT</code> if Amazon Location determines that the tracked device has exited a geofenced area.
+     * </p>
+     * </li>
+     * </ul>
      * <note>
      * <p>
-     * The last geofence that a device was observed within, if any, is tracked for 30 days after the most recent device
-     * position update
+     * The last geofence that a device was observed within is tracked for 30 days after the most recent device position
+     * update.
      * </p>
      * </note>
      * 
@@ -176,14 +197,29 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Evaluates device positions against the geofence geometries from a given geofence collection. The evaluation
-     * determines if the device has entered or exited a geofenced area, which publishes ENTER or EXIT geofence events to
-     * Amazon EventBridge.
+     * Evaluates device positions against the geofence geometries from a given geofence collection.
      * </p>
+     * <p>
+     * This operation always returns an empty response because geofences are asynchronously evaluated. The evaluation
+     * determines if the device has entered or exited a geofenced area, and then publishes one of the following events
+     * to Amazon EventBridge:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ENTER</code> if Amazon Location determines that the tracked device has entered a geofenced area.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EXIT</code> if Amazon Location determines that the tracked device has exited a geofenced area.
+     * </p>
+     * </li>
+     * </ul>
      * <note>
      * <p>
-     * The last geofence that a device was observed within, if any, is tracked for 30 days after the most recent device
-     * position update
+     * The last geofence that a device was observed within is tracked for 30 days after the most recent device position
+     * update.
      * </p>
      * </note>
      * 
@@ -202,7 +238,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * A batch request to retrieve all device positions.
+     * Lists the latest device positions for requested devices.
      * </p>
      * 
      * @param batchGetDevicePositionRequest
@@ -215,7 +251,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * A batch request to retrieve all device positions.
+     * Lists the latest device positions for requested devices.
      * </p>
      * 
      * @param batchGetDevicePositionRequest
@@ -316,8 +352,8 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html">Calculates a route</a>
      * given the following required parameters: <code>DeparturePostiton</code> and <code>DestinationPosition</code>.
      * Requires that you first <a
-     * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create
-     * aroute calculator resource</a>
+     * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create a
+     * route calculator resource</a>
      * </p>
      * <p>
      * By default, a request that doesn't specify a departure time uses the best time of day to travel with the best
@@ -342,7 +378,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#travel-mode">Specifying
-     * a travel mode</a> using TravelMode. This lets you specify additional route preference such as
+     * a travel mode</a> using TravelMode. This lets you specify an additional route preference such as
      * <code>CarModeOptions</code> if traveling by <code>Car</code>, or <code>TruckModeOptions</code> if traveling by
      * <code>Truck</code>.
      * </p>
@@ -364,8 +400,8 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html">Calculates a route</a>
      * given the following required parameters: <code>DeparturePostiton</code> and <code>DestinationPosition</code>.
      * Requires that you first <a
-     * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create
-     * aroute calculator resource</a>
+     * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create a
+     * route calculator resource</a>
      * </p>
      * <p>
      * By default, a request that doesn't specify a departure time uses the best time of day to travel with the best
@@ -390,7 +426,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#travel-mode">Specifying
-     * a travel mode</a> using TravelMode. This lets you specify additional route preference such as
+     * a travel mode</a> using TravelMode. This lets you specify an additional route preference such as
      * <code>CarModeOptions</code> if traveling by <code>Car</code>, or <code>TruckModeOptions</code> if traveling by
      * <code>Truck</code>.
      * </p>
@@ -1257,7 +1293,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Lists the latest device positions for requested devices.
+     * A batch request to retrieve all device positions.
      * </p>
      * 
      * @param listDevicePositionsRequest
@@ -1270,7 +1306,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Lists the latest device positions for requested devices.
+     * A batch request to retrieve all device positions.
      * </p>
      * 
      * @param listDevicePositionsRequest
@@ -1443,7 +1479,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Returns the tags for the specified Amazon Location Service resource.
+     * Returns a list of tags that are applied to the specified Amazon Location resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1456,7 +1492,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Returns the tags for the specified Amazon Location Service resource.
+     * Returns a list of tags that are applied to the specified Amazon Location resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1659,7 +1695,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * </p>
      * 
      * <pre>
-     * <code> &lt;p&gt;Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or change only resources with certain tag values.&lt;/p&gt; &lt;p&gt;Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of characters.&lt;/p&gt; &lt;p&gt;You can use the &lt;code&gt;TagResource&lt;/code&gt; action with an Amazon Location Service resource that already has tags. If you specify a new tag key for the resource, this tag is appended to the tags already associated with the resource. If you specify a tag key that is already associated with the resource, the new tag value that you specify replaces the previous value for that tag. &lt;/p&gt; &lt;p&gt;You can associate as many as 50 tags with a resource.&lt;/p&gt; </code>
+     * <code> &lt;p&gt;Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or change only resources with certain tag values.&lt;/p&gt; &lt;p&gt;You can use the &lt;code&gt;TagResource&lt;/code&gt; operation with an Amazon Location Service resource that already has tags. If you specify a new tag key for the resource, this tag is appended to the tags already associated with the resource. If you specify a tag key that's already associated with the resource, the new tag value that you specify replaces the previous value for that tag. &lt;/p&gt; &lt;p&gt;You can associate up to 50 tags with a resource.&lt;/p&gt; </code>
      * </pre>
      * 
      * @param tagResourceRequest
@@ -1676,7 +1712,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * </p>
      * 
      * <pre>
-     * <code> &lt;p&gt;Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or change only resources with certain tag values.&lt;/p&gt; &lt;p&gt;Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of characters.&lt;/p&gt; &lt;p&gt;You can use the &lt;code&gt;TagResource&lt;/code&gt; action with an Amazon Location Service resource that already has tags. If you specify a new tag key for the resource, this tag is appended to the tags already associated with the resource. If you specify a tag key that is already associated with the resource, the new tag value that you specify replaces the previous value for that tag. &lt;/p&gt; &lt;p&gt;You can associate as many as 50 tags with a resource.&lt;/p&gt; </code>
+     * <code> &lt;p&gt;Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or change only resources with certain tag values.&lt;/p&gt; &lt;p&gt;You can use the &lt;code&gt;TagResource&lt;/code&gt; operation with an Amazon Location Service resource that already has tags. If you specify a new tag key for the resource, this tag is appended to the tags already associated with the resource. If you specify a tag key that's already associated with the resource, the new tag value that you specify replaces the previous value for that tag. &lt;/p&gt; &lt;p&gt;You can associate up to 50 tags with a resource.&lt;/p&gt; </code>
      * </pre>
      * 
      * @param tagResourceRequest
@@ -1694,7 +1730,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Removes one or more tags from the specified Amazon Location Service resource.
+     * Removes one or more tags from the specified Amazon Location resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1707,7 +1743,7 @@ public interface AmazonLocationAsync extends AmazonLocation {
 
     /**
      * <p>
-     * Removes one or more tags from the specified Amazon Location Service resource.
+     * Removes one or more tags from the specified Amazon Location resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1722,5 +1758,160 @@ public interface AmazonLocationAsync extends AmazonLocation {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given geofence collection.
+     * </p>
+     * 
+     * @param updateGeofenceCollectionRequest
+     * @return A Java Future containing the result of the UpdateGeofenceCollection operation returned by the service.
+     * @sample AmazonLocationAsync.UpdateGeofenceCollection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateGeofenceCollection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateGeofenceCollectionResult> updateGeofenceCollectionAsync(UpdateGeofenceCollectionRequest updateGeofenceCollectionRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given geofence collection.
+     * </p>
+     * 
+     * @param updateGeofenceCollectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateGeofenceCollection operation returned by the service.
+     * @sample AmazonLocationAsyncHandler.UpdateGeofenceCollection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateGeofenceCollection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateGeofenceCollectionResult> updateGeofenceCollectionAsync(UpdateGeofenceCollectionRequest updateGeofenceCollectionRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateGeofenceCollectionRequest, UpdateGeofenceCollectionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given map resource.
+     * </p>
+     * 
+     * @param updateMapRequest
+     * @return A Java Future containing the result of the UpdateMap operation returned by the service.
+     * @sample AmazonLocationAsync.UpdateMap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateMap" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMapResult> updateMapAsync(UpdateMapRequest updateMapRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given map resource.
+     * </p>
+     * 
+     * @param updateMapRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateMap operation returned by the service.
+     * @sample AmazonLocationAsyncHandler.UpdateMap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateMap" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateMapResult> updateMapAsync(UpdateMapRequest updateMapRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateMapRequest, UpdateMapResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given place index resource.
+     * </p>
+     * 
+     * @param updatePlaceIndexRequest
+     * @return A Java Future containing the result of the UpdatePlaceIndex operation returned by the service.
+     * @sample AmazonLocationAsync.UpdatePlaceIndex
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdatePlaceIndex" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePlaceIndexResult> updatePlaceIndexAsync(UpdatePlaceIndexRequest updatePlaceIndexRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given place index resource.
+     * </p>
+     * 
+     * @param updatePlaceIndexRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePlaceIndex operation returned by the service.
+     * @sample AmazonLocationAsyncHandler.UpdatePlaceIndex
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdatePlaceIndex" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePlaceIndexResult> updatePlaceIndexAsync(UpdatePlaceIndexRequest updatePlaceIndexRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePlaceIndexRequest, UpdatePlaceIndexResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the specified properties for a given route calculator resource.
+     * </p>
+     * 
+     * @param updateRouteCalculatorRequest
+     * @return A Java Future containing the result of the UpdateRouteCalculator operation returned by the service.
+     * @sample AmazonLocationAsync.UpdateRouteCalculator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateRouteCalculator" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRouteCalculatorResult> updateRouteCalculatorAsync(UpdateRouteCalculatorRequest updateRouteCalculatorRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties for a given route calculator resource.
+     * </p>
+     * 
+     * @param updateRouteCalculatorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRouteCalculator operation returned by the service.
+     * @sample AmazonLocationAsyncHandler.UpdateRouteCalculator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateRouteCalculator" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRouteCalculatorResult> updateRouteCalculatorAsync(UpdateRouteCalculatorRequest updateRouteCalculatorRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRouteCalculatorRequest, UpdateRouteCalculatorResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given tracker resource.
+     * </p>
+     * 
+     * @param updateTrackerRequest
+     * @return A Java Future containing the result of the UpdateTracker operation returned by the service.
+     * @sample AmazonLocationAsync.UpdateTracker
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateTracker" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTrackerResult> updateTrackerAsync(UpdateTrackerRequest updateTrackerRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given tracker resource.
+     * </p>
+     * 
+     * @param updateTrackerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateTracker operation returned by the service.
+     * @sample AmazonLocationAsyncHandler.UpdateTracker
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateTracker" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTrackerResult> updateTrackerAsync(UpdateTrackerRequest updateTrackerRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateTrackerRequest, UpdateTrackerResult> asyncHandler);
 
 }

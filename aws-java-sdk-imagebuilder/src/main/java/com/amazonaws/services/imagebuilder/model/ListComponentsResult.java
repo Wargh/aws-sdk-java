@@ -33,6 +33,12 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
      * <p>
      * The list of component semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * </note>
      */
     private java.util.List<ComponentVersion> componentVersionList;
     /**
@@ -87,8 +93,18 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
      * <p>
      * The list of component semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * </note>
      * 
-     * @return The list of component semantic versions.
+     * @return The list of component semantic versions.</p> <note>
+     *         <p>
+     *         The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *         assign values for the first three, and can filter on all of them.
+     *         </p>
      */
 
     public java.util.List<ComponentVersion> getComponentVersionList() {
@@ -99,9 +115,19 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
      * <p>
      * The list of component semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * </note>
      * 
      * @param componentVersionList
-     *        The list of component semantic versions.
+     *        The list of component semantic versions.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
      */
 
     public void setComponentVersionList(java.util.Collection<ComponentVersion> componentVersionList) {
@@ -117,6 +143,12 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
      * <p>
      * The list of component semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setComponentVersionList(java.util.Collection)} or {@link #withComponentVersionList(java.util.Collection)}
@@ -124,7 +156,11 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param componentVersionList
-     *        The list of component semantic versions.
+     *        The list of component semantic versions.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,9 +178,19 @@ public class ListComponentsResult extends com.amazonaws.AmazonWebServiceResult<c
      * <p>
      * The list of component semantic versions.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * </note>
      * 
      * @param componentVersionList
-     *        The list of component semantic versions.
+     *        The list of component semantic versions.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

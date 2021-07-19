@@ -125,11 +125,16 @@ public class BGPPeer implements Serializable, Cloneable, StructuredPojo {
     private String bgpStatus;
     /**
      * <p>
-     * The Direct Connect endpoint on which the BGP peer terminates.
+     * The Direct Connect endpoint that terminates the BGP peer.
      * </p>
      */
     private String awsDeviceV2;
-
+    /**
+     * <p>
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
+     * </p>
+     */
     private String awsLogicalDeviceId;
 
     /**
@@ -1014,11 +1019,11 @@ public class BGPPeer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the BGP peer terminates.
+     * The Direct Connect endpoint that terminates the BGP peer.
      * </p>
      * 
      * @param awsDeviceV2
-     *        The Direct Connect endpoint on which the BGP peer terminates.
+     *        The Direct Connect endpoint that terminates the BGP peer.
      */
 
     public void setAwsDeviceV2(String awsDeviceV2) {
@@ -1027,10 +1032,10 @@ public class BGPPeer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the BGP peer terminates.
+     * The Direct Connect endpoint that terminates the BGP peer.
      * </p>
      * 
-     * @return The Direct Connect endpoint on which the BGP peer terminates.
+     * @return The Direct Connect endpoint that terminates the BGP peer.
      */
 
     public String getAwsDeviceV2() {
@@ -1039,11 +1044,11 @@ public class BGPPeer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the BGP peer terminates.
+     * The Direct Connect endpoint that terminates the BGP peer.
      * </p>
      * 
      * @param awsDeviceV2
-     *        The Direct Connect endpoint on which the BGP peer terminates.
+     *        The Direct Connect endpoint that terminates the BGP peer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1053,7 +1058,14 @@ public class BGPPeer implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
+     * </p>
+     * 
      * @param awsLogicalDeviceId
+     *        The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *        the device that terminates the physical connection.
      */
 
     public void setAwsLogicalDeviceId(String awsLogicalDeviceId) {
@@ -1061,7 +1073,13 @@ public class BGPPeer implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
+     * </p>
+     * 
+     * @return The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *         the device that terminates the physical connection.
      */
 
     public String getAwsLogicalDeviceId() {
@@ -1069,7 +1087,14 @@ public class BGPPeer implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
+     * </p>
+     * 
      * @param awsLogicalDeviceId
+     *        The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *        the device that terminates the physical connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

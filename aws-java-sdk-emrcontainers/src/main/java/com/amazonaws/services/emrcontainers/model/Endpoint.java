@@ -114,6 +114,18 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> subnetIds;
     /**
      * <p>
+     * Additional details of the endpoint state.
+     * </p>
+     */
+    private String stateDetails;
+    /**
+     * <p>
+     * The reasons why the endpoint has failed.
+     * </p>
+     */
+    private String failureReason;
+    /**
+     * <p>
      * The tags of the endpoint.
      * </p>
      */
@@ -730,6 +742,105 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Additional details of the endpoint state.
+     * </p>
+     * 
+     * @param stateDetails
+     *        Additional details of the endpoint state.
+     */
+
+    public void setStateDetails(String stateDetails) {
+        this.stateDetails = stateDetails;
+    }
+
+    /**
+     * <p>
+     * Additional details of the endpoint state.
+     * </p>
+     * 
+     * @return Additional details of the endpoint state.
+     */
+
+    public String getStateDetails() {
+        return this.stateDetails;
+    }
+
+    /**
+     * <p>
+     * Additional details of the endpoint state.
+     * </p>
+     * 
+     * @param stateDetails
+     *        Additional details of the endpoint state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Endpoint withStateDetails(String stateDetails) {
+        setStateDetails(stateDetails);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The reasons why the endpoint has failed.
+     * </p>
+     * 
+     * @param failureReason
+     *        The reasons why the endpoint has failed.
+     * @see FailureReason
+     */
+
+    public void setFailureReason(String failureReason) {
+        this.failureReason = failureReason;
+    }
+
+    /**
+     * <p>
+     * The reasons why the endpoint has failed.
+     * </p>
+     * 
+     * @return The reasons why the endpoint has failed.
+     * @see FailureReason
+     */
+
+    public String getFailureReason() {
+        return this.failureReason;
+    }
+
+    /**
+     * <p>
+     * The reasons why the endpoint has failed.
+     * </p>
+     * 
+     * @param failureReason
+     *        The reasons why the endpoint has failed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FailureReason
+     */
+
+    public Endpoint withFailureReason(String failureReason) {
+        setFailureReason(failureReason);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The reasons why the endpoint has failed.
+     * </p>
+     * 
+     * @param failureReason
+     *        The reasons why the endpoint has failed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FailureReason
+     */
+
+    public Endpoint withFailureReason(FailureReason failureReason) {
+        this.failureReason = failureReason.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The tags of the endpoint.
      * </p>
      * 
@@ -836,6 +947,10 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
             sb.append("SecurityGroup: ").append(getSecurityGroup()).append(",");
         if (getSubnetIds() != null)
             sb.append("SubnetIds: ").append(getSubnetIds()).append(",");
+        if (getStateDetails() != null)
+            sb.append("StateDetails: ").append(getStateDetails()).append(",");
+        if (getFailureReason() != null)
+            sb.append("FailureReason: ").append(getFailureReason()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -908,6 +1023,14 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSubnetIds() != null && other.getSubnetIds().equals(this.getSubnetIds()) == false)
             return false;
+        if (other.getStateDetails() == null ^ this.getStateDetails() == null)
+            return false;
+        if (other.getStateDetails() != null && other.getStateDetails().equals(this.getStateDetails()) == false)
+            return false;
+        if (other.getFailureReason() == null ^ this.getFailureReason() == null)
+            return false;
+        if (other.getFailureReason() != null && other.getFailureReason().equals(this.getFailureReason()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -934,6 +1057,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getSecurityGroup() == null) ? 0 : getSecurityGroup().hashCode());
         hashCode = prime * hashCode + ((getSubnetIds() == null) ? 0 : getSubnetIds().hashCode());
+        hashCode = prime * hashCode + ((getStateDetails() == null) ? 0 : getStateDetails().hashCode());
+        hashCode = prime * hashCode + ((getFailureReason() == null) ? 0 : getFailureReason().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

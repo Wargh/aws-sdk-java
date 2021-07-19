@@ -68,7 +68,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
     private String description;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across all AWS.
+     * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across AWS.
      * </p>
      * <ul>
      * <li>
@@ -383,7 +383,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across all AWS.
+     * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across AWS.
      * </p>
      * <ul>
      * <li>
@@ -394,8 +394,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      * </ul>
      * 
      * @param indexArn
-     *        The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across all AWS.
-     *        </p>
+     *        The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across AWS. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -410,7 +409,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across all AWS.
+     * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across AWS.
      * </p>
      * <ul>
      * <li>
@@ -420,8 +419,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * </ul>
      * 
-     * @return The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across all AWS.
-     *         </p>
+     * @return The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across AWS. </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -436,7 +434,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across all AWS.
+     * The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across AWS.
      * </p>
      * <ul>
      * <li>
@@ -447,8 +445,7 @@ public class DescribePlaceIndexResult extends com.amazonaws.AmazonWebServiceResu
      * </ul>
      * 
      * @param indexArn
-     *        The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across all AWS.
-     *        </p>
+     *        The Amazon Resource Name (ARN) for the place index resource. Used to specify a resource across AWS. </p>
      *        <ul>
      *        <li>
      *        <p>

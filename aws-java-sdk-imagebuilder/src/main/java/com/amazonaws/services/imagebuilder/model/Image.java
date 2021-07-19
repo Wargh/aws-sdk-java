@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An image build version.
+ * An Image Builder image. You must specify exactly one recipe for the image – either a container recipe (
+ * <code>containerRecipe</code>), which creates a container image, or an image recipe (<code>imageRecipe</code>), which
+ * creates an AMI.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/Image" target="_top">AWS API
@@ -32,6 +34,30 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the image.
      * </p>
+     * <note>
+     * <p>
+     * Semantic versioning is included in each object's Amazon Resource Name (ARN), at the level that applies to that
+     * object as follows:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Versionless ARNs and Name ARNs do not include specific values in any of the nodes. The nodes are either left off
+     * entirely, or they are specified as wildcards, for example: x.x.x.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Version ARNs have only the first three nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.
+     * </p>
+     * </li>
+     * </ol>
+     * </note>
      */
     private String arn;
     /**
@@ -50,6 +76,29 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The semantic version of the image.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
+     * that is not open for updates.
+     * </p>
+     * <p>
+     * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
+     * you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as
+     * 2021.01.01.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      */
     private String version;
     /**
@@ -87,7 +136,7 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
     private ImageRecipe imageRecipe;
     /**
      * <p>
-     * The container recipe used to create the container image type.
+     * The recipe that is used to create an Image Builder container image.
      * </p>
      */
     private ContainerRecipe containerRecipe;
@@ -144,9 +193,55 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the image.
      * </p>
+     * <note>
+     * <p>
+     * Semantic versioning is included in each object's Amazon Resource Name (ARN), at the level that applies to that
+     * object as follows:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Versionless ARNs and Name ARNs do not include specific values in any of the nodes. The nodes are either left off
+     * entirely, or they are specified as wildcards, for example: x.x.x.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Version ARNs have only the first three nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.
+     * </p>
+     * </li>
+     * </ol>
+     * </note>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the image.
+     *        The Amazon Resource Name (ARN) of the image.</p> <note>
+     *        <p>
+     *        Semantic versioning is included in each object's Amazon Resource Name (ARN), at the level that applies to
+     *        that object as follows:
+     *        </p>
+     *        <ol>
+     *        <li>
+     *        <p>
+     *        Versionless ARNs and Name ARNs do not include specific values in any of the nodes. The nodes are either
+     *        left off entirely, or they are specified as wildcards, for example: x.x.x.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Version ARNs have only the first three nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.
+     *        </p>
+     *        </li>
+     *        </ol>
      */
 
     public void setArn(String arn) {
@@ -157,8 +252,55 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the image.
      * </p>
+     * <note>
+     * <p>
+     * Semantic versioning is included in each object's Amazon Resource Name (ARN), at the level that applies to that
+     * object as follows:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Versionless ARNs and Name ARNs do not include specific values in any of the nodes. The nodes are either left off
+     * entirely, or they are specified as wildcards, for example: x.x.x.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Version ARNs have only the first three nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.
+     * </p>
+     * </li>
+     * </ol>
+     * </note>
      * 
-     * @return The Amazon Resource Name (ARN) of the image.
+     * @return The Amazon Resource Name (ARN) of the image.</p> <note>
+     *         <p>
+     *         Semantic versioning is included in each object's Amazon Resource Name (ARN), at the level that applies to
+     *         that object as follows:
+     *         </p>
+     *         <ol>
+     *         <li>
+     *         <p>
+     *         Versionless ARNs and Name ARNs do not include specific values in any of the nodes. The nodes are either
+     *         left off entirely, or they are specified as wildcards, for example: x.x.x.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Version ARNs have only the first three nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Build version ARNs have all four nodes, and point to a specific build for a specific version of an
+     *         object.
+     *         </p>
+     *         </li>
+     *         </ol>
      */
 
     public String getArn() {
@@ -169,9 +311,55 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the image.
      * </p>
+     * <note>
+     * <p>
+     * Semantic versioning is included in each object's Amazon Resource Name (ARN), at the level that applies to that
+     * object as follows:
+     * </p>
+     * <ol>
+     * <li>
+     * <p>
+     * Versionless ARNs and Name ARNs do not include specific values in any of the nodes. The nodes are either left off
+     * entirely, or they are specified as wildcards, for example: x.x.x.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Version ARNs have only the first three nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.
+     * </p>
+     * </li>
+     * </ol>
+     * </note>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the image.
+     *        The Amazon Resource Name (ARN) of the image.</p> <note>
+     *        <p>
+     *        Semantic versioning is included in each object's Amazon Resource Name (ARN), at the level that applies to
+     *        that object as follows:
+     *        </p>
+     *        <ol>
+     *        <li>
+     *        <p>
+     *        Versionless ARNs and Name ARNs do not include specific values in any of the nodes. The nodes are either
+     *        left off entirely, or they are specified as wildcards, for example: x.x.x.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Version ARNs have only the first three nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Build version ARNs have all four nodes, and point to a specific build for a specific version of an object.
+     *        </p>
+     *        </li>
+     *        </ol>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -283,9 +471,53 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The semantic version of the image.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
+     * that is not open for updates.
+     * </p>
+     * <p>
+     * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
+     * you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as
+     * 2021.01.01.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * 
      * @param version
-     *        The semantic version of the image.
+     *        The semantic version of the image.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
+     *        <p>
+     *        <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
+     *        with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
+     *        number, and that is not open for updates.
+     *        </p>
+     *        <p>
+     *        <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes
+     *        that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date,
+     *        such as 2021.01.01.
+     *        </p>
+     *        <p>
+     *        <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards
+     *        (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the first
+     *        wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results,
+     *        but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
+     *        automatically uses a wildcard for that, if applicable.
+     *        </p>
      */
 
     public void setVersion(String version) {
@@ -296,8 +528,52 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The semantic version of the image.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
+     * that is not open for updates.
+     * </p>
+     * <p>
+     * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
+     * you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as
+     * 2021.01.01.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * 
-     * @return The semantic version of the image.
+     * @return The semantic version of the image.</p> <note>
+     *         <p>
+     *         The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *         assign values for the first three, and can filter on all of them.
+     *         </p>
+     *         <p>
+     *         <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
+     *         with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
+     *         number, and that is not open for updates.
+     *         </p>
+     *         <p>
+     *         <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the
+     *         nodes that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a
+     *         date, such as 2021.01.01.
+     *         </p>
+     *         <p>
+     *         <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use
+     *         wildcards (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the
+     *         first wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list
+     *         results, but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
+     *         automatically uses a wildcard for that, if applicable.
+     *         </p>
      */
 
     public String getVersion() {
@@ -308,9 +584,53 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The semantic version of the image.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
+     * that is not open for updates.
+     * </p>
+     * <p>
+     * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
+     * you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as
+     * 2021.01.01.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * 
      * @param version
-     *        The semantic version of the image.
+     *        The semantic version of the image.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
+     *        <p>
+     *        <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
+     *        with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
+     *        number, and that is not open for updates.
+     *        </p>
+     *        <p>
+     *        <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes
+     *        that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date,
+     *        such as 2021.01.01.
+     *        </p>
+     *        <p>
+     *        <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards
+     *        (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the first
+     *        wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results,
+     *        but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
+     *        automatically uses a wildcard for that, if applicable.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -574,11 +894,11 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The container recipe used to create the container image type.
+     * The recipe that is used to create an Image Builder container image.
      * </p>
      * 
      * @param containerRecipe
-     *        The container recipe used to create the container image type.
+     *        The recipe that is used to create an Image Builder container image.
      */
 
     public void setContainerRecipe(ContainerRecipe containerRecipe) {
@@ -587,10 +907,10 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The container recipe used to create the container image type.
+     * The recipe that is used to create an Image Builder container image.
      * </p>
      * 
-     * @return The container recipe used to create the container image type.
+     * @return The recipe that is used to create an Image Builder container image.
      */
 
     public ContainerRecipe getContainerRecipe() {
@@ -599,11 +919,11 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The container recipe used to create the container image type.
+     * The recipe that is used to create an Image Builder container image.
      * </p>
      * 
      * @param containerRecipe
-     *        The container recipe used to create the container image type.
+     *        The recipe that is used to create an Image Builder container image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

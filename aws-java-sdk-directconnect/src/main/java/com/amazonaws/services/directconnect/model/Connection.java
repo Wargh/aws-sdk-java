@@ -158,13 +158,14 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
     private Boolean jumboFrameCapable;
     /**
      * <p>
-     * The Direct Connect endpoint on which the physical connection terminates.
+     * The Direct Connect endpoint that terminates the physical connection.
      * </p>
      */
     private String awsDeviceV2;
     /**
      * <p>
-     * The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
      * </p>
      */
     private String awsLogicalDeviceId;
@@ -1285,11 +1286,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the physical connection terminates.
+     * The Direct Connect endpoint that terminates the physical connection.
      * </p>
      * 
      * @param awsDeviceV2
-     *        The Direct Connect endpoint on which the physical connection terminates.
+     *        The Direct Connect endpoint that terminates the physical connection.
      */
 
     public void setAwsDeviceV2(String awsDeviceV2) {
@@ -1298,10 +1299,10 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the physical connection terminates.
+     * The Direct Connect endpoint that terminates the physical connection.
      * </p>
      * 
-     * @return The Direct Connect endpoint on which the physical connection terminates.
+     * @return The Direct Connect endpoint that terminates the physical connection.
      */
 
     public String getAwsDeviceV2() {
@@ -1310,11 +1311,11 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the physical connection terminates.
+     * The Direct Connect endpoint that terminates the physical connection.
      * </p>
      * 
      * @param awsDeviceV2
-     *        The Direct Connect endpoint on which the physical connection terminates.
+     *        The Direct Connect endpoint that terminates the physical connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1325,11 +1326,13 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
      * </p>
      * 
      * @param awsLogicalDeviceId
-     *        The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     *        The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *        the device that terminates the physical connection.
      */
 
     public void setAwsLogicalDeviceId(String awsLogicalDeviceId) {
@@ -1338,10 +1341,12 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
      * </p>
      * 
-     * @return The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * @return The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *         the device that terminates the physical connection.
      */
 
     public String getAwsLogicalDeviceId() {
@@ -1350,11 +1355,13 @@ public class Connection implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
      * </p>
      * 
      * @param awsLogicalDeviceId
-     *        The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     *        The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *        the device that terminates the physical connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

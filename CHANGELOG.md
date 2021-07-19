@@ -1,3 +1,28 @@
+# __1.12.27__ __2021-07-19__
+## __AWS Direct Connect__
+  - ### Features
+    - Documentation updates for directconnect
+
+## __AWS Health APIs and Notifications__
+  - ### Features
+    - In the Health API, the maximum number of entities for the EventFilter and EntityFilter data types has changed from 100 to 99. This change is related to an internal optimization of the AWS Health service.
+
+## __AWS RoboMaker__
+  - ### Features
+    - This release allows customers to create a new version of WorldTemplates with support for Doors.
+
+## __Amazon EMR Containers__
+  - ### Features
+    - Updated DescribeManagedEndpoint and ListManagedEndpoints to return failureReason and stateDetails in API response.
+
+## __Amazon Location Service__
+  - ### Features
+    - Add five new API operations: UpdateGeofenceCollection, UpdateMap, UpdatePlaceIndex, UpdateRouteCalculator, UpdateTracker.
+
+## __EC2 Image Builder__
+  - ### Features
+    - Documentation updates for reversal of default value for additional instance configuration SSM switch, plus improved descriptions for semantic versioning.
+
 # __1.12.26__ __2021-07-16__
 ## __AWS Audit Manager__
   - ### Features

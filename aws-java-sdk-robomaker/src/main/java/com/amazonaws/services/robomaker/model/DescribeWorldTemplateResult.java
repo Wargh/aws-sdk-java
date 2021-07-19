@@ -59,6 +59,12 @@ public class DescribeWorldTemplateResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The version of the world template that you're using.
+     * </p>
+     */
+    private String version;
 
     /**
      * <p>
@@ -329,6 +335,46 @@ public class DescribeWorldTemplateResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The version of the world template that you're using.
+     * </p>
+     * 
+     * @param version
+     *        The version of the world template that you're using.
+     */
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    /**
+     * <p>
+     * The version of the world template that you're using.
+     * </p>
+     * 
+     * @return The version of the world template that you're using.
+     */
+
+    public String getVersion() {
+        return this.version;
+    }
+
+    /**
+     * <p>
+     * The version of the world template that you're using.
+     * </p>
+     * 
+     * @param version
+     *        The version of the world template that you're using.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeWorldTemplateResult withVersion(String version) {
+        setVersion(version);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -351,7 +397,9 @@ public class DescribeWorldTemplateResult extends com.amazonaws.AmazonWebServiceR
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getVersion() != null)
+            sb.append("Version: ").append(getVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -390,6 +438,10 @@ public class DescribeWorldTemplateResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getVersion() == null ^ this.getVersion() == null)
+            return false;
+        if (other.getVersion() != null && other.getVersion().equals(this.getVersion()) == false)
+            return false;
         return true;
     }
 
@@ -404,6 +456,7 @@ public class DescribeWorldTemplateResult extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         return hashCode;
     }
 

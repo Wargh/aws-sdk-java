@@ -39,8 +39,24 @@ public class CreateImageRecipeRequest extends com.amazonaws.AmazonWebServiceRequ
     private String description;
     /**
      * <p>
-     * The semantic version of the image recipe.
+     * The semantic version of the image recipe. This version follows the semantic version syntax.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
+     * that is not open for updates.
+     * </p>
+     * <p>
+     * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
+     * you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as
+     * 2021.01.01.
+     * </p>
+     * </note>
      */
     private String semanticVersion;
     /**
@@ -173,11 +189,41 @@ public class CreateImageRecipeRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The semantic version of the image recipe.
+     * The semantic version of the image recipe. This version follows the semantic version syntax.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
+     * that is not open for updates.
+     * </p>
+     * <p>
+     * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
+     * you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as
+     * 2021.01.01.
+     * </p>
+     * </note>
      * 
      * @param semanticVersion
-     *        The semantic version of the image recipe.
+     *        The semantic version of the image recipe. This version follows the semantic version syntax.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
+     *        <p>
+     *        <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
+     *        with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
+     *        number, and that is not open for updates.
+     *        </p>
+     *        <p>
+     *        <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes
+     *        that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date,
+     *        such as 2021.01.01.
+     *        </p>
      */
 
     public void setSemanticVersion(String semanticVersion) {
@@ -186,10 +232,40 @@ public class CreateImageRecipeRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The semantic version of the image recipe.
+     * The semantic version of the image recipe. This version follows the semantic version syntax.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
+     * that is not open for updates.
+     * </p>
+     * <p>
+     * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
+     * you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as
+     * 2021.01.01.
+     * </p>
+     * </note>
      * 
-     * @return The semantic version of the image recipe.
+     * @return The semantic version of the image recipe. This version follows the semantic version syntax.</p> <note>
+     *         <p>
+     *         The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *         assign values for the first three, and can filter on all of them.
+     *         </p>
+     *         <p>
+     *         <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
+     *         with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
+     *         number, and that is not open for updates.
+     *         </p>
+     *         <p>
+     *         <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the
+     *         nodes that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a
+     *         date, such as 2021.01.01.
+     *         </p>
      */
 
     public String getSemanticVersion() {
@@ -198,11 +274,41 @@ public class CreateImageRecipeRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The semantic version of the image recipe.
+     * The semantic version of the image recipe. This version follows the semantic version syntax.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
+     * that is not open for updates.
+     * </p>
+     * <p>
+     * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
+     * you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as
+     * 2021.01.01.
+     * </p>
+     * </note>
      * 
      * @param semanticVersion
-     *        The semantic version of the image recipe.
+     *        The semantic version of the image recipe. This version follows the semantic version syntax.</p> <note>
+     *        <p>
+     *        The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can
+     *        assign values for the first three, and can filter on all of them.
+     *        </p>
+     *        <p>
+     *        <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
+     *        with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
+     *        number, and that is not open for updates.
+     *        </p>
+     *        <p>
+     *        <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes
+     *        that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date,
+     *        such as 2021.01.01.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

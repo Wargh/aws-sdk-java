@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Contains the calculated route's details for each path between a pair of positions. The number of legs returned
- * corresponds to one less than the total number of positions in the request.
+ * corresponds to one fewer than the total number of positions in the request.
  * </p>
  * <p>
  * For example, a route with a departure position and destination position returns one leg with the positions <a
@@ -41,7 +41,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </ul>
  * <p>
  * A route with a waypoint between the departure and destination position returns two legs with the positions snapped to
- * a nearby road.:
+ * a nearby road:
  * </p>
  * <ul>
  * <li>

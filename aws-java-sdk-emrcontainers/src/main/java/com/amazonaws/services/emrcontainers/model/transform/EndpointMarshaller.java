@@ -57,6 +57,10 @@ public class EndpointMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("securityGroup").build();
     private static final MarshallingInfo<List> SUBNETIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("subnetIds").build();
+    private static final MarshallingInfo<String> STATEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stateDetails").build();
+    private static final MarshallingInfo<String> FAILUREREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failureReason").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -90,6 +94,8 @@ public class EndpointMarshaller {
             protocolMarshaller.marshall(endpoint.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(endpoint.getSecurityGroup(), SECURITYGROUP_BINDING);
             protocolMarshaller.marshall(endpoint.getSubnetIds(), SUBNETIDS_BINDING);
+            protocolMarshaller.marshall(endpoint.getStateDetails(), STATEDETAILS_BINDING);
+            protocolMarshaller.marshall(endpoint.getFailureReason(), FAILUREREASON_BINDING);
             protocolMarshaller.marshall(endpoint.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

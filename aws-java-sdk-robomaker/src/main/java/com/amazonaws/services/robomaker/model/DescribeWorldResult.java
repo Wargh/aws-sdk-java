@@ -53,6 +53,12 @@ public class DescribeWorldResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * Returns the JSON formatted string that describes the contents of your world.
+     * </p>
+     */
+    private String worldDescriptionBody;
 
     /**
      * <p>
@@ -283,6 +289,46 @@ public class DescribeWorldResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * Returns the JSON formatted string that describes the contents of your world.
+     * </p>
+     * 
+     * @param worldDescriptionBody
+     *        Returns the JSON formatted string that describes the contents of your world.
+     */
+
+    public void setWorldDescriptionBody(String worldDescriptionBody) {
+        this.worldDescriptionBody = worldDescriptionBody;
+    }
+
+    /**
+     * <p>
+     * Returns the JSON formatted string that describes the contents of your world.
+     * </p>
+     * 
+     * @return Returns the JSON formatted string that describes the contents of your world.
+     */
+
+    public String getWorldDescriptionBody() {
+        return this.worldDescriptionBody;
+    }
+
+    /**
+     * <p>
+     * Returns the JSON formatted string that describes the contents of your world.
+     * </p>
+     * 
+     * @param worldDescriptionBody
+     *        Returns the JSON formatted string that describes the contents of your world.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeWorldResult withWorldDescriptionBody(String worldDescriptionBody) {
+        setWorldDescriptionBody(worldDescriptionBody);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -303,7 +349,9 @@ public class DescribeWorldResult extends com.amazonaws.AmazonWebServiceResult<co
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getWorldDescriptionBody() != null)
+            sb.append("WorldDescriptionBody: ").append(getWorldDescriptionBody());
         sb.append("}");
         return sb.toString();
     }
@@ -338,6 +386,10 @@ public class DescribeWorldResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getWorldDescriptionBody() == null ^ this.getWorldDescriptionBody() == null)
+            return false;
+        if (other.getWorldDescriptionBody() != null && other.getWorldDescriptionBody().equals(this.getWorldDescriptionBody()) == false)
+            return false;
         return true;
     }
 
@@ -351,6 +403,7 @@ public class DescribeWorldResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getTemplate() == null) ? 0 : getTemplate().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getWorldDescriptionBody() == null) ? 0 : getWorldDescriptionBody().hashCode());
         return hashCode;
     }
 

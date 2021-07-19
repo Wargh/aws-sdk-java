@@ -29,12 +29,27 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of the resource whose tags you want to update.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String resourceArn;
     /**
      * <p>
-     * The mapping from tag key to tag value for each tag associated with the specified resource.
+     * Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
+     * <code>"TagKey" : "TagValue"</code>.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.Map<String, String> tags;
 
@@ -42,9 +57,22 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of the resource whose tags you want to update.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource whose tags you want to update.
+     *        The Amazon Resource Name (ARN) of the resource whose tags you want to update.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *        </p>
+     *        </li>
      */
 
     public void setResourceArn(String resourceArn) {
@@ -55,8 +83,21 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of the resource whose tags you want to update.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource whose tags you want to update.
+     * @return The Amazon Resource Name (ARN) of the resource whose tags you want to update.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *         </p>
+     *         </li>
      */
 
     public String getResourceArn() {
@@ -67,9 +108,22 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of the resource whose tags you want to update.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource whose tags you want to update.
+     *        The Amazon Resource Name (ARN) of the resource whose tags you want to update.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Format example: <code>arn:aws:geo:region:account-id:resourcetype/ExampleResource</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +134,25 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The mapping from tag key to tag value for each tag associated with the specified resource.
+     * Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
+     * <code>"TagKey" : "TagValue"</code>.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The mapping from tag key to tag value for each tag associated with the specified resource.
+     * @return Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
+     *         <code>"TagKey" : "TagValue"</code>.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     *         </p>
+     *         </li>
      */
 
     public java.util.Map<String, String> getTags() {
@@ -92,11 +161,26 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The mapping from tag key to tag value for each tag associated with the specified resource.
+     * Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
+     * <code>"TagKey" : "TagValue"</code>.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param tags
-     *        The mapping from tag key to tag value for each tag associated with the specified resource.
+     *        Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
+     *        <code>"TagKey" : "TagValue"</code>.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     *        </p>
+     *        </li>
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -105,11 +189,26 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The mapping from tag key to tag value for each tag associated with the specified resource.
+     * Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
+     * <code>"TagKey" : "TagValue"</code>.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param tags
-     *        The mapping from tag key to tag value for each tag associated with the specified resource.
+     *        Tags that have been applied to the specified resource. Tags are mapped from the tag key to the tag value:
+     *        <code>"TagKey" : "TagValue"</code>.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Format example: <code>{"tag1" : "value1", "tag2" : "value2"} </code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

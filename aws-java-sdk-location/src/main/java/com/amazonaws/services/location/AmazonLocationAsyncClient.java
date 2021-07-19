@@ -1562,6 +1562,171 @@ public class AmazonLocationAsyncClient extends AmazonLocationClient implements A
         });
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateGeofenceCollectionResult> updateGeofenceCollectionAsync(UpdateGeofenceCollectionRequest request) {
+
+        return updateGeofenceCollectionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateGeofenceCollectionResult> updateGeofenceCollectionAsync(final UpdateGeofenceCollectionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateGeofenceCollectionRequest, UpdateGeofenceCollectionResult> asyncHandler) {
+        final UpdateGeofenceCollectionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateGeofenceCollectionResult>() {
+            @Override
+            public UpdateGeofenceCollectionResult call() throws Exception {
+                UpdateGeofenceCollectionResult result = null;
+
+                try {
+                    result = executeUpdateGeofenceCollection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMapResult> updateMapAsync(UpdateMapRequest request) {
+
+        return updateMapAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMapResult> updateMapAsync(final UpdateMapRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateMapRequest, UpdateMapResult> asyncHandler) {
+        final UpdateMapRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateMapResult>() {
+            @Override
+            public UpdateMapResult call() throws Exception {
+                UpdateMapResult result = null;
+
+                try {
+                    result = executeUpdateMap(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePlaceIndexResult> updatePlaceIndexAsync(UpdatePlaceIndexRequest request) {
+
+        return updatePlaceIndexAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePlaceIndexResult> updatePlaceIndexAsync(final UpdatePlaceIndexRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePlaceIndexRequest, UpdatePlaceIndexResult> asyncHandler) {
+        final UpdatePlaceIndexRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePlaceIndexResult>() {
+            @Override
+            public UpdatePlaceIndexResult call() throws Exception {
+                UpdatePlaceIndexResult result = null;
+
+                try {
+                    result = executeUpdatePlaceIndex(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRouteCalculatorResult> updateRouteCalculatorAsync(UpdateRouteCalculatorRequest request) {
+
+        return updateRouteCalculatorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRouteCalculatorResult> updateRouteCalculatorAsync(final UpdateRouteCalculatorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateRouteCalculatorRequest, UpdateRouteCalculatorResult> asyncHandler) {
+        final UpdateRouteCalculatorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateRouteCalculatorResult>() {
+            @Override
+            public UpdateRouteCalculatorResult call() throws Exception {
+                UpdateRouteCalculatorResult result = null;
+
+                try {
+                    result = executeUpdateRouteCalculator(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTrackerResult> updateTrackerAsync(UpdateTrackerRequest request) {
+
+        return updateTrackerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTrackerResult> updateTrackerAsync(final UpdateTrackerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateTrackerRequest, UpdateTrackerResult> asyncHandler) {
+        final UpdateTrackerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateTrackerResult>() {
+            @Override
+            public UpdateTrackerResult call() throws Exception {
+                UpdateTrackerResult result = null;
+
+                try {
+                    result = executeUpdateTracker(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
     /**
      * Shuts down the client, releasing all managed resources. This includes forcibly terminating all pending
      * asynchronous service calls. Clients who wish to give pending asynchronous service calls time to complete should

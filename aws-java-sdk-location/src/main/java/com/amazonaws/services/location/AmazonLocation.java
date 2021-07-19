@@ -46,6 +46,9 @@ public interface AmazonLocation {
      * Creates an association between a geofence collection and a tracker resource. This allows the tracker resource to
      * communicate location data to the linked geofence collection.
      * </p>
+     * <p>
+     * You can associate up to five geofence collections to each tracker resource.
+     * </p>
      * <note>
      * <p>
      * Currently not supported — Cross-account configurations, such as creating associations between a tracker resource
@@ -60,14 +63,18 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws ConflictException
-     *         The request was unsuccessful due to a conflict.
+     *         The request was unsuccessful because of a conflict.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ServiceQuotaExceededException
+     *         The operation was denied because the request would exceed the maximum <a
+     *         href="https://docs.aws.amazon.com/location/latest/developerguide/location-quotas.html">quota</a> set for
+     *         Amazon Location Service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.AssociateTrackerConsumer
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/AssociateTrackerConsumer"
      *      target="_top">AWS API Documentation</a>
@@ -86,12 +93,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.BatchDeleteDevicePositionHistory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchDeleteDevicePositionHistory"
      *      target="_top">AWS API Documentation</a>
@@ -115,12 +122,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.BatchDeleteGeofence
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchDeleteGeofence" target="_top">AWS
      *      API Documentation</a>
@@ -129,14 +136,29 @@ public interface AmazonLocation {
 
     /**
      * <p>
-     * Evaluates device positions against the geofence geometries from a given geofence collection. The evaluation
-     * determines if the device has entered or exited a geofenced area, which publishes ENTER or EXIT geofence events to
-     * Amazon EventBridge.
+     * Evaluates device positions against the geofence geometries from a given geofence collection.
      * </p>
+     * <p>
+     * This operation always returns an empty response because geofences are asynchronously evaluated. The evaluation
+     * determines if the device has entered or exited a geofenced area, and then publishes one of the following events
+     * to Amazon EventBridge:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ENTER</code> if Amazon Location determines that the tracked device has entered a geofenced area.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EXIT</code> if Amazon Location determines that the tracked device has exited a geofenced area.
+     * </p>
+     * </li>
+     * </ul>
      * <note>
      * <p>
-     * The last geofence that a device was observed within, if any, is tracked for 30 days after the most recent device
-     * position update
+     * The last geofence that a device was observed within is tracked for 30 days after the most recent device position
+     * update.
      * </p>
      * </note>
      * 
@@ -147,12 +169,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.BatchEvaluateGeofences
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchEvaluateGeofences"
      *      target="_top">AWS API Documentation</a>
@@ -161,7 +183,7 @@ public interface AmazonLocation {
 
     /**
      * <p>
-     * A batch request to retrieve all device positions.
+     * Lists the latest device positions for requested devices.
      * </p>
      * 
      * @param batchGetDevicePositionRequest
@@ -171,12 +193,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.BatchGetDevicePosition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchGetDevicePosition"
      *      target="_top">AWS API Documentation</a>
@@ -196,12 +218,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.BatchPutGeofence
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchPutGeofence" target="_top">AWS API
      *      Documentation</a>
@@ -227,12 +249,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.BatchUpdateDevicePosition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/BatchUpdateDevicePosition"
      *      target="_top">AWS API Documentation</a>
@@ -244,8 +266,8 @@ public interface AmazonLocation {
      * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html">Calculates a route</a>
      * given the following required parameters: <code>DeparturePostiton</code> and <code>DestinationPosition</code>.
      * Requires that you first <a
-     * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create
-     * aroute calculator resource</a>
+     * href="https://docs.aws.amazon.com/location-routes/latest/APIReference/API_CreateRouteCalculator.html">create a
+     * route calculator resource</a>
      * </p>
      * <p>
      * By default, a request that doesn't specify a departure time uses the best time of day to travel with the best
@@ -270,7 +292,7 @@ public interface AmazonLocation {
      * <li>
      * <p>
      * <a href="https://docs.aws.amazon.com/location/latest/developerguide/calculate-route.html#travel-mode">Specifying
-     * a travel mode</a> using TravelMode. This lets you specify additional route preference such as
+     * a travel mode</a> using TravelMode. This lets you specify an additional route preference such as
      * <code>CarModeOptions</code> if traveling by <code>Car</code>, or <code>TruckModeOptions</code> if traveling by
      * <code>Truck</code>.
      * </p>
@@ -286,12 +308,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.CalculateRoute
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CalculateRoute" target="_top">AWS API
      *      Documentation</a>
@@ -308,14 +330,14 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws ConflictException
-     *         The request was unsuccessful due to a conflict.
+     *         The request was unsuccessful because of a conflict.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreateGeofenceCollection
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreateGeofenceCollection"
      *      target="_top">AWS API Documentation</a>
@@ -333,14 +355,14 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws ConflictException
-     *         The request was unsuccessful due to a conflict.
+     *         The request was unsuccessful because of a conflict.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreateMap
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreateMap" target="_top">AWS API
      *      Documentation</a>
@@ -358,14 +380,14 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws ConflictException
-     *         The request was unsuccessful due to a conflict.
+     *         The request was unsuccessful because of a conflict.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreatePlaceIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreatePlaceIndex" target="_top">AWS API
      *      Documentation</a>
@@ -386,14 +408,14 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws ConflictException
-     *         The request was unsuccessful due to a conflict.
+     *         The request was unsuccessful because of a conflict.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreateRouteCalculator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreateRouteCalculator" target="_top">AWS
      *      API Documentation</a>
@@ -411,14 +433,14 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws ConflictException
-     *         The request was unsuccessful due to a conflict.
+     *         The request was unsuccessful because of a conflict.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.CreateTracker
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/CreateTracker" target="_top">AWS API
      *      Documentation</a>
@@ -443,12 +465,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DeleteGeofenceCollection
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeleteGeofenceCollection"
      *      target="_top">AWS API Documentation</a>
@@ -473,12 +495,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DeleteMap
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeleteMap" target="_top">AWS API
      *      Documentation</a>
@@ -502,12 +524,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DeletePlaceIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeletePlaceIndex" target="_top">AWS API
      *      Documentation</a>
@@ -531,12 +553,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DeleteRouteCalculator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeleteRouteCalculator" target="_top">AWS
      *      API Documentation</a>
@@ -561,12 +583,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DeleteTracker
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DeleteTracker" target="_top">AWS API
      *      Documentation</a>
@@ -585,12 +607,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DescribeGeofenceCollection
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribeGeofenceCollection"
      *      target="_top">AWS API Documentation</a>
@@ -609,12 +631,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DescribeMap
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribeMap" target="_top">AWS API
      *      Documentation</a>
@@ -633,12 +655,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DescribePlaceIndex
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribePlaceIndex" target="_top">AWS
      *      API Documentation</a>
@@ -657,12 +679,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DescribeRouteCalculator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribeRouteCalculator"
      *      target="_top">AWS API Documentation</a>
@@ -681,12 +703,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DescribeTracker
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DescribeTracker" target="_top">AWS API
      *      Documentation</a>
@@ -711,12 +733,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.DisassociateTrackerConsumer
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/DisassociateTrackerConsumer"
      *      target="_top">AWS API Documentation</a>
@@ -740,12 +762,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.GetDevicePosition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetDevicePosition" target="_top">AWS API
      *      Documentation</a>
@@ -769,12 +791,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.GetDevicePositionHistory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetDevicePositionHistory"
      *      target="_top">AWS API Documentation</a>
@@ -793,12 +815,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.GetGeofence
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetGeofence" target="_top">AWS API
      *      Documentation</a>
@@ -817,12 +839,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.GetMapGlyphs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetMapGlyphs" target="_top">AWS API
      *      Documentation</a>
@@ -842,12 +864,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.GetMapSprites
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetMapSprites" target="_top">AWS API
      *      Documentation</a>
@@ -871,12 +893,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.GetMapStyleDescriptor
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetMapStyleDescriptor" target="_top">AWS
      *      API Documentation</a>
@@ -901,12 +923,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.GetMapTile
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/GetMapTile" target="_top">AWS API
      *      Documentation</a>
@@ -915,7 +937,7 @@ public interface AmazonLocation {
 
     /**
      * <p>
-     * Lists the latest device positions for requested devices.
+     * A batch request to retrieve all device positions.
      * </p>
      * 
      * @param listDevicePositionsRequest
@@ -923,12 +945,12 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListDevicePositions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListDevicePositions" target="_top">AWS
      *      API Documentation</a>
@@ -945,12 +967,12 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListGeofenceCollections
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListGeofenceCollections"
      *      target="_top">AWS API Documentation</a>
@@ -969,12 +991,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListGeofences
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListGeofences" target="_top">AWS API
      *      Documentation</a>
@@ -991,12 +1013,12 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListMaps
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListMaps" target="_top">AWS API
      *      Documentation</a>
@@ -1013,12 +1035,12 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListPlaceIndexes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListPlaceIndexes" target="_top">AWS API
      *      Documentation</a>
@@ -1035,12 +1057,12 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListRouteCalculators
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListRouteCalculators" target="_top">AWS
      *      API Documentation</a>
@@ -1049,7 +1071,7 @@ public interface AmazonLocation {
 
     /**
      * <p>
-     * Returns the tags for the specified Amazon Location Service resource.
+     * Returns a list of tags that are applied to the specified Amazon Location resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1059,12 +1081,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListTagsForResource" target="_top">AWS
      *      API Documentation</a>
@@ -1083,12 +1105,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListTrackerConsumers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListTrackerConsumers" target="_top">AWS
      *      API Documentation</a>
@@ -1105,12 +1127,12 @@ public interface AmazonLocation {
      * @throws InternalServerException
      *         The request has failed to process because of an unknown server error, exception, or failure.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.ListTrackers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/ListTrackers" target="_top">AWS API
      *      Documentation</a>
@@ -1130,14 +1152,14 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws ConflictException
-     *         The request was unsuccessful due to a conflict.
+     *         The request was unsuccessful because of a conflict.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.PutGeofence
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/PutGeofence" target="_top">AWS API
      *      Documentation</a>
@@ -1157,12 +1179,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.SearchPlaceIndexForPosition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchPlaceIndexForPosition"
      *      target="_top">AWS API Documentation</a>
@@ -1191,12 +1213,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.SearchPlaceIndexForText
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchPlaceIndexForText"
      *      target="_top">AWS API Documentation</a>
@@ -1209,7 +1231,7 @@ public interface AmazonLocation {
      * </p>
      * 
      * <pre>
-     * <code> &lt;p&gt;Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or change only resources with certain tag values.&lt;/p&gt; &lt;p&gt;Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of characters.&lt;/p&gt; &lt;p&gt;You can use the &lt;code&gt;TagResource&lt;/code&gt; action with an Amazon Location Service resource that already has tags. If you specify a new tag key for the resource, this tag is appended to the tags already associated with the resource. If you specify a tag key that is already associated with the resource, the new tag value that you specify replaces the previous value for that tag. &lt;/p&gt; &lt;p&gt;You can associate as many as 50 tags with a resource.&lt;/p&gt; </code>
+     * <code> &lt;p&gt;Tags can help you organize and categorize your resources. You can also use them to scope user permissions, by granting a user permission to access or change only resources with certain tag values.&lt;/p&gt; &lt;p&gt;You can use the &lt;code&gt;TagResource&lt;/code&gt; operation with an Amazon Location Service resource that already has tags. If you specify a new tag key for the resource, this tag is appended to the tags already associated with the resource. If you specify a tag key that's already associated with the resource, the new tag value that you specify replaces the previous value for that tag. &lt;/p&gt; &lt;p&gt;You can associate up to 50 tags with a resource.&lt;/p&gt; </code>
      * </pre>
      * 
      * @param tagResourceRequest
@@ -1219,12 +1241,12 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1233,7 +1255,7 @@ public interface AmazonLocation {
 
     /**
      * <p>
-     * Removes one or more tags from the specified Amazon Location Service resource.
+     * Removes one or more tags from the specified Amazon Location resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1243,17 +1265,137 @@ public interface AmazonLocation {
      * @throws ResourceNotFoundException
      *         The resource that you've entered was not found in your AWS account.
      * @throws AccessDeniedException
-     *         The request was denied due to insufficient access or permission. Check with an administrator to verify
-     *         your permissions.
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
      * @throws ValidationException
      *         The input failed to meet the constraints specified by the AWS service.
      * @throws ThrottlingException
-     *         The request was denied due to request throttling.
+     *         The request was denied because of request throttling.
      * @sample AmazonLocation.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UntagResource" target="_top">AWS API
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given geofence collection.
+     * </p>
+     * 
+     * @param updateGeofenceCollectionRequest
+     * @return Result of the UpdateGeofenceCollection operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.UpdateGeofenceCollection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateGeofenceCollection"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateGeofenceCollectionResult updateGeofenceCollection(UpdateGeofenceCollectionRequest updateGeofenceCollectionRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given map resource.
+     * </p>
+     * 
+     * @param updateMapRequest
+     * @return Result of the UpdateMap operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.UpdateMap
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateMap" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateMapResult updateMap(UpdateMapRequest updateMapRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given place index resource.
+     * </p>
+     * 
+     * @param updatePlaceIndexRequest
+     * @return Result of the UpdatePlaceIndex operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.UpdatePlaceIndex
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdatePlaceIndex" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdatePlaceIndexResult updatePlaceIndex(UpdatePlaceIndexRequest updatePlaceIndexRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties for a given route calculator resource.
+     * </p>
+     * 
+     * @param updateRouteCalculatorRequest
+     * @return Result of the UpdateRouteCalculator operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.UpdateRouteCalculator
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateRouteCalculator" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateRouteCalculatorResult updateRouteCalculator(UpdateRouteCalculatorRequest updateRouteCalculatorRequest);
+
+    /**
+     * <p>
+     * Updates the specified properties of a given tracker resource.
+     * </p>
+     * 
+     * @param updateTrackerRequest
+     * @return Result of the UpdateTracker operation returned by the service.
+     * @throws InternalServerException
+     *         The request has failed to process because of an unknown server error, exception, or failure.
+     * @throws ResourceNotFoundException
+     *         The resource that you've entered was not found in your AWS account.
+     * @throws AccessDeniedException
+     *         The request was denied because of insufficient access or permissions. Check with an administrator to
+     *         verify your permissions.
+     * @throws ValidationException
+     *         The input failed to meet the constraints specified by the AWS service.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling.
+     * @sample AmazonLocation.UpdateTracker
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/UpdateTracker" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateTrackerResult updateTracker(UpdateTrackerRequest updateTrackerRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

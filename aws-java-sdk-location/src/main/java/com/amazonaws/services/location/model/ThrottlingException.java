@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was denied due to request throttling.
+ * The request was denied because of request throttling.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

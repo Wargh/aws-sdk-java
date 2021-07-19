@@ -901,6 +901,19 @@ public interface AWSimagebuilder {
      * <p>
      * Returns the list of component build versions for the specified semantic version.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * 
      * @param listComponentBuildVersionsRequest
      * @return Result of the ListComponentBuildVersions operation returned by the service.
@@ -930,6 +943,19 @@ public interface AWSimagebuilder {
      * <p>
      * Returns the list of component build versions for the specified semantic version.
      * </p>
+     * <note>
+     * <p>
+     * The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign
+     * values for the first three, and can filter on all of them.
+     * </p>
+     * <p>
+     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
+     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
+     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
+     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
+     * if applicable.
+     * </p>
+     * </note>
      * 
      * @param listComponentsRequest
      * @return Result of the ListComponents operation returned by the service.

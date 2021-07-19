@@ -221,13 +221,14 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
     private String region;
     /**
      * <p>
-     * The Direct Connect endpoint on which the virtual interface terminates.
+     * The Direct Connect endpoint that terminates the physical connection.
      * </p>
      */
     private String awsDeviceV2;
     /**
      * <p>
-     * The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
      * </p>
      */
     private String awsLogicalDeviceId;
@@ -1847,11 +1848,11 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the virtual interface terminates.
+     * The Direct Connect endpoint that terminates the physical connection.
      * </p>
      * 
      * @param awsDeviceV2
-     *        The Direct Connect endpoint on which the virtual interface terminates.
+     *        The Direct Connect endpoint that terminates the physical connection.
      */
 
     public void setAwsDeviceV2(String awsDeviceV2) {
@@ -1860,10 +1861,10 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the virtual interface terminates.
+     * The Direct Connect endpoint that terminates the physical connection.
      * </p>
      * 
-     * @return The Direct Connect endpoint on which the virtual interface terminates.
+     * @return The Direct Connect endpoint that terminates the physical connection.
      */
 
     public String getAwsDeviceV2() {
@@ -1872,11 +1873,11 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Direct Connect endpoint on which the virtual interface terminates.
+     * The Direct Connect endpoint that terminates the physical connection.
      * </p>
      * 
      * @param awsDeviceV2
-     *        The Direct Connect endpoint on which the virtual interface terminates.
+     *        The Direct Connect endpoint that terminates the physical connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1887,11 +1888,13 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
      * </p>
      * 
      * @param awsLogicalDeviceId
-     *        The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     *        The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *        the device that terminates the physical connection.
      */
 
     public void setAwsLogicalDeviceId(String awsLogicalDeviceId) {
@@ -1900,10 +1903,12 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
      * </p>
      * 
-     * @return The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * @return The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *         the device that terminates the physical connection.
      */
 
     public String getAwsLogicalDeviceId() {
@@ -1912,11 +1917,13 @@ public class AssociateVirtualInterfaceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     * The Direct Connect endpoint that terminates the logical connection. This device might be different than the
+     * device that terminates the physical connection.
      * </p>
      * 
      * @param awsLogicalDeviceId
-     *        The Direct Connect endpoint that terminates a physical connection's BGP sessions.
+     *        The Direct Connect endpoint that terminates the logical connection. This device might be different than
+     *        the device that terminates the physical connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

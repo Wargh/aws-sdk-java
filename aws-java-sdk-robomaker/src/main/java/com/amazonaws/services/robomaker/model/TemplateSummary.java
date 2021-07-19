@@ -52,6 +52,12 @@ public class TemplateSummary implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * The version of the template that you're using.
+     * </p>
+     */
+    private String version;
 
     /**
      * <p>
@@ -214,6 +220,46 @@ public class TemplateSummary implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The version of the template that you're using.
+     * </p>
+     * 
+     * @param version
+     *        The version of the template that you're using.
+     */
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    /**
+     * <p>
+     * The version of the template that you're using.
+     * </p>
+     * 
+     * @return The version of the template that you're using.
+     */
+
+    public String getVersion() {
+        return this.version;
+    }
+
+    /**
+     * <p>
+     * The version of the template that you're using.
+     * </p>
+     * 
+     * @param version
+     *        The version of the template that you're using.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TemplateSummary withVersion(String version) {
+        setVersion(version);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,7 +278,9 @@ public class TemplateSummary implements Serializable, Cloneable, StructuredPojo 
         if (getLastUpdatedAt() != null)
             sb.append("LastUpdatedAt: ").append(getLastUpdatedAt()).append(",");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getVersion() != null)
+            sb.append("Version: ").append(getVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -263,6 +311,10 @@ public class TemplateSummary implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getVersion() == null ^ this.getVersion() == null)
+            return false;
+        if (other.getVersion() != null && other.getVersion().equals(this.getVersion()) == false)
+            return false;
         return true;
     }
 
@@ -275,6 +327,7 @@ public class TemplateSummary implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         return hashCode;
     }
 

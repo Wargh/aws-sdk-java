@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was denied due to insufficient access or permission. Check with an administrator to verify your
+ * The request was denied because of insufficient access or permissions. Check with an administrator to verify your
  * permissions.
  * </p>
  */

@@ -35,6 +35,8 @@ public class TemplateSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<String> VERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("version").build();
 
     private static final TemplateSummaryMarshaller instance = new TemplateSummaryMarshaller();
 
@@ -56,6 +58,7 @@ public class TemplateSummaryMarshaller {
             protocolMarshaller.marshall(templateSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(templateSummary.getLastUpdatedAt(), LASTUPDATEDAT_BINDING);
             protocolMarshaller.marshall(templateSummary.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(templateSummary.getVersion(), VERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

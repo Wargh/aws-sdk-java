@@ -80,7 +80,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map. For
-     * example, <code>[min x, min y, max x, max y]</code>
+     * example, <code>[min x, min y, max x, max y]</code>.
      * </p>
      * <p>
      * The first 2 <code>bbox</code> parameters describe the lower southwest corner:
@@ -441,7 +441,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map. For
-     * example, <code>[min x, min y, max x, max y]</code>
+     * example, <code>[min x, min y, max x, max y]</code>.
      * </p>
      * <p>
      * The first 2 <code>bbox</code> parameters describe the lower southwest corner:
@@ -475,7 +475,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
      * </ul>
      * 
      * @return Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map.
-     *         For example, <code>[min x, min y, max x, max y]</code> </p>
+     *         For example, <code>[min x, min y, max x, max y]</code>.</p>
      *         <p>
      *         The first 2 <code>bbox</code> parameters describe the lower southwest corner:
      *         </p>
@@ -514,7 +514,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map. For
-     * example, <code>[min x, min y, max x, max y]</code>
+     * example, <code>[min x, min y, max x, max y]</code>.
      * </p>
      * <p>
      * The first 2 <code>bbox</code> parameters describe the lower southwest corner:
@@ -549,7 +549,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
      * 
      * @param routeBBox
      *        Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map.
-     *        For example, <code>[min x, min y, max x, max y]</code> </p>
+     *        For example, <code>[min x, min y, max x, max y]</code>.</p>
      *        <p>
      *        The first 2 <code>bbox</code> parameters describe the lower southwest corner:
      *        </p>
@@ -593,7 +593,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map. For
-     * example, <code>[min x, min y, max x, max y]</code>
+     * example, <code>[min x, min y, max x, max y]</code>.
      * </p>
      * <p>
      * The first 2 <code>bbox</code> parameters describe the lower southwest corner:
@@ -633,7 +633,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
      * 
      * @param routeBBox
      *        Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map.
-     *        For example, <code>[min x, min y, max x, max y]</code> </p>
+     *        For example, <code>[min x, min y, max x, max y]</code>.</p>
      *        <p>
      *        The first 2 <code>bbox</code> parameters describe the lower southwest corner:
      *        </p>
@@ -679,7 +679,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map. For
-     * example, <code>[min x, min y, max x, max y]</code>
+     * example, <code>[min x, min y, max x, max y]</code>.
      * </p>
      * <p>
      * The first 2 <code>bbox</code> parameters describe the lower southwest corner:
@@ -714,7 +714,7 @@ public class CalculateRouteSummary implements Serializable, Cloneable, Structure
      * 
      * @param routeBBox
      *        Specifies a geographical box surrounding a route. Used to zoom into a route when displaying it in a map.
-     *        For example, <code>[min x, min y, max x, max y]</code> </p>
+     *        For example, <code>[min x, min y, max x, max y]</code>.</p>
      *        <p>
      *        The first 2 <code>bbox</code> parameters describe the lower southwest corner:
      *        </p>

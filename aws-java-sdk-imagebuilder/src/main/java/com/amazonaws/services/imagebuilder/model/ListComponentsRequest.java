@@ -41,7 +41,7 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
     private java.util.List<Filter> filters;
     /**
      * <p>
-     * Returns the list of component build versions for the specified semantic version.
+     * Returns the list of component build versions for the specified name.
      * </p>
      */
     private Boolean byName;
@@ -205,11 +205,11 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Returns the list of component build versions for the specified semantic version.
+     * Returns the list of component build versions for the specified name.
      * </p>
      * 
      * @param byName
-     *        Returns the list of component build versions for the specified semantic version.
+     *        Returns the list of component build versions for the specified name.
      */
 
     public void setByName(Boolean byName) {
@@ -218,10 +218,10 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Returns the list of component build versions for the specified semantic version.
+     * Returns the list of component build versions for the specified name.
      * </p>
      * 
-     * @return Returns the list of component build versions for the specified semantic version.
+     * @return Returns the list of component build versions for the specified name.
      */
 
     public Boolean getByName() {
@@ -230,11 +230,11 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Returns the list of component build versions for the specified semantic version.
+     * Returns the list of component build versions for the specified name.
      * </p>
      * 
      * @param byName
-     *        Returns the list of component build versions for the specified semantic version.
+     *        Returns the list of component build versions for the specified name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,10 +245,10 @@ public class ListComponentsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Returns the list of component build versions for the specified semantic version.
+     * Returns the list of component build versions for the specified name.
      * </p>
      * 
-     * @return Returns the list of component build versions for the specified semantic version.
+     * @return Returns the list of component build versions for the specified name.
      */
 
     public Boolean isByName() {

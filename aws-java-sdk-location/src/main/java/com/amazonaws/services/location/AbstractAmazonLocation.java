@@ -253,6 +253,31 @@ public class AbstractAmazonLocation implements AmazonLocation {
     }
 
     @Override
+    public UpdateGeofenceCollectionResult updateGeofenceCollection(UpdateGeofenceCollectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMapResult updateMap(UpdateMapRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePlaceIndexResult updatePlaceIndex(UpdatePlaceIndexRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateRouteCalculatorResult updateRouteCalculator(UpdateRouteCalculatorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTrackerResult updateTracker(UpdateTrackerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }
